@@ -1,0 +1,8 @@
+div.container-fluid{
+	padding: 15;
+}
+div#page-content-wrapper{
+	width: 100%;
+	margin-left: auto;
+	padding: 0;
+}

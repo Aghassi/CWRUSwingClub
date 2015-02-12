@@ -1,0 +1,92 @@
+<html ng-app="SparX" ng-controller="AppController">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="Copyright CWRU Swing Club 2015">
+	<title>SparX 2015 Pictures</title>
+
+	<!--Import Lavish BootStrap-->
+	<link href="/Swing/DEV/CSS/swing-bootstrap.css" rel="stylesheet" type="text/css">
+	<!--Gallery-->
+	<link rel="stylesheet" href="/Swing/DEV/CSS/blueimp-gallery.css">
+	<link rel="stylesheet" href="pictures.css">
+	<!--Sidebar for navigation-->
+	<link href="/Swing/DEV/CSS/simple-sidebar.css" rel="stylesheet" type="text/css">
+	<!--Allow for proper rendering on mobile-->
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+	<div id="wrapper" class="">
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="#">
+						CWRU Swing Club
+					</a>
+				</li>
+				<li>
+					<a href="#">SparX</a>
+				</li>
+			</ul>
+		</div>
+		<div id="page-content-wrapper">
+			<div class="navbar-inverse navbar-header hidden-md hidden-lg">
+				<button href="#menu-toggle" id="menu-toggle" class="btn navbar-toggle pull-left" type="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<img href="#menu-toggle"
+					id="photo-menu-toggle"
+					class="btn img-responsive pull-left col-md-3 hidden-xs hidden-sm"
+					src="/Swing/DEV/Photos/Logos/logo.png"/>
+					<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+					<div id="blueimp-gallery" class="blueimp-gallery">
+						<div class="slides"></div>
+						<h3 class="title"></h3>
+						<a class="prev">‹</a>
+						<a class="next">›</a>
+						<a class="close">×</a>
+						<a class="play-pause"></a>
+						<ol class="indicator"></ol>
+					</div>
+					<div class="col-md-8" id="links">
+						<a href="{{ photo.src }}" title="" ng-repeat="photo in photos" class="photo">
+							<img 
+							class="img-responsive"
+							bn-lazy-src="{{ photo.src }}"
+							alt="SparX 2015"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Put this at the bottom so the page loads faster -->
+		<!-- Jquery -->
+		<script type="text/javascript" src="/Swing/DEV/JS/jquery.js"></script>
+		<script type="text/javascript" src="/Swing/DEV/JS/initialize-gallery.js"></script>
+		<script src="/Swing/DEV/JS/blueimp-gallery.js"></script>
+		<!-- BootStrap -->
+		<script type="text/javascript" src="/Swing/DEV/JS/bootstrap.js"></script>
+		<!--Angular-->
+		<script type="text/javascript" src="/Swing/DEV/Angular/angular.js"></script>
+		<script type="text/javascript" src="/Swing/DEV/Angular/lazy-load-images.js"></script>
+		<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+		</script>
+		<script>
+		$("#photo-menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+		</script>
+	</body>
+	</html>
