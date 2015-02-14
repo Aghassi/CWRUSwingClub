@@ -53,14 +53,16 @@
 						<a class="play-pause"></a>
 						<ol class="indicator"></ol>
 					</div>
-					<div class="col-md-8" id="links">
-						<a href="{{ photo.src }}" title="" ng-repeat="photo in photos" class="photo">
-							<img 
-							class="img-responsive"
-							bn-lazy-src="{{ photo.src }}"
-							alt="SparX 2015"
-							/>
-						</a>
+					<div class="row" id="links">
+						<div class="col-md-4" ng-repeat="photo in photos" class="photo">
+							<a href="{{ photo.src }}" title="">
+								<img 
+								class="img-responsive preview"
+								bn-lazy-src="{{ photo.src }}"
+								alt="SparX 2015"
+								/>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

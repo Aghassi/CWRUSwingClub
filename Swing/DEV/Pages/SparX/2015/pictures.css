@@ -6,3 +6,9 @@ div#page-content-wrapper{
 	margin-left: auto;
 	padding: 0;
 }
+.preview {
+	max-height: 300px;
+	margin-left: auto;
+  	margin-right: auto;
+	padding: 5;
+}
