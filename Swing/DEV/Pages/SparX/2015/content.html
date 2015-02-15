@@ -1,25 +1,28 @@
-<img href="#menu-toggle"
-id="photo-menu-toggle"
-class="btn img-responsive pull-left col-md-3 hidden-xs hidden-sm"
-src="/Swing/DEV/Photos/Logos/logo.png"/>
-<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-	<div class="slides"></div>
-	<h3 class="title"></h3>
-	<a class="prev">‹</a>
-	<a class="next">›</a>
-	<a class="close">×</a>
-	<a class="play-pause"></a>
-	<ol class="indicator"></ol>
-</div>
-<div class="row" id="links">
-	<div class="col-md-4" ng-repeat="photo in photos" class="photo">
-		<a href="{{ photo.src }}" title="">
-			<img 
-			class="img-responsive preview"
-			bn-lazy-src="{{ photo.src }}"
-			alt="SparX 2015"
-			/>
-		</a>
+<div>
+	<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+	<div id="blueimp-gallery" class="blueimp-gallery">
+		<div class="slides"></div>
+		<h3 class="title"></h3>
+		<a class="prev">‹</a>
+		<a class="next">›</a>
+		<a class="close">×</a>
+		<a class="play-pause"></a>
+		<ol class="indicator"></ol>
 	</div>
+	<div class="row" id="links">
+		<div class="col-md-4" ng-repeat="photo in photos" class="photo">
+			<a href="{{ photo.src }}" title="">
+				<img 
+				class="img-responsive preview"
+				bn-lazy-src="{{ photo.src }}"
+				alt="SparX 2015"
+				/>
+			</a>
+		</div>
+	</div>
+	<!--Jquerr-->
+	<script type="text/javascript" src="/Swing/DEV/JS/initialize-gallery.js"></script>
+	<script src="/Swing/DEV/JS/blueimp-gallery.js"></script>
+	<!--Angular-->
+	<script type="text/javascript" src="/Swing/DEV/Angular/lazy-load-images.js"></script>
 </div>

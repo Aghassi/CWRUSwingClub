@@ -1,5 +1,5 @@
 // Create an application module for our demo.
-		var app = angular.module( "SparX", [] );
+		var app = angular.module("SparX");
 		// -------------------------------------------------- //
 		// -------------------------------------------------- //
  
