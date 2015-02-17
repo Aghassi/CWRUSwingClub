@@ -2,13 +2,13 @@
 Contents of the CWRU Swing Club Website
 Images are not included
 
-#Setup on Mac
--Download MAMP
--Throw contents of this repo in MAMP/htdocs
--Run MAMP server
+##Setup on Mac
+1. Download MAMP
+2. Throw contents of this repo in MAMP/htdocs
+3. Run MAMP server
 
-#DEV
+##DEV
 Use when testing website before pushing to live site
 
-#PROD
+##PROD
 All files ready for production on live site. JS and CSS should be minimized
