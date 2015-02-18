@@ -6,4 +6,5 @@ content.directive("content", function() {
     replace: true,         
     transclude: true,      
     templateUrl: "../content.html"
-  }});
+  };
+});

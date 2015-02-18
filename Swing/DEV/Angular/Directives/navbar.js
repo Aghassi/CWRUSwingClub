@@ -4,16 +4,17 @@ angular.module("SparX", [])
 
       // default class
       $scope.checkToggled = function(){
-        if($scope.toggle != "toggled"){
+        if($scope.toggle !== "toggled"){
           $scope.toggle = "toggled";
         }
         else{
           $scope.toggle = " ";
         }     
-      }
+      };
 
     })
 .directive("navbar", function() { 
   return {     
     templateUrl: "/Swing/DEV/Angular/templates/navigation-template.html"
-  }});
+  };
+});
