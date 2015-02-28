@@ -1,0 +1,31 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-csslint": "",
+    "grunt-concat-css": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-newer": "",
+    "grunt-contrib-imagemin": ""
+  },
+  "name": "CWRU_Swing_Club_Website",
+  "description": "Contents of the CWRU Swing Club Website. Images are not included",
+  "version": "1.1.0",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aghassi/CWRUSwingClub"
+  },
+  "author": "David Aghassi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aghassi/CWRUSwingClub/issues"
+  },
+  "homepage": "https://github.com/Aghassi/CWRUSwingClub"
+}

@@ -1,0 +1,48 @@
+if [[ "$OSTYPE" == "linux"* ]]; then
+	
+	echo 'installing npm if you do not have it already'
+	echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+	. ~/.bashrc
+	mkdir ~/local
+	mkdir ~/node-latest-install
+	cd ~/node-latest-install
+	curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
+	./configure --prefix=~/local
+	make install # ok, fine, this step probably takes more than 30 seconds...
+	curl https://www.npmjs.org/install.sh | sh
+
+	echo 'installing grunt'
+	sudo npm install -g grunt-cli
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+	
+	echo 'installing npm if you do not have it already'
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	
+	echo 'install npm'
+	# using Homebrew
+ 
+	# Note: `brew install npm` has problems, as of 2010-12-30.
+	# hopefully it will eventually be good and happy.
+	# As of npm@0.2.13, however, this is an option
+ 
+	PREFIX=$(brew --prefix)
+ 
+	# take ownership
+	# this will also let homebrew work without using sudo
+	# please don't do this if you don't know what it does!
+	sudo mkdir -p $PREFIX/{share/man,bin,lib/node,include/node}
+	sudo chown -R $USER $PREFIX/{share/man,bin,lib/node,include/node}
+ 
+	brew install node
+ 
+	# now install npm
+	# prefix will default to $(brew --prefix)
+	curl https://www.npmjs.org/install.sh | sh
+
+	echo 'installing grunt'
+	sudo npm install -g grunt-cli
+else
+	echo 'windows can not do this. Read the readme'
+fi
+
