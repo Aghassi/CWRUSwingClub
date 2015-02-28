@@ -13,6 +13,8 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 
 	echo 'installing grunt'
 	sudo npm install -g grunt-cli
+
+	echo "PLEASE RUN 'npm install' NOW"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
 	
@@ -42,6 +44,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	echo 'installing grunt'
 	sudo npm install -g grunt-cli
+
+	echo "PLEASE RUN 'npm install' NOW"
 else
 	echo 'windows can not do this. Read the readme'
 fi
