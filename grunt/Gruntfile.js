@@ -6,9 +6,34 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 /*global module:false*/
 module.exports = function(grunt) {
 
+	var devPath = "../Swing/DEV/";
+
+	//HTML
+	var htmlSrc = [devPath + "index.html", devPath + "Pages/**/*.html"];
+	//JS
+	var ngDirectivesSrc = devPath + "Angular/Directives/*.js";
+	var jsSrc = devPath + "JS/*.js";
+	var jsDependencies = devPath +"JS/dependencies/*js";
+	//CSS
+	var cssPagesSrc = devPath + "Pages/**/*.css";
+	var cssDependencies = devPath + "CSS/dependencies/*.css";
+	//Photos
+	var photosSrc = devPath + "Photos/";
+
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
+    html_reorderify: {
+    	reorder: {
+    		options:{
+	    		first: ['id', 'class']
+    		},
+    		files: [{
+    			src: htmlSrc,
+    			dest: '../prod/pages'
+    		}]
+    	}
+    },
     csslint: {
         options: {
             //Dissallow things like .foo, .bar, and then doing .foo.bar in css
@@ -69,23 +94,31 @@ module.exports = function(grunt) {
             "vendor-prefixes": true,
             //Zeros don't need units
             "zero-units":true
-
         },
         pages: {
-            src: ["../Swing/DEV/Pages/**/*.css"]
+            src: [cssPagesSrc]
         }
     },
     concat_css: {
         pages: {
-            src: ["../Swing/DEV/Pages/**/*.css"],
+            src: [cssPagesSrc],
             dest: "../build/css/pages.css"
+        },
+        dependencies: {
+        	src: [cssDependencies],
+        	dest: "../build/css/dependencies.css"
         }
     },
     cssmin: {
-        target: {
+        pages: {
             files: {
               '../prod/css/pages.min.css': ['../build/css/pages.css']
             }
+        },
+        dependencies: {
+        	files: {
+        		'../prod/css/dependencies.min.css': ['../build/css/dependencies.css']
+        	}
         }
     },
     jshint: {
@@ -144,26 +177,34 @@ module.exports = function(grunt) {
     		src: 'Gruntfile.js'
     	},
     	directives: {
-    		src: ['../Swing/DEV/Angular/Directives/*.js']
+    		src: [ngDirectivesSrc]
     	}
     },
     concat: {
         ngDirectives: {
-            src: ['../Swing/DEV/Angular/Directives/*.js'],
+            src: [ngDirectivesSrc],
             dest: '../build/angular/directives/directives.js'
         },
+        dependencies: {
+        	src: jsDependencies,
+        	dest: '../build/js/dependencies/dependencies.js'
+        }
     },
     uglify: {
         ngDirectives: {
             src: '<%= concat.ngDirectives.dest %>',
             dest: '../prod/angular/directives/directives.min.js'
         },
+        dependencies: {
+        	src: '<%= concat.dependencies.dest %>',
+        	dest: '../prod/js/dependencies/dependencies.min,js'
+        }
     },
     imagemin: {
         dynamic: {
             files: [{
                 expand: true,
-                cwd: '../Swing/DEV/Photos/',
+                cwd: photosSrc,
                 src: ['**/*.{png,jpg,gif}'],
                 dest: '../prod/photos/'
             }]
@@ -175,17 +216,18 @@ module.exports = function(grunt) {
     		tasks: ['jshint:gruntfile']
     	},
     	directives: {
-    		files: '<%= jshint.src.directives %>',
+    		files: '<%= jshint.directives %>',
     		tasks: ['newer:jshint:src:directives']
     	},
-        css: {
+        cssPages: {
             files: '<%= csslint.pages.src %>',
-            tasks: ['newer:csslint:pages', 'concat_css:pages', 'cssmin:pages']
+            tasks: ['lintNewerCss', 'concat_css:pages', 'cssmin:pages']
         }
     }
 });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-html-reorderify');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -197,6 +239,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'csslint', 'concat_css', 'cssmin']);
+  grunt.registerTask('default', 'watch');
+  // Build the project for production
+  grunt.registerTask('build', ['html_reorderify', 'jshint', 'concat', 'uglify', 'csslint', 'concat_css', 'cssmin', 'imagemin']);
+  // Lint JS
+  grunt.registerTask('lintjs', 'jshint');
+  grunt.registerTask('lintNewJs', 'newer:jshint');
+  // Lint CSS
+  grunt.registerTask('lintcss', 'csslint');
+  grunt.registerTask('lintNewerCss', 'newer:csslint');
+  //Minify JS
+  grunt.registerTask('minjs', ['concat', 'uglify']);
+  //Minify CSS
+  grunt.registerTask('mincss', ['concat_css', 'cssmin']);
+  //Compress Images
+  grunt.registerTask('minimages', 'imagemin');
 
 };
