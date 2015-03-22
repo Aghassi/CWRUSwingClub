@@ -2,7 +2,6 @@
 *.jpg
 
 /build
-/dev
 /prod
 /node_modules
 /bower_components

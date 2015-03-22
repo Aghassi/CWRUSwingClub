@@ -7,24 +7,25 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 module.exports = function(grunt) {
 
 	var devPath = "/Swing/DEV/";
+    var dev = "dev/"
     var build = "build/";
-    var prod = "prod";
+    var prod = "prod/";
 
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
      "bower_components/jquery/dist/jquery.min.js",
       "bower_components/bootstrap-material-design/dist/js/material.min.js",
-      "bower_components/photoswipe/photoswipe.min.js", 
-      "bower_components/photoswipe/photoswipe-ui-default.min.js"];
+      "bower_components/photoswipe/dist/photoswipe.min.js", 
+      "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
     var bowerDevJS = ["bower_components/angular/angular.js", 
         "bower_components/jquery/dist/jquery.js",
       "bower_components/bootstrap-material-design/dist/js/material.js",
-      "bower_components/photoswipe/photoswipe.js", 
-      "bower_components/photoswipe/photoswipe-ui-default.js"];
+      "bower_components/photoswipe/dist/photoswipe.js", 
+      "bower_components/photoswipe/dist/photoswipe-ui-default.js"];
     var bowerProdCSS = ["bower_components/bootstrap-material-design/dist/css/material.min.css",
-    "bower_components/photoswipe/photoswipe.min.css",];
+    "bower_components/photoswipe/dist/photoswipe.min.css",];
     var bowerDevCSS = ["bower_components/bootstrap-material-design/dist/css/material.css",
-    "bower_components/photoswipe/photoswipe.css"];
+    "bower_components/photoswipe/dist/photoswipe.css"];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/*"];
 
 	//HTML
@@ -39,18 +40,6 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    // Task configuration.
-    html_reorderify: {
-    	reorder: {
-    		options:{
-	    		first: ['id', 'class']
-    		},
-    		files: [{
-    			src: htmlSrc,
-    			dest: build + "html"
-    		}]
-    	}
-    },
     csslint: {
         options: {
             //Dissallow things like .foo, .bar, and then doing .foo.bar in css
@@ -125,7 +114,7 @@ module.exports = function(grunt) {
     cssmin: {
         pages: {
             files: {
-              prod + '/css/pages.min.css': [build + 'css/pages.css']
+              'prod/css/pages.min.css': ['build/css/pages.css']
             }
         },
     },
@@ -211,20 +200,44 @@ module.exports = function(grunt) {
             }]
         }
     },
+    jade: {
+      compile: {
+        options: {
+          data: {},
+          pretty: true
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: [ dev + 'pages/*.jade'],
+          dest: build + 'html',
+          ext: '.html'
+        }]
+      }
+    },
     copy: {
         dependencies: {
             files: [
                 //Dev
-                {expand: true, flatten: true, src: bowerDevJS, dest: 'dev/js', filter: 'isFile'},
-                {expand: true, flatten: true, src: bowerDevCSS, dest: 'dev/css', filter: 'isFile'},
-                {expand: true, flatten: true, src: fonts, dest: 'dev/fonts', filter: 'isFile'},
+                {expand: true, flatten: true, src: bowerDevJS, dest: dev + 'js', filter: 'isFile'},
+                {expand: true, flatten: true, src: bowerDevCSS, dest: dev + 'css', filter: 'isFile'},
+                {expand: true, flatten: true, src: fonts, dest: dev + 'fonts', filter: 'isFile'},
 
                 //Prod
-                {expand: true, flatten: true, src: bowerProdJS, dest: 'prod/js', filter: 'isFile'},
-                {expand: true, flatten: true, src: bowerProdCSS, dest: 'prod/css', filter: 'isFile'},
-                {expand: true, flatten: true, src: fonts, dest: 'prod/fonts', filter: 'isFile'},
-                {expand: true, src: build + "html", dest: 'prod/'},
+                {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
+                {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
+                {expand: true, flatten: true, src: fonts, dest: prod + 'fonts', filter: 'isFile'},
             ]
+        },
+        build: {
+            files: [
+                {expand: true, flatten: true, src: build + "html", dest: prod, filter: 'isFile'},
+            ]
+        }
+    },
+    clean: {
+        build: {
+            src: build
         }
     },
     watch: {
@@ -244,7 +257,7 @@ module.exports = function(grunt) {
 });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-html-reorderify');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -253,16 +266,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
   grunt.registerTask('default', 'watch');
   // Build the project for production
-  grunt.registerTask('build', ['html_reorderify', 'copy',
+  grunt.registerTask('dist', ['html_reorderify', 'copy',
                                 'jshint', 'concat', 'uglify',
                                 'csslint', 'concat_css',
-                                'cssmin', 'imagemin']);
+                                'cssmin', 'imagemin', 'clean']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
@@ -273,7 +287,4 @@ module.exports = function(grunt) {
   grunt.registerTask('minjs', ['concat', 'uglify']);
   //Minify CSS
   grunt.registerTask('mincss', ['concat_css', 'cssmin']);
-  //Compress Images
-  grunt.registerTask('minimages', 'imagemin');
-
 };

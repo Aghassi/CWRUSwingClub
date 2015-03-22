@@ -5,15 +5,16 @@
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-concat-css": "",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-csslint": "",
     "grunt-contrib-cssmin": "",
     "grunt-contrib-imagemin": "",
+    "grunt-contrib-jade": "^0.14.1",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-html-reorderify": "",
     "grunt-newer": ""
   },
   "name": "CWRU_Swing_Club_Website",
