@@ -14,7 +14,10 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 	echo 'installing grunt'
 	sudo npm install -g grunt-cli
 
-	echo "PLEASE RUN 'npm install' NOW"
+	echo 'install bower'
+	sudo npm install -g bower
+	
+	echo "PLEASE RUN 'npm install' AND 'bower install' NOW IN THE PROJECT DIRECTORY"	echo "PLEASE RUN 'npm install' NOW"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
 	
@@ -47,8 +50,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	echo 'installing grunt'
 	sudo npm install -g grunt-cli
 
-	echo "PLEASE RUN 'npm install' NOW"
+	echo 'install bower'
+	sudo npm install -g bower
+
+	echo "PLEASE RUN 'npm install' AND 'bower install' NOW IN THE PROJECT DIRECTORY"
 else
-	echo 'windows can not do this. Read the readme'
+	echo 'Windows can not do this. Read the README'
 fi
 
