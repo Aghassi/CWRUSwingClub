@@ -7,7 +7,7 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 module.exports = function(grunt) {
 
 	var devPath = "/Swing/DEV/";
-    var dev = "dev/"
+    var dev = "dev/";
     var build = "build/";
     var prod = "prod/";
 
@@ -231,7 +231,7 @@ module.exports = function(grunt) {
         },
         build: {
             files: [
-                {expand: true, flatten: true, src: build + "html", dest: prod, filter: 'isFile'},
+                {expand: true, flatten: true, src: build + 'html/*', dest: prod, filter: 'isFile'},
             ]
         }
     },
@@ -273,10 +273,10 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', 'watch');
   // Build the project for production
-  grunt.registerTask('dist', ['html_reorderify', 'copy',
-                                'jshint', 'concat', 'uglify',
+  grunt.registerTask('prod', ['jshint', 'concat', 'uglify',
                                 'csslint', 'concat_css',
-                                'cssmin', 'imagemin', 'clean']);
+                                'cssmin', 'imagemin', 'jade',
+                                'copy', 'clean']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
