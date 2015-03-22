@@ -6,7 +6,7 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 /*global module:false*/
 module.exports = function(grunt) {
 
-	var devPath = "../Swing/DEV/";
+	var devPath = "/Swing/DEV/";
 
 	//HTML
 	var htmlSrc = [devPath + "index.html", devPath + "Pages/**/*.html"];

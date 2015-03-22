@@ -1,0 +1,18 @@
+{
+  "name": "CWRUSwingClub",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Aghassi/CWRUSwingClub",
+  "description": "The website for the CWRU Swing Club",
+  "authors": [
+    "David Aghassi"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
