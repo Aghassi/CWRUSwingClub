@@ -40,7 +40,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
  
 	# now install npm
 	# prefix will default to $(brew --prefix)
-	curl https://www.npmjs.org/install.sh | sh
+	curl -0 -L  https://www.npmjs.org/install.sh
+	sudo sh install.sh
+	rm install.sh
 
 	echo 'installing grunt'
 	sudo npm install -g grunt-cli
