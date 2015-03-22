@@ -7,6 +7,9 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 module.exports = function(grunt) {
 
 	var devPath = "/Swing/DEV/";
+    var build = "build/";
+    var prod = "prod";
+
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
      "bower_components/jquery/dist/jquery.min.js",
@@ -26,7 +29,6 @@ module.exports = function(grunt) {
 
 	//HTML
 	var htmlSrc = [devPath + "index.html", devPath + "Pages/**/*.html"];
-    var htmlBuild = "build/html";
 	//JS
 	var ngDirectivesSrc = devPath + "Angular/Directives/*.js";
 	var jsSrc = devPath + "JS/*.js";
@@ -45,7 +47,7 @@ module.exports = function(grunt) {
     		},
     		files: [{
     			src: htmlSrc,
-    			dest: htmlBuild
+    			dest: build + "html"
     		}]
     	}
     },
@@ -117,13 +119,13 @@ module.exports = function(grunt) {
     concat_css: {
         pages: {
             src: [cssPagesSrc],
-            dest: "../build/css/pages.css"
+            dest: build + "css/pages.css"
         }
     },
     cssmin: {
         pages: {
             files: {
-              '../prod/css/pages.min.css': ['../build/css/pages.css']
+              prod + '/css/pages.min.css': [build + 'css/pages.css']
             }
         },
     },
@@ -176,7 +178,8 @@ module.exports = function(grunt) {
     		},
     		ignores: [
     			'**/*.html',
-                'node_modules/*'
+                'node_modules/*',
+                'bower_components'
     		]
     	},
     	gruntfile: {
@@ -189,13 +192,13 @@ module.exports = function(grunt) {
     concat: {
         ngDirectives: {
             src: [ngDirectivesSrc],
-            dest: '../build/angular/directives/directives.js'
+            dest: build + 'angular/directives/directives.js'
         }
     },
     uglify: {
         ngDirectives: {
             src: '<%= concat.ngDirectives.dest %>',
-            dest: '../prod/angular/directives/directives.min.js'
+            dest: prod + 'angular/directives/directives.min.js'
         }
     },
     imagemin: {
@@ -204,7 +207,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: photosSrc,
                 src: ['**/*.{png,jpg,gif}'],
-                dest: '../prod/photos/'
+                dest: prod + 'photos/'
             }]
         }
     },
@@ -220,7 +223,7 @@ module.exports = function(grunt) {
                 {expand: true, flatten: true, src: bowerProdJS, dest: 'prod/js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: 'prod/css', filter: 'isFile'},
                 {expand: true, flatten: true, src: fonts, dest: 'prod/fonts', filter: 'isFile'},
-                {expand: true, src: htmlBuild, dest: 'prod/'},
+                {expand: true, src: build + "html", dest: 'prod/'},
             ]
         }
     },
