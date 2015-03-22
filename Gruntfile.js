@@ -7,16 +7,31 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 module.exports = function(grunt) {
 
 	var devPath = "/Swing/DEV/";
+    //Dependencies
+    var bowerProdJS = ["bower_components/angular/angular.min.js",
+     "bower_components/jquery/dist/jquery.min.js",
+      "bower_components/bootstrap-material-design/dist/js/material.min.js",
+      "bower_components/photoswipe/photoswipe.min.js", 
+      "bower_components/photoswipe/photoswipe-ui-default.min.js"];
+    var bowerDevJS = ["bower_components/angular/angular.js", 
+        "bower_components/jquery/dist/jquery.js",
+      "bower_components/bootstrap-material-design/dist/js/material.js",
+      "bower_components/photoswipe/photoswipe.js", 
+      "bower_components/photoswipe/photoswipe-ui-default.js"];
+    var bowerProdCSS = ["bower_components/bootstrap-material-design/dist/css/material.min.css",
+    "bower_components/photoswipe/photoswipe.min.css",];
+    var bowerDevCSS = ["bower_components/bootstrap-material-design/dist/css/material.css",
+    "bower_components/photoswipe/photoswipe.css"];
+    var fonts = ["bower_components/bootstrap-material-design/dist/fonts/*"];
 
 	//HTML
 	var htmlSrc = [devPath + "index.html", devPath + "Pages/**/*.html"];
+    var htmlBuild = "build/html";
 	//JS
 	var ngDirectivesSrc = devPath + "Angular/Directives/*.js";
 	var jsSrc = devPath + "JS/*.js";
-	var jsDependencies = devPath +"JS/dependencies/*js";
 	//CSS
 	var cssPagesSrc = devPath + "Pages/**/*.css";
-	var cssDependencies = devPath + "CSS/dependencies/*.css";
 	//Photos
 	var photosSrc = devPath + "Photos/";
 
@@ -30,7 +45,7 @@ module.exports = function(grunt) {
     		},
     		files: [{
     			src: htmlSrc,
-    			dest: '../prod/pages'
+    			dest: htmlBuild
     		}]
     	}
     },
@@ -103,10 +118,6 @@ module.exports = function(grunt) {
         pages: {
             src: [cssPagesSrc],
             dest: "../build/css/pages.css"
-        },
-        dependencies: {
-        	src: [cssDependencies],
-        	dest: "../build/css/dependencies.css"
         }
     },
     cssmin: {
@@ -115,11 +126,6 @@ module.exports = function(grunt) {
               '../prod/css/pages.min.css': ['../build/css/pages.css']
             }
         },
-        dependencies: {
-        	files: {
-        		'../prod/css/dependencies.min.css': ['../build/css/dependencies.css']
-        	}
-        }
     },
     jshint: {
     	options: {
@@ -184,20 +190,12 @@ module.exports = function(grunt) {
         ngDirectives: {
             src: [ngDirectivesSrc],
             dest: '../build/angular/directives/directives.js'
-        },
-        dependencies: {
-        	src: jsDependencies,
-        	dest: '../build/js/dependencies/dependencies.js'
         }
     },
     uglify: {
         ngDirectives: {
             src: '<%= concat.ngDirectives.dest %>',
             dest: '../prod/angular/directives/directives.min.js'
-        },
-        dependencies: {
-        	src: '<%= concat.dependencies.dest %>',
-        	dest: '../prod/js/dependencies/dependencies.min,js'
         }
     },
     imagemin: {
@@ -208,6 +206,22 @@ module.exports = function(grunt) {
                 src: ['**/*.{png,jpg,gif}'],
                 dest: '../prod/photos/'
             }]
+        }
+    },
+    copy: {
+        dependencies: {
+            files: [
+                //Dev
+                {expand: true, flatten: true, src: bowerDevJS, dest: 'dev/js', filter: 'isFile'},
+                {expand: true, flatten: true, src: bowerDevCSS, dest: 'dev/css', filter: 'isFile'},
+                {expand: true, flatten: true, src: fonts, dest: 'dev/fonts', filter: 'isFile'},
+
+                //Prod
+                {expand: true, flatten: true, src: bowerProdJS, dest: 'prod/js', filter: 'isFile'},
+                {expand: true, flatten: true, src: bowerProdCSS, dest: 'prod/css', filter: 'isFile'},
+                {expand: true, flatten: true, src: fonts, dest: 'prod/fonts', filter: 'isFile'},
+                {expand: true, src: htmlBuild, dest: 'prod/'},
+            ]
         }
     },
     watch: {
@@ -235,13 +249,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
   grunt.registerTask('default', 'watch');
   // Build the project for production
-  grunt.registerTask('build', ['html_reorderify', 'jshint', 'concat', 'uglify', 'csslint', 'concat_css', 'cssmin', 'imagemin']);
+  grunt.registerTask('build', ['html_reorderify', 'copy',
+                                'jshint', 'concat', 'uglify',
+                                'csslint', 'concat_css',
+                                'cssmin', 'imagemin']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
