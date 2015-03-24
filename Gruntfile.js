@@ -215,6 +215,26 @@ module.exports = function(grunt) {
         }]
       }
     },
+    htmlbuild: {
+        dist: {
+            src: build + 'html/*.html',
+            dest: prod,
+            options: {
+                beautify: true,
+                scripts: {
+                    bundle: [
+                        prod + 'js/*.js'
+                    ]
+                },
+                styles: {
+                    bundle: [
+                        prod + 'css/*.css'
+                    ]
+                }
+
+            }
+        }
+    },
     copy: {
         dependencies: {
             files: [
@@ -227,11 +247,6 @@ module.exports = function(grunt) {
                 {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
                 {expand: true, flatten: true, src: fonts, dest: prod + 'fonts', filter: 'isFile'},
-            ]
-        },
-        build: {
-            files: [
-                {expand: true, flatten: true, src: build + 'html/*', dest: prod, filter: 'isFile'},
             ]
         }
     },
@@ -266,6 +281,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
@@ -276,7 +292,7 @@ module.exports = function(grunt) {
   grunt.registerTask('prod', ['jshint', 'concat', 'uglify',
                                 'csslint', 'concat_css',
                                 'cssmin', 'imagemin', 'jade',
-                                'copy', 'clean']);
+                                'copy', 'htmlbuild', 'clean']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');

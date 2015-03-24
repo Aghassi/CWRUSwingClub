@@ -15,7 +15,8 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-newer": ""
+    "grunt-newer": "",
+    "grunt-html-build": "~0.4.3"
   },
   "name": "CWRU_Swing_Club_Website",
   "description": "Contents of the CWRU Swing Club Website. Images are not included",
