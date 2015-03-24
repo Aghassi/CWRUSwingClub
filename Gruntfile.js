@@ -292,7 +292,7 @@ module.exports = function(grunt) {
   grunt.registerTask('prod', ['jshint', 'concat', 'uglify',
                                 'csslint', 'concat_css',
                                 'cssmin', 'imagemin', 'jade',
-                                'copy', 'htmlbuild', 'clean']);
+                                'html']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
@@ -303,4 +303,6 @@ module.exports = function(grunt) {
   grunt.registerTask('minjs', ['concat', 'uglify']);
   //Minify CSS
   grunt.registerTask('mincss', ['concat_css', 'cssmin']);
+  //Build HTML
+  grunt.registerTask('html', ['copy', 'jade', 'htmlbuild']);
 };
