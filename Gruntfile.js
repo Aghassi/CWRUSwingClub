@@ -10,12 +10,16 @@ module.exports = function(grunt) {
     var dev = "dev/";
     var build = "build/";
     var prod = "prod/";
+    var images = dev + "images/";
     var jsLib = "js/";
 
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
-     "bower_components/jquery/dist/jquery.min.js",
+      "bower_components/angular/angular.min.js.map",
+      "bower_components/jquery/dist/jquery.min.js",
+      "bower_components/jquery/dist/jquery.min.map",
       "bower_components/bootstrap-material-design/dist/js/material.min.js",
+      "bower_components/bootstrap-material-design/dist/js/material.min.js.map",
       "bower_components/photoswipe/dist/photoswipe.min.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
     var bowerDevJS = ["bower_components/angular/angular.js", 
@@ -24,7 +28,8 @@ module.exports = function(grunt) {
       "bower_components/photoswipe/dist/photoswipe.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.js"];
     var bowerProdCSS = ["bower_components/bootstrap-material-design/dist/css/material.min.css",
-    "bower_components/photoswipe/dist/photoswipe.min.css",];
+      "bower_components/bootstrap-material-design/dist/css/material.min.css.map",
+      "bower_components/photoswipe/dist/photoswipe.min.css",];
     var bowerDevCSS = ["bower_components/bootstrap-material-design/dist/css/material.css",
     "bower_components/photoswipe/dist/photoswipe.css"];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/*"];
@@ -184,11 +189,11 @@ module.exports = function(grunt) {
     concat: {
         directives: {
             src: directives,
-            dest: build + 'js/directives'
+            dest: build + jsLib + '/directives/directives.concat.js'
         },
         controllers: {
             src: controllers,
-            dest: build + 'js/controllers'
+            dest: build + jsLib + '/controllers/controllers.concat.js'
         }
     },
     uglify: {
@@ -208,12 +213,12 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: photosSrc,
                 src: ['**/*.{png,jpg,gif}'],
-                dest: prod + 'photos/'
+                dest: prod + 'images/'
             }]
         }
     },
     jade: {
-      compile: {
+      pages: {
         options: {
           data: {},
           pretty: true
@@ -221,16 +226,50 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           flatten: true,
-          src: [ dev + 'pages/*.jade'],
+          src: dev + 'pages/*.jade',
           dest: build + 'html',
           ext: '.html'
+        }]
+      },
+      directives: {
+        options: {
+            data: {},
+            pretty: true
+        },
+        files: [{
+            expand: true,
+            cwd: dev + jsLib,
+            flatten: true,
+            src: 'directives/**/*.jade',
+            dest: build + jsLib + 'directives',
+            ext: '.html'
         }]
       }
     },
     htmlbuild: {
-        dist: {
-            src: build + 'html/*.html',
+        pages: {
+            src: [build + 'html/*.html'],
             dest: prod,
+            options: {
+                beautify: true,
+                scripts: {
+                    bundle: [
+                        prod + jsLib + '*.js',
+                        prod + jsLib+ 'directives/*.js',
+                        prod + jsLib + 'controllers/*.js'
+                    ]
+                },
+                styles: {
+                    bundle: [
+                        prod + 'css/*.css'
+                    ]
+                }
+
+            }
+        },
+        directives: {
+            src: build + jsLib + 'directives/*.html',
+            dest: prod + jsLib + 'directives/',
             options: {
                 beautify: true,
                 scripts: {
@@ -261,12 +300,16 @@ module.exports = function(grunt) {
                 {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
                 {expand: true, flatten: true, src: fonts, dest: prod + 'fonts', filter: 'isFile'},
+                {expand: true, flatten: true, src: images + '*', dest: prod + 'images', filter: 'isFile'}
             ]
         }
     },
     clean: {
         build: {
             src: build
+        },
+        prod: {
+            src: prod
         }
     },
     watch: {

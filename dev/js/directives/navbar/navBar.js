@@ -4,7 +4,7 @@ angular.module("swingclub", [])
     restrict: "E",         
     replace: true,         
     transclude: true,      
-    templateUrl: "navbar.html",    
+    templateUrl: "js/directives/navbar.html",    
     compile: function(element, attrs) {  
       var li, liElements, links, index, length;
 
