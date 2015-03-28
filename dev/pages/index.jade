@@ -2,18 +2,19 @@ doctype html
 html(ng-app="swingclub")
 	include ../includes/head.jade
 	body
-		navbar
+		include ../js/directives/navbar/navbar.jade
 
-		.main
+		main
 			.container
-				p Case Western Reserve University’s premeire Swing Dancing Club. Join us every week for lessons on East Coast, Lindy Hop, Charleson, and much more! In addition, we travel to events around the mid-west to learn and decompress. We are a tight knit group of dancers looking for the right beat. Oh, and did we mention it is free to CWRU, CIA, and CIM students? 
-				.parralax-container
-					.parralax
-						img.img-responsive(src="images/swingout.png")
-				p Where friends are found, and memories made.
-				.parralax-container
-					.parralax
-						img.img-responsive(src="images/laughing.png")
-				p And music with a beat that will make you want to move every song.
+				.row
+					p Case Western Reserve University’s premeire Swing Dancing Club. Join us every week for lessons on East Coast, Lindy Hop, Charleson, and much more! In addition, we travel to events around the mid-west to learn and decompress. We are a tight knit group of dancers looking for the right beat. Oh, and did we mention it is free to CWRU, CIA, and CIM students? 
+					//- .parralax-container
+					//- 	.parralax
+					//- 		img.img-responsive(src="images/swingout.png")
+					//- p Where friends are found, and memories made.
+					//- .parralax-container
+					//- 	.parralax
+					//- 		img.img-responsive(src="images/laughing.png")
+					p And music with a beat that will make you want to move every song.
 		//Load at the bottom for faster page times
 		include ../includes/jsFrameworks.jade

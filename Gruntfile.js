@@ -16,23 +16,21 @@ module.exports = function(grunt) {
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
       "bower_components/angular/angular.min.js.map",
-      "bower_components/jquery/dist/jquery.min.js",
-      "bower_components/jquery/dist/jquery.min.map",
-      "bower_components/bootstrap-material-design/dist/js/material.min.js",
-      "bower_components/bootstrap-material-design/dist/js/material.min.js.map",
       "bower_components/photoswipe/dist/photoswipe.min.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
     var bowerDevJS = ["bower_components/angular/angular.js", 
-        "bower_components/jquery/dist/jquery.js",
+      "bower_components/jquery/dist/jquery.js",
       "bower_components/bootstrap-material-design/dist/js/material.js",
       "bower_components/photoswipe/dist/photoswipe.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.js"];
-    var bowerProdCSS = ["bower_components/bootstrap-material-design/dist/css/material.min.css",
-      "bower_components/bootstrap-material-design/dist/css/material.min.css.map",
-      "bower_components/photoswipe/dist/photoswipe.min.css",];
+    var bowerProdCSS = ["bower_components/photoswipe/dist/photoswipe.min.css"];
     var bowerDevCSS = ["bower_components/bootstrap-material-design/dist/css/material.css",
     "bower_components/photoswipe/dist/photoswipe.css"];
-    var fonts = ["bower_components/bootstrap-material-design/dist/fonts/*"];
+    var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*", 
+    "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
+    "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
+    "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftMedium.*",
+    "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftRegular.*",]; 
 
 	//JS
 	var js = [dev + jsLib + "scripts/**/*.js"];
@@ -189,11 +187,11 @@ module.exports = function(grunt) {
     concat: {
         directives: {
             src: directives,
-            dest: build + jsLib + '/directives/directives.concat.js'
+            dest: build + jsLib + 'directives/directives.concat.js'
         },
         controllers: {
             src: controllers,
-            dest: build + jsLib + '/controllers/controllers.concat.js'
+            dest: build + jsLib + 'controllers/controllers.concat.js'
         }
     },
     uglify: {
@@ -253,15 +251,15 @@ module.exports = function(grunt) {
             options: {
                 beautify: true,
                 scripts: {
-                    bundle: [
+                    bundle: [      
                         prod + jsLib + '*.js',
                         prod + jsLib+ 'directives/*.js',
-                        prod + jsLib + 'controllers/*.js'
+                        prod + jsLib + 'controllers/*.js',
                     ]
                 },
                 styles: {
                     bundle: [
-                        prod + 'css/*.css'
+                        prod + 'css/*.css',
                     ]
                 }
 
@@ -276,12 +274,12 @@ module.exports = function(grunt) {
                     bundle: [
                         prod + jsLib + '*.js',
                         prod + jsLib+ 'directives/*.js',
-                        prod + jsLib + 'controllers/*.js'
+                        prod + jsLib + 'controllers/*.js',
                     ]
                 },
                 styles: {
                     bundle: [
-                        prod + 'css/*.css'
+                        prod + 'css/*.css',
                     ]
                 }
 
@@ -289,17 +287,19 @@ module.exports = function(grunt) {
         }
     },
     copy: {
-        dependencies: {
+        dev: {
             files: [
-                //Dev
+                 //Dev
                 {expand: true, flatten: true, src: bowerDevJS, dest: dev + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerDevCSS, dest: dev + 'css', filter: 'isFile'},
                 {expand: true, flatten: true, src: fonts, dest: dev + 'fonts', filter: 'isFile'},
-
+            ]
+        },
+        prod: {
+            files: [
                 //Prod
                 {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
-                {expand: true, flatten: true, src: fonts, dest: prod + 'fonts', filter: 'isFile'},
                 {expand: true, flatten: true, src: images + '*', dest: prod + 'images', filter: 'isFile'}
             ]
         }
@@ -350,10 +350,10 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', 'watch');
   // Build the project for production
-  grunt.registerTask('prod', ['jshint', 'concat', 'uglify',
+  grunt.registerTask('prod', [  'clean',
+                                'jshint', 'concat', 'uglify',
                                 'csslint', 'concat_css',
-                                'cssmin', 'imagemin', 'jade',
-                                'html']);
+                                'cssmin', 'imagemin', 'html']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
@@ -365,5 +365,5 @@ module.exports = function(grunt) {
   //Minify CSS
   grunt.registerTask('mincss', ['concat_css', 'cssmin']);
   //Build HTML
-  grunt.registerTask('html', ['copy', 'jade', 'htmlbuild']);
+  grunt.registerTask('html', ['copy:prod', 'jade', 'htmlbuild']);
 };

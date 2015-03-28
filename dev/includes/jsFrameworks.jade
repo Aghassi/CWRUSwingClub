@@ -5,5 +5,15 @@ script(src="/js/material.js")
 script(src="/js/directives/navbar/navbar.js")
 // /build
 
+script(src="//code.jquery.com/jquery-1.10.2.min.js")
+script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+script(src="https://cdn.rawgit.com/Dogfalo/materialize/master/dist/js/materialize.min.js")
 // build:script bundle
 // /build
+
+script(type='text/javascript').
+	$(document).ready(function() {
+		$.material.init();
+	});
+	$('.button-collapse').sideNav();
+	$('.collapsible').collapsible();
