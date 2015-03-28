@@ -1,31 +1,30 @@
 header
-	nav
-		a(href="#" data-activates="slide-out").button-collapse
-			i.mdi-navigation-menu
-		ul#slide-out.side-nav.fixed
-			li.logo
-				img#logo-container.brand-logo.img-responsive(src="images/logo.svg" href="http://www.cwru.edu/swingclub")
-			li.bold.tab
-				// Can change the wave color to match the logo blue
-				a.waves-effect.waves-teal(href="about.html") About
-			li.bold
-				// Can change the wave color to match the logo blue
-				ul.collapsible.collapsible-accordion
-					li.bold
-						a.collapsible-header.waves-effect.waves-teal Events
-							i.mid-navigation-arrow-drop-down
-							.collapisble-body
-								ul
-									li
-										a(href="overview.html") Overview
-									li
-										a(href="sparx.html") SparX
-					li.bold
-						a.collapsible-header.waves-effect.waves-teal Photos
-							i.mid-navigation-arrow-drop-down
-							.collapisble-body(style="display: block")
-								ul
-									li
-										a(href="gallery.html") Gallery
-									li
-										a(href="sparx-photos.html") SparX
+    nav
+        a(href="#" data-activates="slide-out").button-collapse
+            i.mdi-navigation-menu
+        ul#slide-out.side-nav.fixed
+            li.logo
+                img#logo-container.brand-logo.img-responsive(src="images/logo.svg" href="http://www.cwru.edu/swingclub")
+            li.bold.tab
+                // Can change the wave color to match the logo blue
+                a.waves-effect.waves-teal(href="about.html") About
+            ul.collapsible.collapsible-accordion
+                li.bold
+                    a.collapsible-header.waves-effect.waves-teal Events
+                 
+                    div.collapsible-body
+                        ul
+                            li
+                                a(href="overview.html") Overview
+                            li
+                               a(href="sparx.html") SparX
+            ul.collapsible.collapsible-accordion
+                li.bold
+                    a.collapsible-header.waves-effect.waves-teal Photos
+                 
+                    div.collapsible-body
+                        ul
+                            li
+                                a(href="gallery.html") Gallery
+                            li
+                                a(href="sparx.html") SparX
