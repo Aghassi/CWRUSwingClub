@@ -1,3 +1,11 @@
+.logo {
+    padding-bottom: 70% !important;
+}
+
+.logo-container {
+    height: 205px !important;
+}
+
 header, main, footer {
     padding-left: 240px;
 }
