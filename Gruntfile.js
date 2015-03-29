@@ -330,6 +330,10 @@ module.exports = function(grunt) {
         cssPages: {
             files: '<%= csslint.pages.src %>',
             tasks: ['lintNewerCss', 'concat_css:pages', 'cssmin:pages']
+        },
+        jade: {
+            files: dev + 'pages/*.jade',
+            tasks: ['html']
         }
     }
 });
@@ -353,9 +357,9 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'watch');
   // Build the project for production
   grunt.registerTask('prod', [  'clean',
-                                'jshint', 'concat', 'uglify',
-                                'csslint', 'concat_css',
-                                'cssmin', 'imagemin', 'html']);
+                                'jshint', 'minjs',
+                                'csslint', 'mincss',
+                                'imagemin', 'html']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');

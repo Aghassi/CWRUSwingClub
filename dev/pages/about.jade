@@ -1,0 +1,26 @@
+doctype html
+html(ng-app="swingclub")
+    include ../includes/head.jade
+    body
+        include ../js/directives/navbar/navbar.jade
+
+        main
+            .container
+                .container.card-panel.white
+                    .card-content
+                        h2 The Dance
+
+                        p Swing dancing is most commonly known as a group of dances that developed with the swing style of jazz music in the 1920s-1950s. The most popular of these dances is the Lindy Hop, a partner dance that originated in Harlem in 1927, and the type of swing that CWRU Swing most commonly dances and teaches. Other types of swing dancing include Charleston, East Coast, Balboa, Shag, and Blues. Because of the swing revival in the 1990s, there are dance scenes in many countries around the world.
+
+                        p Check out these videos to see what swing looks like:
+                            br
+                            a(class="dance-links" href="https://www.youtube.com/watch?v=qrcZqnICYbs" target="_blank") Hellzapoppin
+                            br
+                            a(class="dance-links" href="https://www.youtube.com/watch?v=pU9o0iDjPL4&amp;feature=youtu.be" target="_blank") THAT performance from Maytime Mess Around
+                            br
+                            a(class="dance-links" href="https://www.youtube.com/watch?v=ofdFj_giGWU" target="_blank") Max &amp; Pamela - Harlem 2014
+
+        //Load at the bottom for faster page times
+        include ../includes/jsFrameworks.jade
+    //Footer
+    include ../includes/footer.index.jade

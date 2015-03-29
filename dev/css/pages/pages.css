@@ -1,11 +1,21 @@
+.bold {
+    font-weight: bold;
+}
+
+/**
+* Navbar Logo
+**/
 .logo {
-    padding-bottom: 70% !important;
+    padding-bottom: 75% !important;
 }
 
 .logo-container {
     height: 205px !important;
 }
 
+/**
+* Main page formatting
+**/
 header, main, footer {
     padding-left: 240px;
 }
