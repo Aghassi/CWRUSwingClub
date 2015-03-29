@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       "bower_components/angular/angular.min.js.map",
       "bower_components/photoswipe/dist/photoswipe.min.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
-    var bowerDevJS = ["bower_components/angular/angular.js", 
+    var bowerDevJS = ["bower_components/angular/angular.js",
       "bower_components/jquery/dist/jquery.js",
       "bower_components/bootstrap-material-design/dist/js/material.js",
       "bower_components/photoswipe/dist/photoswipe.js", 
@@ -37,9 +37,7 @@ module.exports = function(grunt) {
     var controllers = dev + jsLib + "controllers/**/*.js";
     var directives = dev + jsLib + "directives/**/*.js";
 	//CSS
-	var cssPagesSrc = devPath + "Pages/**/*.css";
-	//Photos
-	var photosSrc = devPath + "Photos/";
+	var cssPagesSrc = dev + "css/pages/*.css";
 
   // Project configuration.
   grunt.initConfig({
@@ -202,14 +200,17 @@ module.exports = function(grunt) {
         controllers: {
             src: '<%= concat.controllers.dest %>',
             dest: prod + jsLib + 'controllers/controllers.min.js'
+        },
+        javascript: {
+            src: js,
+            dest: prod + jsLib + "scripts/scripts.min.js"
         }
-
     },
     imagemin: {
         dynamic: {
             files: [{
                 expand: true,
-                cwd: photosSrc,
+                cwd: images,
                 src: ['**/*.{png,jpg,gif}'],
                 dest: prod + 'images/'
             }]
@@ -255,6 +256,7 @@ module.exports = function(grunt) {
                         prod + jsLib + '*.js',
                         prod + jsLib+ 'directives/*.js',
                         prod + jsLib + 'controllers/*.js',
+                        prod + jsLib + 'scripts/*.js'
                     ]
                 },
                 styles: {

@@ -1,30 +1,29 @@
 header
-    nav
+    nav.blue.darken-4
         a(href="#" data-activates="slide-out").button-collapse
             i.mdi-navigation-menu
         ul#slide-out.side-nav.fixed
             li.logo
                 img#logo-container.brand-logo.img-responsive(src="images/logo.svg" href="http://www.cwru.edu/swingclub")
-            li.bold.tab
+            li.bold
                 // Can change the wave color to match the logo blue
-                a.waves-effect.waves-teal(href="about.html") About
+                a.waves-effect.waves-red(href="#/about.html") About
             ul.collapsible.collapsible-accordion
                 li.bold
-                    a.collapsible-header.waves-effect.waves-teal Events
+                    a.collapsible-header.waves-effect.waves-red Events
+                    div.collapsible-body
+                        ul
+                            li
+                                a(href="#/overview.html") Overview
+                            li
+                               a(href="#/sparx.html") SparX
+            ul.collapsible.collapsible-accordion
+                li.bold
+                    a.collapsible-header.waves-effect.waves-red Media
                  
                     div.collapsible-body
                         ul
                             li
-                                a(href="overview.html") Overview
+                                a(href="#/gallery.html") Gallery
                             li
-                               a(href="sparx.html") SparX
-            ul.collapsible.collapsible-accordion
-                li.bold
-                    a.collapsible-header.waves-effect.waves-teal Photos
-                 
-                    div.collapsible-body
-                        ul
-                            li
-                                a(href="gallery.html") Gallery
-                            li
-                                a(href="sparx.html") SparX
+                                a(href="#/sparx-gallery.html") SparX
