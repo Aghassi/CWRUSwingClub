@@ -320,12 +320,12 @@ module.exports = function(grunt) {
     		tasks: ['jshint:gruntfile']
     	},
     	angular: {
-    		files: '<%= jshint.angular %>',
-    		tasks: ['newer:jshint:src:angular']
+    		files: '<%= jshint.angular.src %>',
+    		tasks: ['newer:jshint:angular']
     	},
         js: {
-            files: '<%= jshint.js %>',
-            tasks: ['newer:jshint:src:js']
+            files: '<%= jshint.js.src %>',
+            tasks: ['newer:jshint:js']
         },
         cssPages: {
             files: '<%= csslint.pages.src %>',
