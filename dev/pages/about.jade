@@ -1,8 +1,8 @@
 doctype html
-html(ng-app="swingclub")
+html
     include ../includes/head.jade
-    body
-        include ../js/directives/navbar/navbar.jade
+    body(ng-app='swingclub')
+        include ../includes/navbar/navbar.jade
 
         main
             .container(ng-controller="cardController")
@@ -14,9 +14,10 @@ html(ng-app="swingclub")
 
                         div(ng-repeat="url in urls")
                             br
-                            a(href={{url.url}} target="_blank") {{url.title}}
+                            a(href="{{url.url}}" target="_blank") {{url.title}}
 
         //Load at the bottom for faster page times
         include ../includes/jsFrameworks.jade
+        
     //Footer
     include ../includes/footer.index.jade

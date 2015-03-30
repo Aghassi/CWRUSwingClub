@@ -302,7 +302,8 @@ module.exports = function(grunt) {
                 //Prod
                 {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
-                {expand: true, flatten: true, src: images + '*', dest: prod + 'images', filter: 'isFile'}
+                {expand: true, flatten: true, src: images + '*', dest: prod + 'images', filter: 'isFile'},
+                {expand: true, flatten: true, src: dev + 'json/*.json', dest: prod + 'json/', filter: 'isFile'}
             ]
         }
     },
