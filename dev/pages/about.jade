@@ -12,12 +12,12 @@ html
 
                         p {{card.content}}
 
-                        div(ng-repeat="url in urls")
+                        div(ng-repeat="url in card.urls")
                             br
                             a(href="{{url.url}}" target="_blank") {{url.title}}
 
         //Load at the bottom for faster page times
         include ../includes/jsFrameworks.jade
-        
+
     //Footer
     include ../includes/footer.index.jade
