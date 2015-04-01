@@ -6,11 +6,11 @@ Please see CSSLint documentation for more in depth descriptions of each setting
 /*global module:false*/
 module.exports = function(grunt) {
 
-	var devPath = "/Swing/DEV/";
+    var src = "src/";
     var dev = "dev/";
     var build = "build/";
     var prod = "prod/";
-    var images = dev + "images/";
+    var images = src + "images/";
     var jsLib = "js/";
 
     //Dependencies
@@ -19,13 +19,10 @@ module.exports = function(grunt) {
       "bower_components/photoswipe/dist/photoswipe.min.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
     var bowerDevJS = ["bower_components/angular/angular.js",
-      "bower_components/jquery/dist/jquery.js",
-      "bower_components/bootstrap-material-design/dist/js/material.js",
       "bower_components/photoswipe/dist/photoswipe.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.js"];
     var bowerProdCSS = ["bower_components/photoswipe/dist/photoswipe.min.css"];
-    var bowerDevCSS = ["bower_components/bootstrap-material-design/dist/css/material.css",
-    "bower_components/photoswipe/dist/photoswipe.css"];
+    var bowerDevCSS = ["bower_components/photoswipe/dist/photoswipe.css"];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*", 
     "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
     "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
@@ -33,11 +30,11 @@ module.exports = function(grunt) {
     "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftRegular.*",]; 
 
 	//JS
-	var js = [dev + jsLib + "scripts/**/*.js"];
-    var controllers = dev + jsLib + "controllers/**/*.js";
-    var directives = dev + jsLib + "directives/**/*.js";
+	var js = [src + jsLib + "scripts/**/*.js"];
+    var controllers = src + jsLib + "controllers/**/*.js";
+    var directives = src + jsLib + "directives/**/*.js";
 	//CSS
-	var cssPagesSrc = dev + "css/pages/*.css";
+	var cssPagesSrc = src + "css/pages/*.css";
 
   // Project configuration.
   grunt.initConfig({
@@ -185,11 +182,15 @@ module.exports = function(grunt) {
     concat: {
         directives: {
             src: directives,
-            dest: build + jsLib + 'directives/directives.concat.js'
+            dest: build + jsLib + 'directives/directives.js'
         },
         controllers: {
             src: controllers,
-            dest: build + jsLib + 'controllers/controllers.concat.js'
+            dest: build + jsLib + 'controllers/controllers.js'
+        },
+        scripts: {
+            src: js,
+            dest: build + jsLib + 'scripts/scripts.js'
         }
     },
     uglify: {
@@ -202,12 +203,20 @@ module.exports = function(grunt) {
             dest: prod + jsLib + 'controllers/controllers.min.js'
         },
         javascript: {
-            src: js,
+            src: '<%= concat.scripts.dest =>',
             dest: prod + jsLib + "scripts/scripts.min.js"
         }
     },
     imagemin: {
-        dynamic: {
+        dev: {
+            files: [{
+                expand: true,
+                cwd: images,
+                src: ['**/*.{png,jpg,gif}'],
+                dest: dev + 'images/'
+            }]
+        },
+        prod: {
             files: [{
                 expand: true,
                 cwd: images,
@@ -225,7 +234,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           flatten: true,
-          src: dev + 'pages/*.jade',
+          src: src + 'pages/*.jade',
           dest: build + 'html',
           ext: '.html'
         }]
@@ -237,7 +246,7 @@ module.exports = function(grunt) {
         },
         files: [{
             expand: true,
-            cwd: dev + jsLib,
+            cwd: src + jsLib,
             flatten: true,
             src: 'directives/**/*.jade',
             dest: build + jsLib + 'directives',
@@ -246,7 +255,28 @@ module.exports = function(grunt) {
       }
     },
     htmlbuild: {
-        pages: {
+        dev: {
+            src: [build + 'html/*.html'],
+            dest: dev,
+            options: {
+                beautify: true,
+                scripts: {
+                    bundle: [      
+                        dev + jsLib + '*.js',
+                        dev + jsLib+ 'directives/*.js',
+                        dev + jsLib + 'controllers/*.js',
+                        dev + jsLib + 'scripts/*.js'
+                    ]
+                },
+                styles: {
+                    bundle: [
+                        dev + 'css/*.css',
+                    ]
+                }
+
+            }
+        },
+        prod: {
             src: [build + 'html/*.html'],
             dest: prod,
             options: {
@@ -266,35 +296,20 @@ module.exports = function(grunt) {
                 }
 
             }
-        },
-        directives: {
-            src: build + jsLib + 'directives/*.html',
-            dest: prod + jsLib + 'directives/',
-            options: {
-                beautify: true,
-                scripts: {
-                    bundle: [
-                        prod + jsLib + '*.js',
-                        prod + jsLib+ 'directives/*.js',
-                        prod + jsLib + 'controllers/*.js',
-                    ]
-                },
-                styles: {
-                    bundle: [
-                        prod + 'css/*.css',
-                    ]
-                }
-
-            }
         }
     },
     copy: {
         dev: {
             files: [
                  //Dev
+                {expand: true, flatten: true, src: build + 'js/directives/*.js', dest: dev + 'js/directives', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'js/controllers/*.js', dest: dev + 'js/controllers', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'js/scripts/*.js', dest: dev + 'js/scripts', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'css/**/*.css', dest: dev + 'css', filter: 'isFile' },
                 {expand: true, flatten: true, src: bowerDevJS, dest: dev + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerDevCSS, dest: dev + 'css', filter: 'isFile'},
-                {expand: true, flatten: true, src: fonts, dest: dev + 'fonts', filter: 'isFile'},
+                {expand: true, flatten: true, src: images + '*', dest: dev + 'images', filter: 'isFile'},
+                {expand: true, flatten: true, src: src + 'json/*.json', dest: dev + 'json/', filter: 'isFile'}
             ]
         },
         prod: {
@@ -303,11 +318,14 @@ module.exports = function(grunt) {
                 {expand: true, flatten: true, src: bowerProdJS, dest: prod + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerProdCSS, dest: prod + 'css', filter: 'isFile'},
                 {expand: true, flatten: true, src: images + '*', dest: prod + 'images', filter: 'isFile'},
-                {expand: true, flatten: true, src: dev + 'json/*.json', dest: prod + 'json/', filter: 'isFile'}
+                {expand: true, flatten: true, src: src + 'json/*.json', dest: prod + 'json/', filter: 'isFile'}
             ]
         }
     },
     clean: {
+        dev: {
+            src: dev
+        },
         build: {
             src: build
         },
@@ -333,7 +351,7 @@ module.exports = function(grunt) {
             tasks: ['lintNewerCss', 'concat_css:pages', 'cssmin:pages']
         },
         jade: {
-            files: dev + 'pages/*.jade',
+            files: src + 'pages/*.jade',
             tasks: ['html']
         }
     }
@@ -357,10 +375,16 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', 'watch');
   // Build the project for production
-  grunt.registerTask('prod', [  'clean',
+  grunt.registerTask('prod', [  'clean:build', 'clean:prod',
                                 'jshint', 'minjs',
                                 'csslint', 'mincss',
-                                'imagemin', 'html']);
+                                'imagemin:prod', 'html']);
+  // Build the project for dev
+  grunt.registerTask('dev', ['clean:build', 'clean:dev',
+                            'jshint', 'concat',
+                            'csslint', 'concat_css',
+                            'imagemin:dev', 'copy:dev',
+                            'jade', 'htmlbuild']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');

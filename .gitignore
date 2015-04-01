@@ -1,10 +1,12 @@
 *.png
 *.jpg
 
+/dev
 /build
 /prod
 /node_modules
 /bower_components
+/Swing
 
 install.sh
 
