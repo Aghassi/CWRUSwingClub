@@ -6,6 +6,7 @@ html(ng-app="swingclub" ng-controller="RouteController")
         nav.blue.darken-4
             a(href="#" data-activates="slide-out").button-collapse
                 i.mdi-navigation-menu
+            a(ng-bind='name')
             ul#slide-out.side-nav.fixed
                 li.logo
                     a.logo-container.brand-logo(href="http://www.cwru.edu/swingclub")

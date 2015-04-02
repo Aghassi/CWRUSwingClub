@@ -7,9 +7,12 @@ app.controller('RouteController', ['$scope', '$route', '$routeParams', '$locatio
     $scope.$routeParams = $routeParams;
 }]);
 
-app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout){
     $rootScope.name = 'CWRU Swing Club';
     $scope.$routeParams = $routeParams;
+    $timeout(function() {
+        $('.parallax').parallax();
+    }, 10);
 }]);
 app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
     $rootScope.name = 'About';
