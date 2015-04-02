@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/Aghassi/CWRUSwingClub/issues"
   },
-  "homepage": "https://github.com/Aghassi/CWRUSwingClub"
+  "homepage": "https://github.com/Aghassi/CWRUSwingClub",
+  "dependencies": {}
 }

@@ -10,20 +10,20 @@ html(ng-app="swingclub" ng-controller="RouteController")
                 span.brand-logo.hide-on-med-and-down(ng-bind='name')
                 ul#slide-out.side-nav.fixed
                     li.logo
-                        a.logo-container.brand-logo(href="http://www.cwru.edu/swingclub")
+                        a.logo-container.brand-logo(href="#")
                             object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
                     li.bold
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href="/about.html") About
+                        a.waves-effect.waves-red(href="#about.html") About
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Events
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href="/overview.html") Overview
+                                        a(href="#events/overview.html") Overview
                                     li
-                                       a(href="/sparx.html") SparX
+                                       a(href="#events/sparx.html") SparX
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Media
@@ -31,9 +31,9 @@ html(ng-app="swingclub" ng-controller="RouteController")
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href="/gallery.html") Gallery
+                                        a(href="#media/gallery.html") Gallery
                                     li
-                                        a(href="/sparx-gallery.html") SparX
+                                        a(href="#media/sparx-gallery.html") SparX
     
     body
         div(ng-view)

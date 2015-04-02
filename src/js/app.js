@@ -30,5 +30,5 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'AboutController',
         });
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
 });
