@@ -1,23 +1,11 @@
-doctype html
-html
-    include ../includes/head.jade
-    body(ng-app='swingclub')
-        include ../includes/navbar/navbar.jade
+main
+    .container(ng-controller="cardController")
+        .container.card-panel.white(ng-repeat="card in cards")
+            .card-content
+                h2 {{card.title}}
 
-        main
-            .container(ng-controller="cardController")
-                .container.card-panel.white(ng-repeat="card in cards")
-                    .card-content
-                        h2 {{card.title}}
+                p {{card.content}}
 
-                        p {{card.content}}
-
-                        div(ng-repeat="url in card.urls")
-                            br
-                            a(href="{{url.url}}" target="_blank") {{url.title}}
-
-        //Load at the bottom for faster page times
-        include ../includes/jsFrameworks.jade
-
-    //Footer
-    include ../includes/footer.index.jade
+                div(ng-repeat="url in card.urls")
+                    br
+                    a(href="{{url.url}}" target="_blank") {{url.title}}

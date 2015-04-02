@@ -1,0 +1,41 @@
+doctype html
+html(ng-app="swingclub" ng-controller="RouteController")
+    include includes/head.jade
+
+    header
+        nav.blue.darken-4
+            a(href="#" data-activates="slide-out").button-collapse
+                i.mdi-navigation-menu
+            ul#slide-out.side-nav.fixed
+                li.logo
+                    a.logo-container.brand-logo(href="http://www.cwru.edu/swingclub")
+                        object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
+                li.bold
+                    // Can change the wave color to match the logo blue
+                    a.waves-effect.waves-red(href="/about.html") About
+                ul.collapsible.collapsible-accordion
+                    li
+                        a.collapsible-header.waves-effect.waves-red.bold Events
+                        div.collapsible-body
+                            ul
+                                li
+                                    a(href="/overview.html") Overview
+                                li
+                                   a(href="/sparx.html") SparX
+                ul.collapsible.collapsible-accordion
+                    li
+                        a.collapsible-header.waves-effect.waves-red.bold Media
+                     
+                        div.collapsible-body
+                            ul
+                                li
+                                    a(href="/gallery.html") Gallery
+                                li
+                                    a(href="/sparx-gallery.html") SparX
+    
+    body
+        div(ng-view)
+        //Load at the bottom for faster page times
+        include includes/jsFrameworks.jade
+    //Footer
+    include includes/footer.jade

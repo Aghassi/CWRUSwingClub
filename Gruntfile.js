@@ -16,9 +16,12 @@ module.exports = function(grunt) {
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
       "bower_components/angular/angular.min.js.map",
+      "bower_components/angular-route/angular-route.min.js",
+      "bower_components/angular-route/angular-route.min.js.map",
       "bower_components/photoswipe/dist/photoswipe.min.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"];
     var bowerDevJS = ["bower_components/angular/angular.js",
+      "bower_components/angular-route/angular-route.js",
       "bower_components/photoswipe/dist/photoswipe.js", 
       "bower_components/photoswipe/dist/photoswipe-ui-default.js"];
     var bowerProdCSS = ["bower_components/photoswipe/dist/photoswipe.min.css"];
@@ -31,8 +34,8 @@ module.exports = function(grunt) {
 
 	//JS
 	var js = [src + jsLib + "scripts/**/*.js"];
-    var controllers = src + jsLib + "controllers/**/*.js";
-    var directives = src + jsLib + "directives/**/*.js";
+    //AngularJS
+    var angular = [src + jsLib + "app.js", src + jsLib + "controllers/**/*.js", src + jsLib + "directives/**/*.js"]; 
 	//CSS
 	var cssPagesSrc = src + "css/pages/*.css";
 
@@ -173,20 +176,16 @@ module.exports = function(grunt) {
     		src: 'Gruntfile.js'
     	},
     	angular: {
-    		src: [directives, controllers]
+    		src: angular
     	},
         js: {
             src: js
         }
     },
     concat: {
-        directives: {
-            src: directives,
-            dest: build + jsLib + 'directives/directives.js'
-        },
-        controllers: {
-            src: controllers,
-            dest: build + jsLib + 'controllers/controllers.js'
+        angular: {
+            src: angular,
+            dest: build + jsLib + 'app.js'
         },
         scripts: {
             src: js,
@@ -194,18 +193,14 @@ module.exports = function(grunt) {
         }
     },
     uglify: {
-        directives: {
-            src: '<%= concat.directives.dest %>',
-            dest: prod + jsLib + 'directives/directives.min.js'
+        angular: {
+            src: '<%= concat.angular.dest %>',
+            dest: prod + jsLib + 'app.min.js'
         },
-        controllers: {
-            src: '<%= concat.controllers.dest %>',
-            dest: prod + jsLib + 'controllers/controllers.min.js'
-        },
-        javascript: {
+        scripts: {
             src: '<%= concat.scripts.dest =>',
             dest: prod + jsLib + "scripts/scripts.min.js"
-        }
+        },
     },
     imagemin: {
         dev: {
@@ -239,32 +234,29 @@ module.exports = function(grunt) {
           ext: '.html'
         }]
       },
-      directives: {
+      index: {
         options: {
             data: {},
-            pretty: true
+            pretty: true,
         },
         files: [{
             expand: true,
-            cwd: src + jsLib,
             flatten: true,
-            src: 'directives/**/*.jade',
-            dest: build + jsLib + 'directives',
+            src: src + 'index.jade',
+            dest: build,
             ext: '.html'
         }]
       }
     },
     htmlbuild: {
-        dev: {
-            src: [build + 'html/*.html'],
-            dest: dev,
+        dev_pages: {
+            src: build + 'html/*.html',
+            dest: dev + 'pages/',
             options: {
                 beautify: true,
                 scripts: {
                     bundle: [      
                         dev + jsLib + '*.js',
-                        dev + jsLib+ 'directives/*.js',
-                        dev + jsLib + 'controllers/*.js',
                         dev + jsLib + 'scripts/*.js'
                     ]
                 },
@@ -276,16 +268,33 @@ module.exports = function(grunt) {
 
             }
         },
-        prod: {
+        dev_index: {
+            src: build + 'index.html',
+            dest: dev,
+            options: {
+                beautify: true,
+                scripts: {
+                    bundle: [      
+                        dev + jsLib + '*.js',
+                        dev + jsLib + 'scripts/*.js'
+                    ]
+                },
+                styles: {
+                    bundle: [
+                        dev + 'css/*.css',
+                    ]
+                }
+
+            }
+        },
+        prod_pages: {
             src: [build + 'html/*.html'],
-            dest: prod,
+            dest: prod + 'pages/',
             options: {
                 beautify: true,
                 scripts: {
                     bundle: [      
                         prod + jsLib + '*.js',
-                        prod + jsLib+ 'directives/*.js',
-                        prod + jsLib + 'controllers/*.js',
                         prod + jsLib + 'scripts/*.js'
                     ]
                 },
@@ -296,15 +305,33 @@ module.exports = function(grunt) {
                 }
 
             }
-        }
+        },
+        prod_index: {
+            src: build + 'index.html',
+            dest: prod,
+            options: {
+                beautify: true,
+                scripts: {
+                    bundle: [      
+                        prod + jsLib + '*.js',
+                        prod + jsLib + 'scripts/*.js'
+                    ]
+                },
+                styles: {
+                    bundle: [
+                        prod + 'css/*.css',
+                    ]
+                }
+
+            }
+        },
     },
     copy: {
         dev: {
             files: [
                  //Dev
-                {expand: true, flatten: true, src: build + 'js/directives/*.js', dest: dev + 'js/directives', filter: 'isFile' },
-                {expand: true, flatten: true, src: build + 'js/controllers/*.js', dest: dev + 'js/controllers', filter: 'isFile' },
-                {expand: true, flatten: true, src: build + 'js/scripts/*.js', dest: dev + 'js/scripts', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'js/app.js', dest: dev + 'js/', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'css/**/*.css', dest: dev + 'css', filter: 'isFile' },
                 {expand: true, flatten: true, src: build + 'css/**/*.css', dest: dev + 'css', filter: 'isFile' },
                 {expand: true, flatten: true, src: bowerDevJS, dest: dev + 'js', filter: 'isFile'},
                 {expand: true, flatten: true, src: bowerDevCSS, dest: dev + 'css', filter: 'isFile'},
@@ -352,7 +379,7 @@ module.exports = function(grunt) {
         },
         jade: {
             files: src + 'pages/*.jade',
-            tasks: ['html']
+            tasks: ['jade']
         }
     }
 });
@@ -384,7 +411,8 @@ module.exports = function(grunt) {
                             'jshint', 'concat',
                             'csslint', 'concat_css',
                             'imagemin:dev', 'copy:dev',
-                            'jade', 'htmlbuild']);
+                            'jade', 'htmlbuild:dev_index', 
+                            'htmlbuild:dev_pages']);
   // Lint JS
   grunt.registerTask('lintjs', 'jshint');
   grunt.registerTask('lintNewJs', 'newer:jshint');
@@ -396,5 +424,6 @@ module.exports = function(grunt) {
   //Minify CSS
   grunt.registerTask('mincss', ['concat_css', 'cssmin']);
   //Build HTML
-  grunt.registerTask('html', ['copy:prod', 'jade', 'htmlbuild']);
+  grunt.registerTask('html', ['copy:prod', 'jade', 
+    'htmlbuild:prod_pages','htmlbuild:prod_index']);
 };
