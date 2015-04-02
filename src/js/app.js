@@ -1,17 +1,18 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
-app.controller('RouteController', ['$scope', '$route', '$routeParams', 'location', function($scope, $route, $routeParams, $location){
+app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', 
+    function($scope, $route, $routeParams, $location){
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
 }]);
 
-app.controller('IndexController', ['$scope', '$routeScope', '$routeParams', function($scope, $routeScope, $routeParams){
-    $routeScope.name = 'CWRU Swing Club';
+app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+    $rootScope.name = 'CWRU Swing Club';
     $scope.$routeParams = $routeParams;
 }]);
-app.controller('AboutController', ['$scope', '$routeScope', '$routeParams', function($scope, $routeScope, $routeParams){
-    $routeScope.name = 'About';
+app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+    $rootScope.name = 'About';
     $scope.$routeParams = $routeParams;
 }]);
 

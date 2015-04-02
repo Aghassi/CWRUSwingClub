@@ -342,7 +342,7 @@ module.exports = function(grunt) {
         dev: {
             files: [
                  //Dev
-                {expand: true, flatten: true, src: build + 'js/**/*.js', dest: dev + 'js/', filter: 'isFile' },
+                {expand: true, flatten: true, src: build + 'js/**/*.js', dest: dev + 'js/scripts', filter: 'isFile' },
                 {expand: true, flatten: true, src: build + 'css/**/*.css', dest: dev + 'css', filter: 'isFile' },
                 {expand: true, flatten: true, src: build + 'css/**/*.css', dest: dev + 'css', filter: 'isFile' },
                 {expand: true, flatten: true, src: bowerDevJS, dest: dev + 'js', filter: 'isFile'},
