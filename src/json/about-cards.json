@@ -23,6 +23,24 @@
     },
     {
         "title": "The Scene",
-        "content": "CWRU Swing Club is not the only group of swing dancers in Cleveland. As a club, we try to stay as connected with the rest of the Cleveland scene as possible. If you are not Case, CIA, or CIM affiliated, or just want to learn more about Cleveland swing dancing, here are some links that can help. The scenes include:"
+        "content": "CWRU Swing Club is not the only group of swing dancers in Cleveland. As a club, we try to stay as connected with the rest of the Cleveland scene as possible. If you are not Case, CIA, or CIM affiliated, or just want to learn more about Cleveland swing dancing, here are some links that can help. The scenes include:",
+        "urls": [
+            {
+                "title": "Get Hep Swing",
+                "url": "http://www.gethepswing.com/"
+            },
+            {
+                "title": "Cleveland Swing Dancers",
+                "url": "https://www.facebook.com/groups/163060053762071/"
+            },
+            {
+                "title": "Cleveland Swings",
+                "url": "http://clevelandswings.org"
+            },
+            {
+                "title": "Oberlin Swings",
+                "url": "http://oswing.org"
+            }
+        ]
     }
 ]
