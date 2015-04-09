@@ -5,7 +5,6 @@ var photoswype = {
      **/
     function init() {
         var pswpElement = document.querySelectorAll('.pswp')[0];
-
         var items = {};
 
         $.ajax({
