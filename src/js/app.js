@@ -8,8 +8,8 @@ app.controller('RouteController', ['$scope', '$route', '$routeParams', '$locatio
 }]);
 
 app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout){
-    $rootScope.name = 'CWRU Swing Club'; //Page name in browser bar
-    $rootScope.title = '';  //Title of the page at the top
+    $rootScope.name = '';  //Title of the page at the top
+    $rootScope.title = 'CWRU Swing Club'; //Page name in browser bar
     $scope.$routeParams = $routeParams;
     $timeout(function() {
         $('.parallax').parallax();
@@ -25,6 +25,11 @@ app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', fu
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
 }]);
+app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+    $rootScope.name = 'Gallery';
+    $rootScope.title = 'Gallery';
+    $scope.$routeParams = $routeParams;
+}]);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -32,13 +37,21 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/home.html',
             controller: 'IndexController',
         })
+        .when('/home.html', {
+            templateUrl: 'pages/home.html',
+            controller: 'IndexController',
+        })
         .when('/about.html', {
             templateUrl: 'pages/about.html',
             controller: 'AboutController',
         })
-        .when('/Overview.html', {
-            templateUrl: 'pages/Overview.html',
+        .when('/events/overview.html', {
+            templateUrl: 'pages/overview.html',
             controller: 'OverviewController',
+        })
+        .when('/media/gallery.html', {
+            templateUrl: 'pages/gallery.html',
+            controller: 'GalleryController',
         });
 
     $locationProvider.html5Mode(false);
