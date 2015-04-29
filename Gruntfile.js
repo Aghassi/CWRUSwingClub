@@ -17,17 +17,13 @@ module.exports = function(grunt) {
     var bowerProdJS = ["bower_components/angular/angular.min.js",
         "bower_components/angular/angular.min.js.map",
         "bower_components/angular-route/angular-route.min.js",
-        "bower_components/angular-route/angular-route.min.js.map",
-        "bower_components/photoswipe/dist/photoswipe.min.js",
-        "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
+        "bower_components/angular-route/angular-route.min.js.map"
     ];
     var bowerDevJS = ["bower_components/angular/angular.js",
-        "bower_components/angular-route/angular-route.js",
-        "bower_components/photoswipe/dist/photoswipe.js",
-        "bower_components/photoswipe/dist/photoswipe-ui-default.js"
+        "bower_components/angular-route/angular-route.js"
     ];
-    var bowerProdCSS = ["bower_components/photoswipe/dist/photoswipe.min.css"];
-    var bowerDevCSS = ["bower_components/photoswipe/dist/photoswipe.css"];
+    var bowerProdCSS = [];
+    var bowerDevCSS = [];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
