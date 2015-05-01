@@ -17,13 +17,15 @@ module.exports = function(grunt) {
     var bowerProdJS = ["bower_components/angular/angular.min.js",
         "bower_components/angular/angular.min.js.map",
         "bower_components/angular-route/angular-route.min.js",
-        "bower_components/angular-route/angular-route.min.js.map"
+        "bower_components/angular-route/angular-route.min.js.map",
+        "bower_components/nanogallery/dist/jquery.nanogallery.min.js"
     ];
     var bowerDevJS = ["bower_components/angular/angular.js",
-        "bower_components/angular-route/angular-route.js"
+        "bower_components/angular-route/angular-route.js",
+        "bower_components/nanogallery/dist/jquery.nanogallery.min.js"
     ];
-    var bowerProdCSS = [];
-    var bowerDevCSS = [];
+    var bowerProdCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
+    var bowerDevCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
@@ -257,8 +259,6 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'photoswipe.js',
-                            dev + jsLib + 'photoswipe-ui-default.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -279,8 +279,6 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'photoswipe.js',
-                            dev + jsLib + 'photoswipe-ui-default.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -301,8 +299,6 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'photoswipe.min.js',
-                            prod + jsLib + 'photoswipe-ui-default.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -323,8 +319,6 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'photoswipe.min.js',
-                            prod + jsLib + 'photoswipe-ui-default.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
