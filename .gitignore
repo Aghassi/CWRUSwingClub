@@ -8,6 +8,8 @@
 /bower_components
 /Swing
 
+**/.DS_Store
+
 install.sh
 
 

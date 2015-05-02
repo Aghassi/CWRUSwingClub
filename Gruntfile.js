@@ -22,10 +22,10 @@ module.exports = function(grunt) {
     ];
     var bowerDevJS = ["bower_components/angular/angular.js",
         "bower_components/angular-route/angular-route.js",
-        "bower_components/nanogallery/dist/jquery.nanogallery.min.js"
+        "bower_components/nanogallery/jquery.nanogallery.js"
     ];
     var bowerProdCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
-    var bowerDevCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
+    var bowerDevCSS = ["bower_components/nanogallery/css/nanogallery.css"];
     var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
         "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
@@ -259,6 +259,7 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
+                            dev + jsLib + 'jquery.nanogallery.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -279,6 +280,7 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
+                            dev + jsLib + 'jquery.nanogallery.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -299,6 +301,7 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
+                            prod + jsLib + 'jquery.nanogallery.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -319,6 +322,7 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
+                            prod + jsLib + 'jquery.nanogallery.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -463,19 +467,25 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', 'watch');
-    // Build the project for production
+    // Compile the project for production
     grunt.registerTask('prod', ['clean:build', 'clean:prod',
         'jshint', 'minjs',
         'csslint', 'mincss',
         'imagemin:prod', 'html'
     ]);
-    // Build the project for dev
+    // Compile the project for dev
     grunt.registerTask('dev', ['clean:build', 'clean:dev',
         'jshint', 'concat',
         'csslint', 'concat_css',
         'imagemin:dev', 'copy:dev',
         'jade', 'htmlbuild:dev_index',
         'htmlbuild:dev_pages'
+    ]);
+    //Build the project
+    grunt.registerTask('build', ['clean:build', 'jshint',
+        'concat', 'csslint', 
+        'concat_css', 'imagemin:dev',
+        'copy:dev', 'jade'
     ]);
     // Lint JS
     grunt.registerTask('lintjs', 'jshint');

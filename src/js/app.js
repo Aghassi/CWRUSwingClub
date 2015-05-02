@@ -30,19 +30,33 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
     $rootScope.title = 'Gallery';
     $scope.$routeParams = $routeParams;
     //Setup the gallery
+    // $(document).ready(function () {
+    //     jQuery("#gallery").nanoGallery({
+    //         kind:'picasa',
+    //         userID:'105002386404497872124',
+    //         album:'6135497289919570833',
+
+    //         paginationMaxLinesPerPage: 4,
+        
+    //         thumbnailHoverEffect: 'borderLighter'
+    //     });
+    // });
+}]);
+app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+    $rootScope.name = 'SparX 2015';
+    $rootScope.title = 'SparX';
+    $scope.$routeParams = $routeParams;
+    //Setup the gallery
     $(document).ready(function () {
-        $("#gallery").nanoGallery({
+        jQuery("#sparx").nanoGallery({
             kind:'picasa',
-            userID:'cwruswing',
-            albums:'6135497289919570833',
-            thumbnailWidth: 200,
-            thumbnailHeight: 175,
+            userID:'105002386404497872124',
+            album:'6135497289919570833',
 
-             paginationMaxLinesPerPage: 3,
+            paginationMaxLinesPerPage: 4,
 
-            thumbnailHoverEffect: 'labelSlideUp,borderLighter',
-            thumbnailLabel: {display: true, align: 'center'},
-            theme: 'clean',
+            galleryToolbarHideIcons: true,
+            thumbnailHoverEffect: 'borderLighter'
         });
     });
 }]);
@@ -68,6 +82,10 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/media/gallery.html', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
+        })
+        .when('/media/sparx-gallery.html', {
+            templateUrl: 'pages/sparx-gallery.html',
+            controller: 'SparxController',
         });
 
     $locationProvider.html5Mode(false);
