@@ -29,41 +29,51 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
     $rootScope.name = 'Gallery';
     $rootScope.title = 'Gallery';
     $scope.$routeParams = $routeParams;
-    //Setup the gallery
-    // $(document).ready(function () {
-    //     jQuery("#gallery").nanoGallery({
-    //         kind:'picasa',
-    //         userID:'105002386404497872124',
-    //         album:'6135497289919570833',
-
-    //         paginationMaxLinesPerPage: 4,
-        
-    //         thumbnailHoverEffect: 'borderLighter'
-    //     });
-    // });
-}]);
-app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
-    $rootScope.name = 'SparX 2015';
-    $rootScope.title = 'SparX';
-    $scope.$routeParams = $routeParams;
-    //Setup the gallery
+    //Setup the gallery - justified
     $(document).ready(function () {
-        jQuery("#sparx").nanoGallery({
+        jQuery("#gallery").nanoGallery({
             kind:'picasa',
-            userID:'105002386404497872124',
-            album:'6135497289919570833',
+            userID:'cwruswing',
+            album:'',
+            thumbnailWidth: 'auto',
 
             paginationMaxLinesPerPage: 4,
 
             galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'borderLighter',
+            thumbnailHoverEffect: 'imageScale150',
             thumbnailLabel: {
                 display: false,
                 displayDescription: false,
                 hideIcons: true,
             },
-            thumbnailGutterWidth: 4,
-            thumbnailGutterHeight: 4
+            thumbnailGutterWidth: 5,
+            thumbnailGutterHeight: 5
+        });
+    });
+}]);
+app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+    $rootScope.name = 'SparX 2015';
+    $rootScope.title = 'SparX';
+    $scope.$routeParams = $routeParams;
+    //Setup the gallery - paginated
+    $(document).ready(function () {
+        jQuery("#sparx").nanoGallery({
+            kind:'picasa',
+            userID:'cwruswing',
+            album:'6135497289919570833',
+            thumbnailWidth: '111',
+
+            paginationMaxLinesPerPage: 4,
+
+            galleryToolbarHideIcons: true,
+            thumbnailHoverEffect: 'imageScale150',
+            thumbnailLabel: {
+                display: false,
+                displayDescription: false,
+                hideIcons: true,
+            },
+            thumbnailGutterWidth: 5,
+            thumbnailGutterHeight: 5
         });
     });
 }]);
@@ -90,11 +100,16 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
+        .when('/nanogallery/gallery/6135497289919570833', {
+            templateUrl: 'pages/gallery.html',
+            controller: 'GalleryController',
+        })
         .when('/media/sparx-gallery.html', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
         })
         //Reload nano gallery
+        //Number is the cwruswing account id
         .when('/nanogallery/sparx/6135497289919570833', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
