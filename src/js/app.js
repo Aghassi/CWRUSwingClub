@@ -56,7 +56,14 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
             paginationMaxLinesPerPage: 4,
 
             galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'borderLighter'
+            thumbnailHoverEffect: 'borderLighter',
+            thumbnailLabel: {
+                display: false,
+                displayDescription: false,
+                hideIcons: true,
+            },
+            thumbnailGutterWidth: 4,
+            thumbnailGutterHeight: 4
         });
     });
 }]);
@@ -84,6 +91,11 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'GalleryController',
         })
         .when('/media/sparx-gallery.html', {
+            templateUrl: 'pages/sparx-gallery.html',
+            controller: 'SparxController',
+        })
+        //Reload nano gallery
+        .when('/nanogallery/sparx/6135497289919570833', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
         });

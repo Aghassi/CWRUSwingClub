@@ -26,12 +26,7 @@ module.exports = function(grunt) {
     ];
     var bowerProdCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
     var bowerDevCSS = ["bower_components/nanogallery/css/nanogallery.css"];
-    var fonts = ["bower_components/bootstrap-material-design/dist/fonts/Material-Design-Icons.*",
-        "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftBold.*",
-        "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.*",
-        "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftMedium.*",
-        "bower_components/bootstrap-material-design/dist/fonts/RobotoDraftRegular.*",
-    ];
+    var fonts = ["bower_components/nanogallery/dist/css/font/*"];
 
     //JS
     var js = src + jsLib + "scripts/*.js";
@@ -372,6 +367,12 @@ module.exports = function(grunt) {
                     }, {
                         expand: true,
                         flatten: true,
+                        src: fonts,
+                        dest: dev + 'css/font',
+                        filter: 'isFile'
+                    }, {
+                        expand: true,
+                        flatten: true,
                         src: images + '*',
                         dest: dev + 'images',
                         filter: 'isFile'
@@ -398,6 +399,12 @@ module.exports = function(grunt) {
                         flatten: true,
                         src: bowerProdCSS,
                         dest: prod + 'css',
+                        filter: 'isFile'
+                    }, {
+                        expand: true,
+                        flatten: true,
+                        src: fonts,
+                        dest: dev + 'css/font',
                         filter: 'isFile'
                     }, {
                         expand: true,
