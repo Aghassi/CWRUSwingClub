@@ -33,12 +33,13 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
     $(document).ready(function () {
         jQuery("#gallery").nanoGallery({
             kind:'picasa',
-            userID:'cwruswing',
-            album:'',
+            userID:'cwruswing@gmail.com',
+            album:'6144618759687328673',
             thumbnailWidth: 'auto',
 
             paginationMaxLinesPerPage: 4,
 
+            theme: 'clean',
             galleryToolbarHideIcons: true,
             thumbnailHoverEffect: 'imageScale150',
             thumbnailLabel: {
@@ -59,12 +60,13 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
     $(document).ready(function () {
         jQuery("#sparx").nanoGallery({
             kind:'picasa',
-            userID:'cwruswing',
+            userID:'cwruswing@gmail.com',
             album:'6135497289919570833',
-            thumbnailWidth: '111',
+            thumbnailWidth: '101',
 
             paginationMaxLinesPerPage: 4,
 
+            theme: 'clean',
             galleryToolbarHideIcons: true,
             thumbnailHoverEffect: 'imageScale150',
             thumbnailLabel: {
@@ -100,7 +102,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
-        .when('/nanogallery/gallery/6135497289919570833', {
+        .when('/nanogallery/gallery/6144618759687328673', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
