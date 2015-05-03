@@ -17,16 +17,14 @@ module.exports = function(grunt) {
     var bowerProdJS = ["bower_components/angular/angular.min.js",
         "bower_components/angular/angular.min.js.map",
         "bower_components/angular-route/angular-route.min.js",
-        "bower_components/angular-route/angular-route.min.js.map",
-        "bower_components/nanogallery/dist/jquery.nanogallery.min.js"
+        "bower_components/angular-route/angular-route.min.js.map"
     ];
     var bowerDevJS = ["bower_components/angular/angular.js",
-        "bower_components/angular-route/angular-route.js",
-        "bower_components/nanogallery/jquery.nanogallery.js"
+        "bower_components/angular-route/angular-route.js"
     ];
-    var bowerProdCSS = ["bower_components/nanogallery/dist/css/nanogallery.min.css"];
-    var bowerDevCSS = ["bower_components/nanogallery/css/nanogallery.css"];
-    var fonts = ["bower_components/nanogallery/dist/css/font/*"];
+    var bowerProdCSS = [];
+    var bowerDevCSS = [];
+    var fonts = [];
 
     //JS
     var js = src + jsLib + "scripts/*.js";
@@ -190,11 +188,11 @@ module.exports = function(grunt) {
         },
         uglify: {
             angular: {
-                src: '<%= concat.angular.dest %>',
-                dest: prod + jsLib + 'app.min.js'
+                src: build + jsLib + 'app.js',
+                dest: prod + jsLib + 'scripts/app.min.js'
             },
             scripts: {
-                src: '<%= concat.scripts.dest =>',
+                src: build + jsLib + 'scripts/scripts.js',
                 dest: prod + jsLib + "scripts/scripts.min.js"
             },
         },
@@ -254,7 +252,6 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'jquery.nanogallery.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -275,7 +272,6 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'jquery.nanogallery.js',
                             dev + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -296,7 +292,6 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'jquery.nanogallery.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
@@ -317,7 +312,6 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'jquery.nanogallery.min.js',
                             prod + jsLib + 'scripts/*.js'
                         ]
                     },
