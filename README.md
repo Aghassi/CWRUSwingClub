@@ -12,6 +12,7 @@ Please note that this is still a work in progress and may not represent the fina
 ## Creating production
 1. run `grunt prod`
 2. You will now see a prod folder that contains all the data you need for the server. You can put this folder where ever it needs to go to be run
+NOTE: To create dev, run 'grunt dev'
 
 ## Run Server on  Mac
 1. Download MAMP
