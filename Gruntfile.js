@@ -338,6 +338,12 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
+                        src: src + 'js/app.js',
+                        dest: dev + 'js/scripts',
+                        filter: 'isFile'
+                    },{
+                        expand: true,
+                        flatten: true,
                         src: build + 'js/**/*.js',
                         dest: dev + 'js/scripts',
                         filter: 'isFile'

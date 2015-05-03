@@ -1,0 +1,15 @@
+.backdrop {
+    background-color: maroon;
+}
+
+.letter-color {
+    color: yellow;
+    font-size: 46px;
+    text-align: center;
+
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}

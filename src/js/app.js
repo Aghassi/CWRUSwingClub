@@ -114,6 +114,9 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/nanogallery/sparx/6135497289919570833', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
+        })
+        .otherwise({
+            redirectTo: '/'
         });
 
     $locationProvider.html5Mode(false);
