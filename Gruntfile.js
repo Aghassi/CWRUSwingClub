@@ -28,8 +28,8 @@ module.exports = function(grunt) {
 
     //JS
     var js = src + jsLib + "scripts/*.js";
-    //AngularJS
-    var angular = [src + jsLib + "app.js", src + jsLib + "controllers/**/*.js", src + jsLib + "directives/**/*.js"];
+    //Angular
+    var angular = [src + jsLib + "scripts/app.js", src + jsLib + 'controllers/**/*.js', src + jsLib + 'directives/**/*.js'];
     //CSS
     var cssPagesSrc = src + "css/pages/*.css";
 
@@ -177,9 +177,13 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            angular: {
-                src: angular,
-                dest: build + jsLib + 'app.js'
+            controllers: {
+                src: src + jsLib + 'controllers/**/*.js',
+                dest: build + jsLib + 'controllers.js'
+            },
+            directives: {
+                src: src + jsLib + 'directives/**/*.js',
+                dest: build + jsLib + 'directives.js'
             },
             scripts: {
                 src: js,
@@ -187,9 +191,13 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            angular: {
-                src: build + jsLib + 'app.js',
-                dest: prod + jsLib + 'scripts/app.min.js'
+            controllers: {
+                src: build + jsLib + 'controllers.js',
+                dest: prod + jsLib + 'scripts/controllers.min.js'
+            },
+            directives: {
+                src: build + jsLib + 'directives.js',
+                dest: prod + jsLib + 'scripts/directives.min.js'
             },
             scripts: {
                 src: build + jsLib + 'scripts/scripts.js',
@@ -320,7 +328,6 @@ module.exports = function(grunt) {
                             prod + 'css/*.css',
                         ]
                     }
-
                 }
             },
         },
@@ -383,6 +390,12 @@ module.exports = function(grunt) {
                 files: [
                     //Prod
                     {
+                        expand: true,
+                        flatten: true,
+                        src: src + 'js/app.js',
+                        dest: prod + 'js/scripts',
+                        filter: 'isFile'
+                    },{
                         expand: true,
                         flatten: true,
                         src: bowerProdJS,

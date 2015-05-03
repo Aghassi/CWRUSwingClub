@@ -1,7 +1,6 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
-app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', 
-    function($scope, $route, $routeParams, $location){
+app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location){
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
