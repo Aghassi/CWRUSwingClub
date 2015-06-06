@@ -3,27 +3,45 @@
  */
 
 .background-sparx {
-    background: maroon;
+    background: navajowhite;
     font-family: serif;
 }
 
-.background-sparx .year {
+nav {
+    background-color: maroon;
+    height: 90px;
+    line-height: 90px;
+}
+
+nav .brand-logo {
+    color: yellow;
+    pointer-events: none;
+    cursor: default;
+}
+
+.card {
+    background-color: maroon;
+}
+
+.background-sparx .card .year {
     /* Margins and font are set based on viewport */
     
     display: none;
     color: yellow;
-    font-size: 35vw;
-    text-align: center;
-    margin: 25vh -10vw -50px -10vw;
+    font-size: 10vw;
+    text-align: left;
+    text-decoration: underline;
+    margin: 7vh 10vh 19vh;
+    margin-bottom: -10vh;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.background-sparx .letter {
+.background-sparx .card .letter {
     opacity: 0;
     color: yellow;
-    text-align: center;
-    font-size: 100vw;
-    margin-top: 0;
-    margin-left: -10vw;
-    margin-right: -10vw;
+    text-align: left;
+    font-size: 29vw;
+    margin-left: 5vw;
     line-height: normal;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
