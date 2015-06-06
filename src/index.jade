@@ -17,14 +17,14 @@ html(ng-app='swingclub' ng-controller='RouteController')
                         a.waves-effect.waves-red(href="#home.html") Home
                     li.bold.about
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href='about.html') About
+                        a.waves-effect.waves-red(href='#about.html') About
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Events
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href='events/overview.html') Overview
+                                        a(href='#events/overview.html') Overview
                                     li
                                        a(href='pages/sparx.html') SparX
                     ul.collapsible.collapsible-accordion
@@ -34,9 +34,9 @@ html(ng-app='swingclub' ng-controller='RouteController')
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href='media/gallery.html') Gallery
+                                        a(href='#media/gallery.html') Gallery
                                     li
-                                        a(href='media/sparx-gallery.html') SparX
+                                        a(href='#media/sparx-gallery.html') SparX
     
     body
         div(ng-view)
