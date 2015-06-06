@@ -1,39 +1,52 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
-app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location){
+app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
 }]);
 
-app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout){
-    $rootScope.name = '';  //Title of the page at the top
-    $rootScope.title = 'CWRU Swing Club'; //Page name in browser bar
+app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout) {
+    $rootScope.name = ''; // Title of the page at the top
+    $rootScope.title = 'CWRU Swing Club'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
     $timeout(function() {
         $('.parallax').parallax();
     }, 10);
+
+    // Always make sure we are looking at the top of the page
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
 }]);
-app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'About';
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
+
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
 }]);
-app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
+
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
 }]);
-app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
     $rootScope.title = 'Gallery';
     $scope.$routeParams = $routeParams;
-    //Setup the gallery - justified
-    $(document).ready(function () {
+    // Setup the gallery - justified
+    $(document).ready(function() {
         jQuery("#gallery").nanoGallery({
-            kind:'picasa',
-            userID:'cwruswing@gmail.com',
-            album:'6144618759687328673',
+            kind: 'picasa',
+            userID: 'cwruswing@gmail.com',
+            album: '6144618759687328673',
             thumbnailWidth: 'auto',
 
             paginationMaxLinesPerPage: 4,
@@ -50,17 +63,22 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
             thumbnailGutterHeight: 5
         });
     });
+
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
 }]);
-app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams){
+app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
     $rootScope.title = 'SparX';
     $scope.$routeParams = $routeParams;
-    //Setup the gallery - paginated
-    $(document).ready(function () {
+
+    // Setup the gallery - paginated
+    $(document).ready(function() {
         jQuery("#sparx").nanoGallery({
-            kind:'picasa',
-            userID:'cwruswing@gmail.com',
-            album:'6135497289919570833',
+            kind: 'picasa',
+            userID: 'cwruswing@gmail.com',
+            album: '6135497289919570833',
             thumbnailWidth: '101',
 
             paginationMaxLinesPerPage: 4,
@@ -77,6 +95,10 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
             thumbnailGutterHeight: 5
         });
     });
+
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow");
 }]);
 
 app.config(function($routeProvider, $locationProvider) {
@@ -109,7 +131,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
         })
-        //Reload nano gallery
+        //Reload nano gallery when we exit a picture
         //Number is the cwruswing account id
         .when('/nanogallery/sparx/6135497289919570833', {
             templateUrl: 'pages/sparx-gallery.html',

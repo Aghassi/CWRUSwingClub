@@ -1,28 +1,34 @@
 .bold {
     font-weight: bold;
 }
-
 /**
 * Navbar Logo
 **/
-.logo {
-    padding-bottom: 75% !important;
-    background-color: white !important;
+
+.side-nav .logo {
+    padding-bottom: 75%;
+    background-color: white;
+    pointer-events: none;
+    cursor: default;
 }
 
-.logo-container {
-    height: 205px !important;
+.side-nav .logo .logo-container {
+    height: 205px;
 }
-
 /**
 * Main page formatting
 **/
-header, main, footer {
+
+header,
+main,
+footer {
     padding-left: 240px;
 }
 
-@media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0;
-  }
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
 }

@@ -1,15 +1,29 @@
-.backdrop {
-    background-color: maroon;
+/**
+ * SPARX
+ */
+
+.background-sparx {
+    background: maroon;
+    font-family: serif;
 }
 
-.letter-color {
+.background-sparx .year {
+    /* Margins and font are set based on viewport */
+    
+    display: none;
     color: yellow;
-    font-size: 46px;
+    font-size: 35vw;
     text-align: center;
+    margin: 25vh -10vw -50px -10vw;
+}
 
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+.background-sparx .letter {
+    opacity: 0;
+    color: yellow;
+    text-align: center;
+    font-size: 100vw;
+    margin-top: 0;
+    margin-left: -10vw;
+    margin-right: -10vw;
+    line-height: normal;
 }
