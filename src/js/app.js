@@ -15,27 +15,27 @@ app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$tim
     }, 10);
 
     // Always make sure we are looking at the top of the page
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
-    }, "slow");
+    }, 'slow');
 }]);
 app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'About';
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
 
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
-    }, "slow");
+    }, 'slow');
 }]);
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
 
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
-    }, "slow");
+    }, 'slow');
 }]);
 app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
@@ -43,7 +43,7 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
     $scope.$routeParams = $routeParams;
     // Setup the gallery - justified
     $(document).ready(function() {
-        jQuery("#gallery").nanoGallery({
+        jQuery('#gallery').nanoGallery({
             kind: 'picasa',
             userID: 'cwruswing@gmail.com',
             album: '6144618759687328673',
@@ -64,9 +64,9 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
         });
     });
 
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
-    }, "slow");
+    }, 'slow');
 }]);
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
@@ -75,7 +75,7 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
 
     // Setup the gallery - paginated
     $(document).ready(function() {
-        jQuery("#sparx").nanoGallery({
+        jQuery('#sparx').nanoGallery({
             kind: 'picasa',
             userID: 'cwruswing@gmail.com',
             album: '6135497289919570833',
@@ -96,9 +96,9 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
         });
     });
 
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
-    }, "slow");
+    }, 'slow');
 }]);
 
 app.config(function($routeProvider, $locationProvider) {

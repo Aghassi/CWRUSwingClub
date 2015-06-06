@@ -1,32 +1,32 @@
 doctype html
-html(ng-app="swingclub" ng-controller="RouteController")
+html(ng-app='swingclub' ng-controller='RouteController')
     include includes/head.jade
     
     header
         nav.blue.darken-4
             .container
-                a(href="#" data-activates="slide-out").button-collapse
+                a(href='/' data-activates='slide-out').button-collapse
                     i.mdi-navigation-menu
                 span.brand-logo.show-on-med-and-down(ng-bind='name')
                 ul#slide-out.side-nav.fixed
                     li.logo
                         a.logo-container.brand-logo
-                            object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
+                            object(type='image/svg+xml' data='images/logo.svg' style='height:100%;')
                     li.bold.home
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href="home.html") Home
+                        a.waves-effect.waves-red(href='home.html') Home
                     li.bold.about
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href="about.html") About
+                        a.waves-effect.waves-red(href='about.html') About
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Events
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href="events/overview.html") Overview
+                                        a(href='events/overview.html') Overview
                                     li
-                                       a(href="pages/sparx.html") SparX
+                                       a(href='pages/sparx.html') SparX
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Media
@@ -34,9 +34,9 @@ html(ng-app="swingclub" ng-controller="RouteController")
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href="media/gallery.html") Gallery
+                                        a(href='media/gallery.html') Gallery
                                     li
-                                        a(href="media/sparx-gallery.html") SparX
+                                        a(href='media/sparx-gallery.html') SparX
     
     body
         div(ng-view)
