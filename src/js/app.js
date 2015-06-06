@@ -131,8 +131,8 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
         })
-        //Reload nano gallery when we exit a picture
-        //Number is the cwruswing account id
+        // Reload nano gallery when we exit a picture
+        // Number is the cwruswing account id
         .when('/nanogallery/sparx/6135497289919570833', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
@@ -141,5 +141,7 @@ app.config(function($routeProvider, $locationProvider) {
             redirectTo: '/'
         });
 
-    $locationProvider.html5Mode(true);
+    // Leave this false so people can access pages without having
+    // to go to cwru.edu/swingclub first.
+    $locationProvider.html5Mode(false);
 });

@@ -10,11 +10,11 @@ html(ng-app='swingclub' ng-controller='RouteController')
                 span.brand-logo.show-on-med-and-down(ng-bind='name')
                 ul#slide-out.side-nav.fixed
                     li.logo
-                        a.logo-container.brand-logo
-                            object(type='image/svg+xml' data='images/logo.svg' style='height:100%;')
+                        a.logo-container.brand-logo(href="#home.html")
+                            object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
                     li.bold.home
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href='home.html') Home
+                        a.waves-effect.waves-red(href="#home.html") Home
                     li.bold.about
                         // Can change the wave color to match the logo blue
                         a.waves-effect.waves-red(href='about.html') About
