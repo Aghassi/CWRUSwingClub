@@ -23,16 +23,50 @@ nav .brand-logo {
     background-color: maroon;
 }
 
+.card .large .card-contents {
+    height: inherit;
+}
+
+.card .large .card-contents .container {
+    height: inherit;
+}
+
+@media (min-width: 600px) {
+    .year {
+        font-size: 8rem;
+        font-size: 115px;
+    }
+    .letter {
+        font-size: 19rem;
+        font-size: 331px;
+    }
+}
+
+@media (min-width: 800px) {
+    .background-sparx .card .year {
+        font-size: 10rem;
+        font-size: 135px;
+    }
+    .background-sparx .card .letter {
+        font-size: 29rem;
+        font-size: 390px;
+    }
+}
+
+@media (max-width: 600px) {
+    .background-sparx .card {
+        display: none;
+    }
+}
+
 .background-sparx .card .year {
     /* Margins and font are set based on viewport */
     
     display: none;
     color: yellow;
-    font-size: 10vw;
     text-align: left;
     text-decoration: underline;
-    margin: 7vh 10vh 19vh;
-    margin-bottom: -10vh;
+    margin: 7vh auto -8vh 4vw;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
@@ -40,8 +74,8 @@ nav .brand-logo {
     opacity: 0;
     color: yellow;
     text-align: left;
-    font-size: 29vw;
-    margin-left: 5vw;
+    margin-left: 3.5vw;
+    margin-right: auto;
     line-height: normal;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
