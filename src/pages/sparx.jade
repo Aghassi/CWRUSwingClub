@@ -3,10 +3,14 @@ html(ng-app="swingclub")
     include ../includes/head.jade
     
     body.background-sparx
+         nav
+            .nav-wrapper
+
         .container
-            h1.year 2016
-            h1.letter X
+            .card.large
+                .card-contents
+                    h1.year 2016
+                    h1.letter X
 
                     
-        //Load at the bottom for faster page times
         include ../includes/jsFrameworks.jade
