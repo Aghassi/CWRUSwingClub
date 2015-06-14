@@ -4,7 +4,7 @@
         $('.year').fadeIn({
             duration: 2000,
             complete: function() {
-                $('.letter').css('opacity', 0).animate({
+                $('.big-letter').css('opacity', 0).animate({
                     opacity: 1
                 }, 1000);
             },

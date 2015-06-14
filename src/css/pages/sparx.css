@@ -7,6 +7,26 @@
     font-family: serif;
 }
 
+.big-letter {
+    opacity: 0;
+    text-align: left;
+    margin-left: 3.5vw;
+    margin-right: auto;
+    line-height: normal;
+}
+
+.card {
+    background-color: maroon;
+}
+
+.card .card-contents {
+    height: inherit;
+}
+
+.card .card-contents .row {
+    height: inherit;
+}
+
 nav {
     background-color: maroon;
     height: 90px;
@@ -18,64 +38,70 @@ nav .brand-logo {
     pointer-events: none;
     cursor: default;
 }
+/* Set the font size of the X for screen sizes*/
 
-.card {
-    background-color: maroon;
-}
-
-.card .large .card-contents {
-    height: inherit;
-}
-
-.card .large .card-contents .container {
-    height: inherit;
-}
-
-@media (min-width: 600px) {
-    .year {
-        font-size: 8rem;
-        font-size: 115px;
-    }
-    .letter {
-        font-size: 19rem;
+@media (min-width: 650px) {
+    .big-letter {
         font-size: 331px;
     }
+    .lettering .date .weekend {
+        font-size: 2em;
+    }
+    .lettering .phrase {
+        font-size: 3.4em;
+        font-weight: 600;
+    }
+    .lettering .year {
+        font-size: 115px;
+        margin-bottom: -6vw;
+    }
 }
 
-@media (min-width: 800px) {
-    .background-sparx .card .year {
-        font-size: 10rem;
-        font-size: 135px;
-    }
-    .background-sparx .card .letter {
-        font-size: 29rem;
+@media (min-width: 801px) {
+    .big-letter {
         font-size: 390px;
     }
+    .lettering .date .weekend {
+        font-size: 2.6em;
+    }
+    .lettering .phrase {
+        font-size: 5em;
+        font-weight: 600;
+    }
+    .lettering .year {
+        font-size: 135px;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .background-sparx .card {
         display: none;
     }
 }
 
-.background-sparx .card .year {
-    /* Margins and font are set based on viewport */
-    
-    display: none;
+.lettering {
     color: yellow;
-    text-align: left;
-    text-decoration: underline;
-    margin: 7vh auto -8vh 4vw;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.background-sparx .card .letter {
-    opacity: 0;
-    color: yellow;
+.lettering .date .weekend {
+    margin-bottom: -30px;
+}
+
+.row .date {
+    height: 27%;
+    margin-bottom: 5vw;
+}
+
+.weekend {
+    margin-bottom: -30px;
+}
+
+.year {
+    /* Margins and font are set based on viewport */
+    
+    display: none;
     text-align: left;
-    margin-left: 3.5vw;
-    margin-right: auto;
-    line-height: normal;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    text-decoration: underline;
+    margin: 7vh auto -8vh 4vw;
 }
