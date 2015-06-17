@@ -10,6 +10,7 @@
 .big-letter {
     opacity: 0;
     font-size: 22rem;
+    margin-bottom: -7vh;
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
@@ -27,6 +28,12 @@
     height: inherit;
 }
 
+.headshot {
+    max-width: 45%;
+    margin: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+}
+
 nav {
     background-color: maroon;
     height: 90px;
@@ -38,27 +45,10 @@ nav .brand-logo {
     pointer-events: none;
     cursor: default;
 }
-/* Set the font size of the X for screen sizes*/
 
-@media (min-width: 650px) {
-    .lettering .date .weekend {
-        font-size: 2em;
-    }
-    .lettering .phrase {
-        font-size: 3.4em;
-        font-weight: 600;
-    }
-}
+@media (min-width: 650px) {}
 
-@media (min-width: 801px) {
-    .lettering .date .weekend {
-        font-size: 2.6em;
-    }
-    .lettering .phrase {
-        font-size: 5em;
-        font-weight: 600;
-    }
-}
+@media (min-width: 801px) {}
 
 @media (max-width: 650px) {
     .background-sparx .card {
@@ -67,16 +57,13 @@ nav .brand-logo {
 }
 
 .lettering {
-    color: yellow;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    color: gold;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
-.lettering .date .weekend {
-    margin-bottom: -30px;
-}
-
-.row .date {
-    height: 27%;
+.location {
+    font-size: 2.7rem;
+    margin: -4vh auto -1vh auto;
 }
 
 .weekend {
