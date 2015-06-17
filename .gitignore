@@ -1,5 +1,7 @@
 *.png
 *.jpg
+#Except the sparx images
+!src/images/sparx/*
 
 /dev
 /build
