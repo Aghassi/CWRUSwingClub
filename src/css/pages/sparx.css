@@ -9,21 +9,21 @@
 
 .big-letter {
     opacity: 0;
-    text-align: left;
-    margin-left: 3.5vw;
+    font-size: 22rem;
+    margin-left: auto;
     margin-right: auto;
     line-height: normal;
 }
 
-.card {
+.card-panel {
     background-color: maroon;
 }
 
-.card .card-contents {
+.card-panel .card-contents {
     height: inherit;
 }
 
-.card .card-contents .row {
+.card-panel .card-contents .row {
     height: inherit;
 }
 
@@ -41,9 +41,6 @@ nav .brand-logo {
 /* Set the font size of the X for screen sizes*/
 
 @media (min-width: 650px) {
-    .big-letter {
-        font-size: 331px;
-    }
     .lettering .date .weekend {
         font-size: 2em;
     }
@@ -51,25 +48,15 @@ nav .brand-logo {
         font-size: 3.4em;
         font-weight: 600;
     }
-    .lettering .year {
-        font-size: 115px;
-        margin-bottom: -6vw;
-    }
 }
 
 @media (min-width: 801px) {
-    .big-letter {
-        font-size: 390px;
-    }
     .lettering .date .weekend {
         font-size: 2.6em;
     }
     .lettering .phrase {
         font-size: 5em;
         font-weight: 600;
-    }
-    .lettering .year {
-        font-size: 135px;
     }
 }
 
@@ -90,18 +77,18 @@ nav .brand-logo {
 
 .row .date {
     height: 27%;
-    margin-bottom: 5vw;
 }
 
 .weekend {
-    margin-bottom: -30px;
+    font-size: 2.2rem;
+    margin: 1vh auto -4vh auto;
 }
 
 .year {
     /* Margins and font are set based on viewport */
     
     display: none;
-    text-align: left;
+    font-size: 7.7rem;
     text-decoration: underline;
-    margin: 7vh auto -8vh 4vw;
+    margin: 7vh auto -8vh auto;
 }
