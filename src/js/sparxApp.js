@@ -1,4 +1,4 @@
-var app = angular.module('sparxApp', ['ngRoute']);
+var app = angular.module('sparx', ['ngRoute']);
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
@@ -19,7 +19,7 @@ app.controller('LandingController', ['$scope', '$rootScope', '$routeParams', '$t
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
-        .when('pages/sparx.html', {
+        .when('/', {
             templateUrl: 'pages/sparx-landing-page.html',
             controller: 'LandingController',
         })

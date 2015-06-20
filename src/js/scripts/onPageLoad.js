@@ -1,6 +1,6 @@
 //Self invoking anonymous function
 (function() {
-    $(document).ready(function() {
+    $('.main-nav').on('load', function() {
         //Initialize any material related things
         $('.button-collapse').sideNav();
         $('.collapsible').collapsible();

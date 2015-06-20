@@ -10,7 +10,6 @@
 }
 
 .big-letter {
-    opacity: 0;
     font-size: 15rem;
     margin-bottom: -7vh;
     margin-left: auto;
@@ -73,7 +72,6 @@ nav .brand-logo {
 .year {
     /* Margins and font are set based on viewport */
     
-    display: none;
     font-size: 8.7rem;
     text-decoration: underline;
     margin: 9vh auto -3vh auto;

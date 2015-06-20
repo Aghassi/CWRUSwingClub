@@ -8,10 +8,11 @@ module.exports = function(grunt) {
 
     var src = "src/";
     var dev = "dev/";
+    var jsLib = "js/";
+    var srcJs = src + jsLib;
     var build = "build/";
     var prod = "prod/";
     var images = src + "images/";
-    var jsLib = "js/";
 
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
@@ -27,9 +28,11 @@ module.exports = function(grunt) {
     var fonts = ['src/fonts/bodoni/*'];
 
     //JS
-    var js = src + jsLib + "scripts/*.js";
+    var js = srcJs + "scripts/*.js";
     //Angular
-    var angular = [src + jsLib + "scripts/app.js", src + jsLib + 'controllers/**/*.js', src + jsLib + 'directives/**/*.js'];
+    var angular = [srcJs + "scripts/app.js", srcJs + 'scripts/sparxApp.js',
+        srcJs + 'controllers/**/*.js', srcJs + 'directives/**/*.js'
+    ];
     //CSS
     var cssPagesSrc = src + "css/pages/*.css";
 
@@ -178,11 +181,11 @@ module.exports = function(grunt) {
         },
         concat: {
             controllers: {
-                src: src + jsLib + 'controllers/**/*.js',
+                src: srcJs + 'controllers/**/*.js',
                 dest: build + jsLib + 'controllers.js'
             },
             directives: {
-                src: src + jsLib + 'directives/**/*.js',
+                src: srcJs + 'directives/**/*.js',
                 dest: build + jsLib + 'directives.js'
             },
             scripts: {
@@ -338,7 +341,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: src + 'js/app.js',
+                        src: [srcJs + 'app.js', srcJs + 'sparxApp.js'],
                         dest: dev + 'js/scripts',
                         filter: 'isFile'
                     }, {
