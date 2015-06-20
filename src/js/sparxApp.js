@@ -6,10 +6,13 @@ app.controller('RouteController', ['$scope', '$route', '$routeParams', '$locatio
     $scope.$routeParams = $routeParams;
 }]);
 
-app.controller('LandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout) {
-    $rootScope.name = ''; // Title of the page at the top
+app.controller('LandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
     $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
+
+    $http.get("../json/headshots.json").success(function(data) {
+        $scope.headshots = data;
+    });
 
     // Always make sure we are looking at the top of the page
     $('html, body').animate({
