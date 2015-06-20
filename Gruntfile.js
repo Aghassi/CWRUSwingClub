@@ -23,8 +23,8 @@ module.exports = function(grunt) {
         "bower_components/angular-route/angular-route.js"
     ];
     var bowerProdCSS = [];
-    var bowerDevCSS = [];
-    var fonts = [];
+    var devCSS = ['src/css/MyFontsWebfontsKit.css'];
+    var fonts = ['src/fonts/bodoni/*'];
 
     //JS
     var js = src + jsLib + "scripts/*.js";
@@ -341,7 +341,7 @@ module.exports = function(grunt) {
                         src: src + 'js/app.js',
                         dest: dev + 'js/scripts',
                         filter: 'isFile'
-                    },{
+                    }, {
                         expand: true,
                         flatten: true,
                         src: build + 'js/**/*.js',
@@ -356,7 +356,7 @@ module.exports = function(grunt) {
                     }, {
                         expand: true,
                         flatten: true,
-                        src: build + 'css/**/*.css',
+                        src: devCSS,
                         dest: dev + 'css',
                         filter: 'isFile'
                     }, {
@@ -368,14 +368,8 @@ module.exports = function(grunt) {
                     }, {
                         expand: true,
                         flatten: true,
-                        src: bowerDevCSS,
-                        dest: dev + 'css',
-                        filter: 'isFile'
-                    }, {
-                        expand: true,
-                        flatten: true,
                         src: fonts,
-                        dest: dev + 'css/font',
+                        dest: dev + 'fonts',
                         filter: 'isFile'
                     }, {
                         expand: true,
@@ -401,7 +395,7 @@ module.exports = function(grunt) {
                         src: src + 'js/app.js',
                         dest: prod + 'js/scripts',
                         filter: 'isFile'
-                    },{
+                    }, {
                         expand: true,
                         flatten: true,
                         src: bowerProdJS,
@@ -503,7 +497,7 @@ module.exports = function(grunt) {
     ]);
     //Build the project
     grunt.registerTask('build', ['clean:build', 'jshint',
-        'concat', 'csslint', 
+        'concat', 'csslint',
         'concat_css', 'imagemin:dev',
         'copy:dev', 'jade'
     ]);
