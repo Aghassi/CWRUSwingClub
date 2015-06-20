@@ -4,9 +4,7 @@
             .card-contents
                 .row.lettering
                     .col.l4.left-align
-                        img(src="images/sparx/KateHedin.jpg").circle.headshot
-                        img(src="images/sparx/BobbyWhite.jpg").circle.headshot
-                        img(src="images/sparx/Boilermakers.jpg").circle.headshot
+                        img(ng-repeat="headshot in headshots" src="{{headshot.src}}").circle.headshot
                     .col.l4.center-align
                         h4.weekend February 5th-7th
                         h1.year 2016
