@@ -10,7 +10,7 @@
 }
 
 .big-letter {
-    font-size: 15rem;
+    font-size: 14rem;
     margin-bottom: -7vh;
     margin-left: auto;
     margin-right: auto;
@@ -32,7 +32,19 @@
 .headshot {
     max-width: 45%;
     margin: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.headshot:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 
 nav {
@@ -46,12 +58,7 @@ nav .brand-logo {
     color: yellow;
     pointer-events: none;
     cursor: default;
-}
-
-@media (max-width: 650px) {
-    .background-sparx .card {
-        display: none;
-    }
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
 .lettering {
@@ -60,19 +67,19 @@ nav .brand-logo {
 }
 
 .location {
-    font-size: 2.7rem;
+    font-size: 3rem;
     margin: -4vh auto -1vh auto;
 }
 
 .weekend {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     margin: 1vh auto -4vh auto;
 }
 
 .year {
     /* Margins and font are set based on viewport */
     
-    font-size: 8.7rem;
+    font-size: 10rem;
     text-decoration: underline;
     margin: 9vh auto -3vh auto;
 }

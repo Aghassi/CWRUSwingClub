@@ -5,7 +5,18 @@ html(ng-app="sparx" ng-controller="RouteController")
     body.background-sparx
          nav
             .nav-wrapper
-                a.brand-logo.center SparX
+                .container
+                    a.brand-logo.center SparX
+                    ul.left.hide-on-med-and-down
+                        li
+                            a Schedule
+                        li
+                            a Instructors
+                    ul.right.hide-on-med-and-down
+                        li
+                            a Registration
+                        li
+                            a Map
         
         div(ng-view)
 

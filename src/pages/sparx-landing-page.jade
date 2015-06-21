@@ -3,12 +3,11 @@
         .card-panel
             .card-contents
                 .row.lettering
-                    .col.l4.left-align
-                        img(ng-repeat="headshot in headshots" src="{{headshot.src}}").circle.headshot
-                    .col.l4.center-align
+                    .col.m3.l4.center.hide-on-small-only
+                        img(ng-repeat="headshot in headshots" src="{{headshot.src}}").circle.headshot.z-depth-2
+                    .col.s12.m6.l4.center
                         h4.weekend February 5th-7th
                         h1.year 2016
-                        h1.big-letter VII
+                        h1.big-letter VIII
                         h4.location Cleveland, OH
-                    .col.l4.right-align
-                        
+                    .col.m3.l4.center.hide-on-small-only
