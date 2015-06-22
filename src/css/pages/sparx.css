@@ -47,6 +47,10 @@
     transform: scale(1.1, 1.1);
 }
 
+.modal-content {
+    color: darkred;
+}
+
 nav {
     background-color: maroon;
     height: 90px;
@@ -55,10 +59,15 @@ nav {
 
 nav .brand-logo {
     font-size: 3.5rem;
-    color: yellow;
+    color: gold;
     pointer-events: none;
     cursor: default;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+}
+
+nav ul a:hover {
+    color: gold;
+    text-decoration: none;
 }
 
 .lettering {

@@ -12,6 +12,10 @@ app.controller('LandingController', ['$scope', '$rootScope', '$routeParams', '$t
 
     $http.get("../json/headshots.json").success(function(data) {
         $scope.headshots = data;
+        // So we give the DOM a second to load the data
+        setTimeout(function() {
+            $('.modal-trigger').leanModal();
+        }, 1500);
     });
 
     // Always make sure we are looking at the top of the page
