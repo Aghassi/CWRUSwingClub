@@ -25,8 +25,9 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
     $scope.$routeParams = $routeParams;
 
     $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollTop: 0
+}, 'slow');
+
 }]);
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
@@ -107,19 +108,19 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/home.html',
             controller: 'IndexController',
         })
-        .when('/home.html', {
+        .when('/home', {
             templateUrl: 'pages/home.html',
             controller: 'IndexController',
         })
-        .when('/about.html', {
+        .when('/about', {
             templateUrl: 'pages/about.html',
             controller: 'AboutController',
         })
-        .when('/events/overview.html', {
+        .when('/events/overview', {
             templateUrl: 'pages/overview.html',
             controller: 'OverviewController',
         })
-        .when('/media/gallery.html', {
+        .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
@@ -127,7 +128,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
-        .when('/media/sparx-gallery.html', {
+        .when('/media/sparx-gallery', {
             templateUrl: 'pages/sparx-gallery.html',
             controller: 'SparxController',
         })

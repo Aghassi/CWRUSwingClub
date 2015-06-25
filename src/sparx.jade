@@ -1,6 +1,6 @@
 doctype html
 html(ng-app="sparx" ng-controller="RouteController")
-    include ../includes/head-sparx.jade
+    include includes/head-sparx.jade
     
     body.background-sparx
          nav
@@ -11,7 +11,7 @@ html(ng-app="sparx" ng-controller="RouteController")
                         li
                             a Schedule
                         li
-                            a Instructors
+                            a(href="#/instructors") Instructors
                     ul.right.hide-on-med-and-down
                         li
                             a Registration
@@ -20,5 +20,6 @@ html(ng-app="sparx" ng-controller="RouteController")
         
         div(ng-view)
 
+
                     
-        include ../includes/jsFrameworks.jade
+        include includes/jsFrameworks.jade

@@ -9,6 +9,25 @@
     font-style: normal;
 }
 
+.background-sparx nav {
+    background-color: maroon;
+    height: 90px;
+    line-height: 90px;
+}
+
+.background-sparx nav .brand-logo {
+    font-size: 3.5rem;
+    color: gold;
+    pointer-events: none;
+    cursor: default;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+}
+
+.background-sparx nav ul a:hover {
+    color: gold;
+    text-decoration: none;
+}
+
 .big-letter {
     font-size: 14rem;
     margin-bottom: -7vh;
@@ -17,6 +36,13 @@
     line-height: normal;
 }
 
+.bio-image {
+    height: 400px;
+    margin: 10px;
+    max-width: 266px;
+}
+
+.card,
 .card-panel {
     background-color: maroon;
 }
@@ -51,25 +77,6 @@
     color: darkred;
 }
 
-nav {
-    background-color: maroon;
-    height: 90px;
-    line-height: 90px;
-}
-
-nav .brand-logo {
-    font-size: 3.5rem;
-    color: gold;
-    pointer-events: none;
-    cursor: default;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-}
-
-nav ul a:hover {
-    color: gold;
-    text-decoration: none;
-}
-
 .lettering {
     color: gold;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
@@ -78,6 +85,12 @@ nav ul a:hover {
 .location {
     font-size: 3rem;
     margin: -4vh auto -1vh auto;
+}
+
+.sparx-flow-text {
+    color: white;
+    font-size: 2.25vh;
+    padding: 10px;
 }
 
 .weekend {
