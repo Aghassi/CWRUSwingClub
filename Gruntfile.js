@@ -252,19 +252,6 @@ module.exports = function(grunt) {
                     ext: '.html'
                 }]
             },
-            sparx: {
-                options: {
-                    data: {},
-                    pretty: true,
-                },
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: src + 'sparx.jade',
-                    dest: build,
-                    ext: '.html'
-                }]
-            }
         },
         htmlbuild: {
             dev_pages: {
@@ -297,26 +284,6 @@ module.exports = function(grunt) {
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
                             dev + jsLib + 'scripts/*.js'
-                        ]
-                    },
-                    styles: {
-                        bundle: [
-                            dev + 'css/*.css',
-                        ]
-                    }
-
-                }
-            },
-            dev_sparx: {
-                src: build + 'sparx.html',
-                dest: dev,
-                options: {
-                    beautify: true,
-                    scripts: {
-                        bundle: [
-                            dev + jsLib + 'angular.js',
-                            dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'scripts/sparxApp.js'
                         ]
                     },
                     styles: {
@@ -529,7 +496,7 @@ module.exports = function(grunt) {
         'csslint', 'concat_css',
         'imagemin:dev', 'copy:dev',
         'jade', 'htmlbuild:dev_index',
-        'htmlbuild:dev_pages', 'htmlbuild:dev_sparx'
+        'htmlbuild:dev_pages'
     ]);
     //Build the project
     grunt.registerTask('build', ['clean:build', 'jshint',

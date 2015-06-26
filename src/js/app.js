@@ -19,14 +19,15 @@ app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$tim
         scrollTop: 0
     }, 'slow');
 }]);
+
 app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'About';
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
 
     $('html, body').animate({
-    scrollTop: 0
-}, 'slow');
+        scrollTop: 0
+    }, 'slow');
 
 }]);
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
@@ -71,7 +72,7 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
 }]);
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
-    $rootScope.title = 'SparX';
+    $rootScope.title = 'SparX Gallery';
     $scope.$routeParams = $routeParams;
 
     // Setup the gallery - paginated
@@ -102,6 +103,39 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
     }, 'slow');
 }]);
 
+app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
+    $rootScope.title = 'SparX'; // Page name in browser bar
+    $scope.$routeParams = $routeParams;
+
+    $http.get("../json/headshots.json").success(function(data) {
+        $scope.headshots = data;
+        // So we give the DOM a second to load the data
+        setTimeout(function() {
+            $('.modal-trigger').leanModal();
+        }, 1500);
+    });
+
+    // Always make sure we are looking at the top of the page
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+
+}]);
+
+app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
+    $rootScope.title = 'Instructors'; // Page name in browser bar
+    $scope.$routeParams = $routeParams;
+
+    $http.get("../json/instructors.json").success(function(data) {
+        $scope.teachers = data;
+    });
+
+    // Always make sure we are looking at the top of the page
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+}]);
+
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
@@ -119,6 +153,10 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/events/overview', {
             templateUrl: 'pages/overview.html',
             controller: 'OverviewController',
+        })
+        .when('/sparx', {
+            templateUrl: 'pages/sparx.html',
+            controller: 'SparXLandingController'
         })
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',

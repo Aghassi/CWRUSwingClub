@@ -3,7 +3,7 @@ html(ng-app='swingclub' ng-controller='RouteController')
     include includes/head.jade
     
     header
-        nav.blue.darken-4.main-nav
+        nav.blue.darken-4.main-nav(ng-if="title != 'SparX'")
             .container
                 a(href='/' data-activates='slide-out').button-collapse
                     i.mdi-navigation-menu
@@ -26,7 +26,7 @@ html(ng-app='swingclub' ng-controller='RouteController')
                                     li
                                         a(href='#events/overview') Overview
                                     li
-                                       a(href='sparx.html') SparX
+                                       a(href='#events/sparx') SparX
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Media
@@ -37,7 +37,23 @@ html(ng-app='swingclub' ng-controller='RouteController')
                                         a(href='#media/gallery') Gallery
                                     li
                                         a(href='#media/sparx-gallery') SparX
-    
+        
+        .background-sparx(ng-if="title == 'SparX'")
+            nav
+                .nav-wrapper
+                    .container
+                        a.brand-logo.center SparX
+                        ul.left.hide-on-med-and-down
+                            li
+                                a Schedule
+                            li
+                                a(href="#/instructors") Instructors
+                        ul.right.hide-on-med-and-down
+                            li
+                                a Registration
+                            li
+                                a Map
+            
     body
         div(ng-view)
         //Load at the bottom for faster page times
