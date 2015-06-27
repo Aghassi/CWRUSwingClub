@@ -22,12 +22,14 @@ header {
 .background-sparx nav .brand-logo {
     font-size: 3.5rem;
     color: gold;
-    pointer-events: none;
-    cursor: default;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
-.background-sparx nav ul a:hover {
+.background-sparx nav ul a:hover,
+.background-sparx nav ul a:focus,
+.background-sparx nav .brand-logo:hover,
+.background-sparx nav .brand-logo:focus,
+.background-sparx nav .brand-logo:visited {
     color: gold;
     text-decoration: none;
 }
@@ -75,6 +77,10 @@ header {
     -ms-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
+}
+
+.instructor-card {
+    opacity: 0;
 }
 
 .modal-content {
