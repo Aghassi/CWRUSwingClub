@@ -1,18 +1,19 @@
-.container
-    .col.s12.m12.l12
-        .card-panel
-            .card-contents
-                .row.lettering
-                    .col.m3.l4.center.hide-on-small-only
-                        div(ng-repeat="headshot in headshots")
-                            img(src="{{headshot.src}}" href="#{{headshot.id}}").circle.headshot.z-depth-2.modal-trigger
-                            div.modal(id="{{headshot.id}}")
-                                .modal-content
-                                    h4 {{headshot.name}}
-                                    img(src="{{headshot.bodyshot}}").img-responsive
-                    .col.s12.m6.l4.center
-                        h4.weekend February 5th-7th
-                        h1.year 2016
-                        h1.big-letter VIII
-                        h4.location Cleveland, OH
-                    .col.m3.l4.center.hide-on-small-only
+.background-sparx
+    .container
+        .col.s12.m12.l12
+            .card-panel
+                .card-contents
+                    .row.lettering
+                        .col.m3.l4.center.hide-on-small-only
+                            div(ng-repeat="headshot in headshots")
+                                img(src="{{headshot.src}}" href="#{{headshot.id}}").circle.headshot.z-depth-2.modal-trigger
+                                div.modal(id="{{headshot.id}}")
+                                    .modal-content
+                                        h4 {{headshot.name}}
+                                        img(src="{{headshot.bodyshot}}").img-responsive
+                        .col.s12.m6.l4.center
+                            h4.weekend February 5th-7th
+                            h1.year 2016
+                            h1.big-letter VIII
+                            h4.location Cleveland, OH
+                        .col.m3.l4.center.hide-on-small-only

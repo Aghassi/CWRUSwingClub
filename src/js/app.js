@@ -1,11 +1,20 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
+var scrollToTop = function() {
+    // Always make sure we are looking at the top of the page
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+
+}
+
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
 }]);
 
+//Handles the main landing page
 app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout) {
     $rootScope.name = ''; // Title of the page at the top
     $rootScope.title = 'CWRU Swing Club'; // Page name in browser bar
@@ -14,10 +23,7 @@ app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$tim
         $('.parallax').parallax();
     }, 10);
 
-    // Always make sure we are looking at the top of the page
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop();
 }]);
 
 app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
@@ -25,19 +31,14 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
 
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
-
+    scrollToTop();
 }]);
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
 
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop();
 }]);
 app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
@@ -66,9 +67,7 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
         });
     });
 
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop();
 }]);
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
@@ -98,9 +97,7 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
         });
     });
 
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop();
 }]);
 
 app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
@@ -115,25 +112,19 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
         }, 1500);
     });
 
-    // Always make sure we are looking at the top of the page
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop();
 
 }]);
 
 app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
-    $rootScope.title = 'Instructors'; // Page name in browser bar
+    $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
 
     $http.get("../json/instructors.json").success(function(data) {
         $scope.teachers = data;
     });
 
-    // Always make sure we are looking at the top of the page
-    $('html, body').animate({
-        scrollTop: 0
-    }, 'slow');
+    scrollToTop()
 }]);
 
 app.config(function($routeProvider, $locationProvider) {
@@ -157,6 +148,10 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/sparx', {
             templateUrl: 'pages/sparx.html',
             controller: 'SparXLandingController'
+        })
+        .when('/sparx/:instructors', {
+            templateUrl: 'pages/instructors.html',
+            controller: 'InstructorsController'
         })
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
