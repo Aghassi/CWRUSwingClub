@@ -20,10 +20,13 @@ header {
 }
 
 .background-sparx nav .brand-logo {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: gold;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
+/**
+ * Overriting materialized/bootstrap hover + focus effects
+ */
 
 .background-sparx nav ul a:hover,
 .background-sparx nav ul a:focus,
@@ -101,6 +104,10 @@ header {
     color: white;
     font-size: 2.25vh;
     padding: 10px;
+}
+
+.tag-lines {
+    font-size: 3rem;
 }
 
 .weekend {

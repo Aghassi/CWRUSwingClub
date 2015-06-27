@@ -1,6 +1,6 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
-var scrollToTop = function() {
+var _scrollToTop = function() {
     // Always make sure we are looking at the top of the page
     $('html, body').animate({
         scrollTop: 0
@@ -22,7 +22,7 @@ app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$tim
         $('.parallax').parallax();
     }, 10);
 
-    scrollToTop();
+    _scrollToTop();
 }]);
 
 app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
@@ -30,14 +30,14 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
 
-    scrollToTop();
+    _scrollToTop();
 }]);
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
 
-    scrollToTop();
+    _scrollToTop();
 }]);
 app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
@@ -66,7 +66,7 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
         });
     });
 
-    scrollToTop();
+    _scrollToTop();
 }]);
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
@@ -96,7 +96,7 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
         });
     });
 
-    scrollToTop();
+    _scrollToTop();
 }]);
 
 app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
@@ -111,7 +111,7 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
         }, 500);
     });
 
-    scrollToTop();
+    _scrollToTop();
 
 }]);
 
@@ -123,6 +123,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
         $scope.teachers = data;
     });
 
+    // We always want to see one card so the user doesn't think the page didn't load
     setTimeout(function() {
         $('.bobby-kate').animate({
             'opacity': '1'
@@ -163,7 +164,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     }];
     Materialize.scrollFire(options);
 
-    scrollToTop()
+    _scrollToTop()
 }]);
 
 app.config(function($routeProvider, $locationProvider) {
@@ -184,6 +185,15 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/overview.html',
             controller: 'OverviewController',
         })
+        /**
+         * SparX main page starts at route /sparx
+         * To add or remove routes use the following notation
+         * href(#sparx/:param)
+         * And here use
+         * .when(/sparx/:param)
+         * 
+         * :param is the name of the location you are passing in (eg instructors)
+         */
         .when('/sparx', {
             templateUrl: 'pages/sparx.html',
             controller: 'SparXLandingController'
@@ -196,6 +206,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
         })
+        // See comment below as to why we do this
         .when('/nanogallery/gallery/6144618759687328673', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
