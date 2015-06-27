@@ -122,3 +122,108 @@ header {
     text-decoration: underline;
     margin: 9vh auto -3vh auto;
 }
+/**
+ * SPARX MEDIA QUERIES
+ *
+ * We need to handle font sizing on different screen sizes because rem is not universal
+ */
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .big-letter {
+        font-size: 11rem;
+    }
+    .location,
+    .tag-lines {
+        font-size: 2rem;
+    }
+    .weekend {
+        font-size: 1.5rem;
+    }
+    .year {
+        font-size: 8rem;
+    }
+}
+/* ----------- iPhone 5 and 5S ----------- */
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .weekend {
+        margin: 1vh auto;
+    }
+    .year {
+        margin-top: 12vh;
+    }
+}
+/* ----------- iPhone 6 ----------- */
+/* ----------- Galaxy S4 ----------- */
+/* ----------- Galaxy S3 ----------- */
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .big-letter {
+        font-size: 10rem;
+        margin-bottom: -4vh;
+    }
+    .tag-lines {
+        font-size: 2.15rem;
+    }
+    .location,
+    .weekend {
+        font-size: 1.85rem;
+        margin: 1vh auto;
+    }
+    .year {
+        font-size: 7.5rem;
+        margin-top: 6vh;
+    }
+}
+/* ----------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .location,
+    .weekend {
+        margin: 1vh auto;
+    }
+}
+/* ----------- iPad 1 and 2 ----------- */
+/* ----------- iPad mini ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .big-letter {
+        font-size: 10rem;
+        margin-bottom: -4vh;
+    }
+    .tag-lines {
+        font-size: 2.15rem;
+    }
+    .location,
+    .weekend {
+        font-size: 1.85rem;
+    }
+    .year {
+        font-size: 7.5rem;
+        margin-top: 6vh;
+    }
+}
+/* Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+    .year {
+        margin-top: 7vh;
+    }
+}
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .big-letter {
+        margin-bottom: -4vh;
+    }
+    .year {
+        margin-top: 6vh;
+    }
+}
