@@ -46,9 +46,9 @@ header {
 }
 
 .bio-image {
-    height: 400px;
+    max-height: 20%;
     margin: 10px;
-    max-width: 266px;
+    max-width: 25%;
 }
 
 .card,
@@ -96,22 +96,22 @@ header {
 }
 
 .location {
-    font-size: 3rem;
     margin: -4vh auto -1vh auto;
+}
+
+.location,
+.tag-lines,
+.weekend {
+    font-size: 2.5rem;
 }
 
 .sparx-flow-text {
     color: white;
-    font-size: 2.25vh;
+    font-size: 1.25rem;
     padding: 10px;
 }
 
-.tag-lines {
-    font-size: 3rem;
-}
-
 .weekend {
-    font-size: 2.5rem;
     margin: 1vh auto -4vh auto;
 }
 
@@ -132,23 +132,36 @@ header {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     .big-letter {
-        font-size: 11rem;
+        font-size: 10rem;
+    }
+    .bio-image {
+        max-width: 92%;
     }
     .location,
-    .tag-lines {
-        font-size: 2rem;
-    }
+    .tag-lines,
     .weekend {
-        font-size: 1.5rem;
+        font-size: 1.85rem;
     }
     .year {
-        font-size: 8rem;
+        font-size: 7.5rem;
+    }
+}
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .bio-image {
+        max-height: 20%;
     }
 }
 /* ----------- iPhone 5 and 5S ----------- */
 /* Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .bio-image {
+        max-height: 40%;
+        margin: 10px;
+        max-width: 50%;
+    }
     .weekend {
         margin: 1vh auto;
     }
@@ -166,10 +179,13 @@ header {
         font-size: 10rem;
         margin-bottom: -4vh;
     }
-    .tag-lines {
-        font-size: 2.15rem;
+    .bio-image {
+        max-height: 40%;
+        margin: 10px;
+        max-width: 50%;
     }
     .location,
+    .tag-lines,
     .weekend {
         font-size: 1.85rem;
         margin: 1vh auto;
@@ -183,7 +199,13 @@ header {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .bio-image {
+        max-height: 40%;
+        margin: 10px;
+        max-width: 50%;
+    }
     .location,
+    .tag-line,
     .weekend {
         margin: 1vh auto;
     }
@@ -197,23 +219,27 @@ header {
         font-size: 10rem;
         margin-bottom: -4vh;
     }
-    .tag-lines {
-        font-size: 2.15rem;
+    .bio-image {
+        max-height: 40%;
+        margin: 10px;
+        max-width: 50%;
     }
     .location,
+    .tag-lines,
     .weekend {
         font-size: 1.85rem;
+        margin: 1vh auto;
     }
     .year {
         font-size: 7.5rem;
-        margin-top: 6vh;
+        margin-top: 2vh;
     }
 }
 /* Landscape */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
     .year {
-        margin-top: 7vh;
+        margin-top: 2vh;
     }
 }
 /* ----------- iPad 3 and 4 ----------- */
