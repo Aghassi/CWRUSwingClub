@@ -27,7 +27,7 @@ header {
 
 .side-nav li a,
 .side-nav li:hover,
-.side-nav li.active {
+.side-nav li:active {
     color: darkred !important;
 }
 /**
@@ -260,8 +260,4 @@ nav .nav-wrapper i:focus {
     .year {
         margin-top: 6vh;
     }
-}
-
-nav .nav-wrapper i {
-    display: inline-block;
 }
