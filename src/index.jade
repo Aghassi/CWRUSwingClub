@@ -9,8 +9,7 @@ html(ng-app='swingclub' ng-controller='RouteController')
             .container
                 a(href='/' data-activates='slide-out').button-collapse
                     i.mdi-navigation-menu
-                span.brand-logo.show-on-med-and-down(ng-bind='name')
-                ul.side-nav.fixed
+                ul.side-nav.fixed#slide-out
                     li.logo
                         a.logo-container.brand-logo(href="#home")
                             object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
@@ -40,7 +39,7 @@ html(ng-app='swingclub' ng-controller='RouteController')
                                     li
                                         a(href='#media/sparx-gallery') SparX
         
-        nav(ng-if="title == 'SparX'")
+        nav(ng-if="title == 'SparX'").sparx-nav
             .nav-wrapper
                 .container
                     a.brand-logo.center(href="#sparx") SparX

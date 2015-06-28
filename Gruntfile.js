@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     var bowerDevJS = ["bower_components/angular/angular.js",
         "bower_components/angular-route/angular-route.js"
     ];
-    var bowerProdCSS = [];
+    var bowerProdCSS = ['src/css/MyFontsWebfontsKit.css'];
     var devCSS = ['src/css/MyFontsWebfontsKit.css'];
     var fonts = ['src/fonts/bodoni/*'];
 
@@ -395,7 +395,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: src + 'js/app.js',
+                        src: [srcJs + '/app.js', srcJs + 'sparxApp.js'],
                         dest: prod + 'js/scripts',
                         filter: 'isFile'
                     }, {
@@ -414,7 +414,7 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true,
                         src: fonts,
-                        dest: dev + 'css/font',
+                        dest: prod + 'fonts',
                         filter: 'isFile'
                     }, {
                         expand: true,
