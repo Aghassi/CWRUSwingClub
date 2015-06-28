@@ -24,6 +24,12 @@ header {
     color: gold;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
+
+.side-nav li a,
+.side-nav li:hover,
+.side-nav li.active {
+    color: darkred !important;
+}
 /**
  * Overriting materialized/bootstrap hover + focus effects
  */
@@ -32,7 +38,9 @@ header {
 .background-sparx nav ul a:focus,
 .background-sparx nav .brand-logo:hover,
 .background-sparx nav .brand-logo:focus,
-.background-sparx nav .brand-logo:visited {
+.background-sparx nav .brand-logo:visited,
+nav .nav-wrapper i:hover,
+nav .nav-wrapper i:focus {
     color: gold;
     text-decoration: none;
 }
@@ -252,4 +260,8 @@ header {
     .year {
         margin-top: 6vh;
     }
+}
+
+nav .nav-wrapper i {
+    display: inline-block;
 }

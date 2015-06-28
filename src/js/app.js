@@ -7,6 +7,12 @@ var _scrollToTop = function() {
     }, 'slow');
 }
 
+var initSparxNav = function() {
+    setTimeout(function() {
+        $('.sparx-collapse-button').sideNav();
+    }, 500);
+}
+
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
@@ -111,6 +117,7 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
         }, 500);
     });
 
+    initSparxNav();
     _scrollToTop();
 
 }]);
@@ -164,6 +171,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     }];
     Materialize.scrollFire(options);
 
+    initSparxNav();
     _scrollToTop()
 }]);
 
