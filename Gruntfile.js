@@ -341,7 +341,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: [srcJs + 'app.js', srcJs + 'sparxApp.js'],
+                        src: [srcJs + 'app.js'],
                         dest: dev + 'js/scripts',
                         filter: 'isFile'
                     }, {
@@ -395,7 +395,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: [srcJs + '/app.js', srcJs + 'sparxApp.js'],
+                        src: [srcJs + '/app.js'],
                         dest: prod + 'js/scripts',
                         filter: 'isFile'
                     }, {

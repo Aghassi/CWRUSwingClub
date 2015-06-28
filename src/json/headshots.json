@@ -1,16 +1,16 @@
 [{
-    "src": "../images/sparx/left-headshots/BobbyWhite_headshot.jpg",
-    "bodyshot": "../images/sparx/BWhite.jpg",
+    "src": "images/sparx/left-headshots/BobbyWhite_headshot.jpg",
+    "bodyshot": "images/sparx/BWhite.jpg",
     "id": "Bobby_White",
     "name": "Bobby White"
 }, {
-    "src": "../images/sparx/left-headshots/KateHedin_headshot.jpg",
-    "bodyshot": "../images/sparx/KateHedin.jpg",
+    "src": "images/sparx/left-headshots/KateHedin_headshot.jpg",
+    "bodyshot": "images/sparx/KateHedin.jpg",
     "id": "Kate_Hedin",
     "name": "Kate Hedin"
 }, {
-    "src": "../images/sparx/left-headshots/Boilermakers_headshot.jpg",
-    "bodyshot": "../images/sparx/Boilermakers.jpg",
+    "src": "images/sparx/left-headshots/Boilermakers_headshot.jpg",
+    "bodyshot": "images/sparx/Boilermakers.jpg",
     "id": "Boilermakers",
     "name": "Boilermakers"
 }]

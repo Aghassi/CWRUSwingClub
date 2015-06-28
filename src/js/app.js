@@ -109,7 +109,7 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
     $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
 
-    $http.get("../json/headshots.json").success(function(data) {
+    $http.get("json/headshots.json").success(function(data) {
         $scope.headshots = data;
         // So we give the DOM a second to load the data
         setTimeout(function() {
@@ -126,7 +126,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
 
-    $http.get("../json/instructors.json").success(function(data) {
+    $http.get("json/instructors.json").success(function(data) {
         $scope.teachers = data;
     });
 
