@@ -7,21 +7,23 @@ header {
 }
 
 .background-sparx {
-    background: navajowhite;
+    background: #FFE6B5;
     font-family: BodoniSans-Regular;
     font-weight: normal;
     font-style: normal;
 }
 
 .background-sparx nav {
-    background-color: maroon;
+    /* Off red **/
+    
+    background-color: #681B20;
     height: 90px;
     line-height: 90px;
 }
 
 .background-sparx nav .brand-logo {
     font-size: 4.5rem;
-    color: gold;
+    color: #dd9a5f;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
@@ -42,7 +44,9 @@ header {
 .background-sparx nav .brand-logo:visited,
 nav .nav-wrapper i:hover,
 nav .nav-wrapper i:focus {
-    color: gold;
+    /* Rust orange */
+    
+    color: #dd9a5f;
     text-decoration: none;
 }
 
@@ -62,7 +66,7 @@ nav .nav-wrapper i:focus {
 
 .card,
 .card-panel {
-    background-color: maroon;
+    background-color: #681B20;
 }
 
 .card-panel .card-contents {
@@ -99,12 +103,12 @@ nav .nav-wrapper i:focus {
     margin: 10px 0;
 }
 
-.modal-content {
-    color: darkred;
+.modal {
+    background-color: #681B20;
 }
 
 .lettering {
-    color: gold;
+    color: #ffed4d;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
