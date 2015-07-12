@@ -42,7 +42,8 @@ html(ng-app='swingclub' ng-controller='RouteController')
         nav(ng-if="title == 'SparX'").sparx-nav
             .nav-wrapper
                 .container
-                    a.brand-logo.center(href="#sparx") SparX
+                    a.brand-logo.center(href="#sparx")
+                        object(type="image/svg+xml" data="images/sparx_logo.svg" style="height:100%;")
                     a(data-activates='mobile-nav').sparx-collapse-button.hide-on-large-only
                         i.mdi-navigation-menu
                     ul.left.hide-on-med-and-down

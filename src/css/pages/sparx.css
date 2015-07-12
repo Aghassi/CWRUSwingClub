@@ -25,13 +25,7 @@ header {
     font-size: 4.5rem;
     color: #dd9a5f;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-}
-
-.sparx-nav .side-nav li a,
-.sparx-nav .side-nav li:hover,
-.sparx-nav .side-nav li:active {
-    color: darkred !important;
-    text-decoration: none;
+    height: 85px;
 }
 /**
  * Overriting materialized/bootstrap hover + focus effects
@@ -128,6 +122,13 @@ nav .nav-wrapper i:focus {
     font-size: 1.25rem;
     padding: 10px;
     margin-top: -10px;
+}
+
+.sparx-nav .side-nav li a,
+.sparx-nav .side-nav li:hover,
+.sparx-nav .side-nav li:active {
+    color: darkred !important;
+    text-decoration: none;
 }
 
 .weekend {
