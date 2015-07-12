@@ -1,0 +1,9 @@
+.container
+	ul#teacher-list
+		li.instructor-card(ng-repeat="teacher in teachers" class="{{teacher.id}}")
+			.card
+				.card-contents
+					img.pull-left.bio-image.z-depth-2(src="{{teacher.src}}")
+					div.sparx-flow-text 
+						h4.instructor-names {{teacher.name}}
+						p {{teacher.bio}}

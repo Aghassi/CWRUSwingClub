@@ -2,46 +2,269 @@
  * SPARX
  */
 
-.background-sparx {
-    background: navajowhite;
-    font-family: serif;
+header {
+    padding-left: 0;
 }
 
-nav {
-    background-color: maroon;
+.background-sparx {
+    background: #FFE6B5;
+    font-family: BodoniSans-Regular;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background-sparx nav {
+    /* Off red **/
+    
+    background-color: #681B20;
     height: 90px;
     line-height: 90px;
 }
 
-nav .brand-logo {
-    color: yellow;
-    pointer-events: none;
-    cursor: default;
+.background-sparx nav .brand-logo {
+    font-size: 4.5rem;
+    color: #dd9a5f;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
-.card {
-    background-color: maroon;
+.sparx-nav .side-nav li a,
+.sparx-nav .side-nav li:hover,
+.sparx-nav .side-nav li:active {
+    color: darkred !important;
+    text-decoration: none;
 }
+/**
+ * Overriting materialized/bootstrap hover + focus effects
+ */
 
-.background-sparx .card .year {
-    /* Margins and font are set based on viewport */
+.background-sparx nav ul a:hover,
+.background-sparx nav ul a:focus,
+.background-sparx nav .brand-logo:hover,
+.background-sparx nav .brand-logo:focus,
+.background-sparx nav .brand-logo:visited,
+nav .nav-wrapper i:hover,
+nav .nav-wrapper i:focus {
+    /* Rust orange */
     
-    display: none;
-    color: yellow;
-    font-size: 10vw;
-    text-align: left;
-    text-decoration: underline;
-    margin: 7vh 10vh 19vh;
-    margin-bottom: -10vh;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    color: #dd9a5f;
+    text-decoration: none;
 }
 
-.background-sparx .card .letter {
-    opacity: 0;
-    color: yellow;
-    text-align: left;
-    font-size: 29vw;
-    margin-left: 5vw;
+.big-letter {
+    font-size: 14rem;
+    margin-bottom: -7vh;
+    margin-left: auto;
+    margin-right: auto;
     line-height: normal;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.bio-image {
+    max-height: 20%;
+    margin: 20px 10px;
+    max-width: 25%;
+}
+
+.card,
+.card-panel {
+    background-color: #681B20;
+}
+
+.card-panel .card-contents {
+    height: inherit;
+}
+
+.card-panel .card-contents .row {
+    height: inherit;
+}
+
+.headshot {
+    max-width: 45%;
+    margin: 6px;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.headshot:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.instructor-card {
+    opacity: 0;
+}
+
+.instructor-names {
+    margin: 10px 0;
+}
+
+.modal {
+    background-color: #681B20;
+}
+
+.lettering {
+    color: #ffed4d;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+}
+
+.location {
+    margin: -4vh auto -1vh auto;
+}
+
+.location,
+.tag-lines,
+.weekend {
+    font-size: 2.5rem;
+}
+
+.sparx-flow-text {
+    color: white;
+    font-size: 1.25rem;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+.weekend {
+    margin: 1vh auto -4vh auto;
+}
+
+.year {
+    /* Margins and font are set based on viewport */
+    
+    font-size: 10rem;
+    text-decoration: underline;
+    margin: 9vh auto -3vh auto;
+}
+/**
+ * SPARX MEDIA QUERIES
+ *
+ * We need to handle font sizing on different screen sizes because rem is not universal
+ */
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .big-letter {
+        font-size: 10rem;
+    }
+    .bio-image {
+        max-width: 92%;
+    }
+    .location,
+    .tag-lines,
+    .weekend {
+        font-size: 1.85rem;
+    }
+    .year {
+        font-size: 7.5rem;
+    }
+}
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .bio-image {
+        max-height: 20%;
+    }
+}
+/* ----------- iPhone 5 and 5S ----------- */
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .bio-image {
+        max-height: 40%;
+        max-width: 50%;
+    }
+    .weekend {
+        margin: 1vh auto;
+    }
+    .year {
+        margin-top: 12vh;
+    }
+}
+/* ----------- iPhone 6 ----------- */
+/* ----------- Galaxy S4 ----------- */
+/* ----------- Galaxy S3 ----------- */
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .big-letter {
+        font-size: 10rem;
+        margin-bottom: -4vh;
+    }
+    .bio-image {
+        max-height: 40%;
+        max-width: 50%;
+    }
+    .location,
+    .tag-lines,
+    .weekend {
+        font-size: 1.85rem;
+        margin: 1vh auto;
+    }
+    .year {
+        font-size: 7.5rem;
+        margin-top: 6vh;
+    }
+}
+/* ----------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .bio-image {
+        max-height: 40%;
+        max-width: 50%;
+    }
+    .location,
+    .tag-line,
+    .weekend {
+        margin: 1vh auto;
+    }
+}
+/* ----------- iPad 1 and 2 ----------- */
+/* ----------- iPad mini ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .big-letter {
+        font-size: 10rem;
+        margin-bottom: -4vh;
+    }
+    .bio-image {
+        max-height: 40%;
+        max-width: 50%;
+    }
+    .location,
+    .tag-lines,
+    .weekend {
+        font-size: 1.85rem;
+        margin: 1vh auto;
+    }
+    .year {
+        font-size: 7.5rem;
+        margin-top: 2vh;
+    }
+}
+/* Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+    .year {
+        margin-top: 2vh;
+    }
+}
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .big-letter {
+        margin-bottom: -4vh;
+    }
+    .year {
+        margin-top: 6vh;
+    }
 }

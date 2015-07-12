@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3045072, 2015-06-18T13:43:35-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BodoniSans-Regular by Jason Vandenberg
+ * URL: http://www.myfonts.com/fonts/greyscale-type/bodoni-sans/regular/
+ * Copyright: Copyright &#x00A9;2014 by Jason Vandenberg. All rights reserved.
+ * Licensed pageviews: 20,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3045072
+ * 
+ * © 2015 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+
+@import url("//hello.myfonts.net/count/2e76d0");
+@font-face {
+    font-family: 'BodoniSans-Regular';
+    src: url('../fonts/2E76D0_0_0.eot');
+    src: url('../fonts/2E76D0_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2E76D0_0_0.woff2') format('woff2'), url('../fonts/2E76D0_0_0.woff') format('woff'), url('../fonts/2E76D0_0_0.ttf') format('truetype');
+}

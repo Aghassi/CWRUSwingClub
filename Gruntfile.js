@@ -8,10 +8,11 @@ module.exports = function(grunt) {
 
     var src = "src/";
     var dev = "dev/";
+    var jsLib = "js/";
+    var srcJs = src + jsLib;
     var build = "build/";
     var prod = "prod/";
     var images = src + "images/";
-    var jsLib = "js/";
 
     //Dependencies
     var bowerProdJS = ["bower_components/angular/angular.min.js",
@@ -22,14 +23,16 @@ module.exports = function(grunt) {
     var bowerDevJS = ["bower_components/angular/angular.js",
         "bower_components/angular-route/angular-route.js"
     ];
-    var bowerProdCSS = [];
-    var bowerDevCSS = [];
-    var fonts = [];
+    var bowerProdCSS = ['src/css/MyFontsWebfontsKit.css'];
+    var devCSS = ['src/css/MyFontsWebfontsKit.css'];
+    var fonts = ['src/fonts/bodoni/*'];
 
     //JS
-    var js = src + jsLib + "scripts/*.js";
+    var js = srcJs + "scripts/*.js";
     //Angular
-    var angular = [src + jsLib + "scripts/app.js", src + jsLib + 'controllers/**/*.js', src + jsLib + 'directives/**/*.js'];
+    var angular = [srcJs + "scripts/app.js", srcJs + 'scripts/sparxApp.js',
+        srcJs + 'controllers/**/*.js', srcJs + 'directives/**/*.js'
+    ];
     //CSS
     var cssPagesSrc = src + "css/pages/*.css";
 
@@ -178,11 +181,11 @@ module.exports = function(grunt) {
         },
         concat: {
             controllers: {
-                src: src + jsLib + 'controllers/**/*.js',
+                src: srcJs + 'controllers/**/*.js',
                 dest: build + jsLib + 'controllers.js'
             },
             directives: {
-                src: src + jsLib + 'directives/**/*.js',
+                src: srcJs + 'directives/**/*.js',
                 dest: build + jsLib + 'directives.js'
             },
             scripts: {
@@ -248,7 +251,7 @@ module.exports = function(grunt) {
                     dest: build,
                     ext: '.html'
                 }]
-            }
+            },
         },
         htmlbuild: {
             dev_pages: {
@@ -338,10 +341,10 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: src + 'js/app.js',
+                        src: [srcJs + 'app.js'],
                         dest: dev + 'js/scripts',
                         filter: 'isFile'
-                    },{
+                    }, {
                         expand: true,
                         flatten: true,
                         src: build + 'js/**/*.js',
@@ -356,7 +359,7 @@ module.exports = function(grunt) {
                     }, {
                         expand: true,
                         flatten: true,
-                        src: build + 'css/**/*.css',
+                        src: devCSS,
                         dest: dev + 'css',
                         filter: 'isFile'
                     }, {
@@ -368,14 +371,8 @@ module.exports = function(grunt) {
                     }, {
                         expand: true,
                         flatten: true,
-                        src: bowerDevCSS,
-                        dest: dev + 'css',
-                        filter: 'isFile'
-                    }, {
-                        expand: true,
-                        flatten: true,
                         src: fonts,
-                        dest: dev + 'css/font',
+                        dest: dev + 'fonts',
                         filter: 'isFile'
                     }, {
                         expand: true,
@@ -398,10 +395,10 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: src + 'js/app.js',
+                        src: [srcJs + '/app.js'],
                         dest: prod + 'js/scripts',
                         filter: 'isFile'
-                    },{
+                    }, {
                         expand: true,
                         flatten: true,
                         src: bowerProdJS,
@@ -417,7 +414,7 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true,
                         src: fonts,
-                        dest: dev + 'css/font',
+                        dest: prod + 'fonts',
                         filter: 'isFile'
                     }, {
                         expand: true,
@@ -503,7 +500,7 @@ module.exports = function(grunt) {
     ]);
     //Build the project
     grunt.registerTask('build', ['clean:build', 'jshint',
-        'concat', 'csslint', 
+        'concat', 'csslint',
         'concat_css', 'imagemin:dev',
         'copy:dev', 'jade'
     ]);

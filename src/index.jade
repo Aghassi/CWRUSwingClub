@@ -3,30 +3,31 @@ html(ng-app='swingclub' ng-controller='RouteController')
     include includes/head.jade
     
     header
-        nav.blue.darken-4
+        //- nf-if is determined in app.js
+        //- It should probably rely on URL and not title in the future
+        nav.blue.darken-4.main-nav(ng-if="title != 'SparX'")
             .container
                 a(href='/' data-activates='slide-out').button-collapse
                     i.mdi-navigation-menu
-                span.brand-logo.show-on-med-and-down(ng-bind='name')
-                ul.side-nav.fixed
+                ul.side-nav.fixed#slide-out
                     li.logo
-                        a.logo-container.brand-logo(href="#home.html")
+                        a.logo-container.brand-logo(href="#home")
                             object(type="image/svg+xml" data="images/logo.svg" style="height:100%;")
                     li.bold.home
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href="#home.html") Home
+                        a.waves-effect.waves-red(href="#home") Home
                     li.bold.about
                         // Can change the wave color to match the logo blue
-                        a.waves-effect.waves-red(href='#about.html') About
+                        a.waves-effect.waves-red(href='#about') About
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Events
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href='#events/overview.html') Overview
+                                        a(href='#events/overview') Overview
                                     li
-                                       a(href='pages/sparx.html') SparX
+                                       a(href='#sparx') SparX
                     ul.collapsible.collapsible-accordion
                         li
                             a.collapsible-header.waves-effect.waves-red.bold Media
@@ -34,13 +35,38 @@ html(ng-app='swingclub' ng-controller='RouteController')
                             div.collapsible-body
                                 ul
                                     li
-                                        a(href='#media/gallery.html') Gallery
+                                        a(href='#media/gallery') Gallery
                                     li
-                                        a(href='#media/sparx-gallery.html') SparX
-    
-    body
+                                        a(href='#media/sparx-gallery') SparX
+        
+        nav(ng-if="title == 'SparX'").sparx-nav
+            .nav-wrapper
+                .container
+                    a.brand-logo.center(href="#sparx") SparX
+                    a(data-activates='mobile-nav').sparx-collapse-button.hide-on-large-only
+                        i.mdi-navigation-menu
+                    ul.left.hide-on-med-and-down
+                        li
+                            a Schedule
+                        li
+                            a(href="#sparx/instructors") Instructors
+                    ul.right.hide-on-med-and-down
+                        li
+                            a Register this fall!
+                        li
+                            a Map
+                    ul.side-nav#mobile-nav
+                        li
+                            a Schedule
+                        li
+                            a(href="#sparx/instructors") Instructors
+                        li
+                            a Register this fall!
+                        li
+                            a Map
+    //- ng-class lets us put CSS classes in based on context.
+    //- We need this here so we can color the background of the SparX page        
+    body(ng-class="{'background-sparx': title === 'SparX'}")
         div(ng-view)
         //Load at the bottom for faster page times
         include includes/jsFrameworks.jade
-    //Footer
-    include includes/footer.jade

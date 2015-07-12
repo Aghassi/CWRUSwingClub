@@ -1,16 +1,23 @@
-doctype html
-html(ng-app="swingclub")
-    include ../includes/head.jade
-    
-    body.background-sparx
-         nav
-            .nav-wrapper
-
-        .container
-            .card.large
+.background-sparx
+    .container
+        .col.s12.m12.l12
+            .card-panel
                 .card-contents
-                    h1.year 2016
-                    h1.letter X
-
-                    
-        include ../includes/jsFrameworks.jade
+                    .row.lettering
+                        .col.m3.l4.center.hide-on-small-only
+                            p.tag-lines Lindy Hop
+                            div(ng-repeat="headshot in headshots")
+                                img(src="{{headshot.src}}" href="#{{headshot.id}}").circle.headshot.z-depth-2.modal-trigger
+                                div.modal.modal-fixed-footer(id="{{headshot.id}}")
+                                    .modal-content
+                                        h4 {{headshot.name}}
+                                        img(src="{{headshot.bodyshot}}").img-responsive
+                                    .modal-footer
+                                        a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
+                        .col.s12.m6.l4.center
+                            h4.weekend February 5th-7th
+                            h1.year 2016
+                            h1.big-letter VIII
+                            h4.location Cleveland, OH
+                        .col.m3.l4.center.hide-on-small-only
+                            p.tag-lines Balboa
