@@ -46,7 +46,6 @@ nav .nav-wrapper i:focus {
 
 .big-letter {
     font-size: 14rem;
-    margin-bottom: -7vh;
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
@@ -73,7 +72,7 @@ nav .nav-wrapper i:focus {
 }
 
 .headshot {
-    max-width: 45%;
+    max-width: 90%;
     margin: 6px;
     -webkit-transition: 0.5s ease;
     -moz-transition: 0.5s ease;
@@ -99,16 +98,29 @@ nav .nav-wrapper i:focus {
 }
 
 .modal {
-    background-color: #681B20;
+    width: 45%;
+}
+
+.modal,
+.modal .modal-content {
+    background-color: #eeeff1;
+}
+
+.modal .modal-content .name {
+    color: #681B20
+}
+
+.modal .modal-footer {
+    background-color: #681B20
+}
+
+.modal .modal-footer .modal-action {
+    color: #dd9a5f
 }
 
 .lettering {
     color: #ffed4d;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-}
-
-.location {
-    margin: -4vh auto -1vh auto;
 }
 
 .location,
@@ -132,7 +144,7 @@ nav .nav-wrapper i:focus {
 }
 
 .weekend {
-    margin: 1vh auto -4vh auto;
+    margin: 1vh auto;
 }
 
 .year {

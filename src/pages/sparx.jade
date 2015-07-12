@@ -4,20 +4,21 @@
             .card-panel
                 .card-contents
                     .row.lettering
-                        .col.m3.l4.center.hide-on-small-only
-                            p.tag-lines Lindy Hop
-                            div(ng-repeat="headshot in headshots")
-                                img(src="{{headshot.src}}" href="#{{headshot.id}}").circle.headshot.z-depth-2.modal-trigger
-                                div.modal.modal-fixed-footer(id="{{headshot.id}}")
-                                    .modal-content
-                                        h4 {{headshot.name}}
-                                        img(src="{{headshot.bodyshot}}").img-responsive
-                                    .modal-footer
-                                        a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
-                        .col.s12.m6.l4.center
-                            h4.weekend February 5th-7th
+                        .center
                             h1.year 2016
                             h1.big-letter VIII
+                            h4.weekend February 5th-7th
                             h4.location Cleveland, OH
-                        .col.m3.l4.center.hide-on-small-only
-                            p.tag-lines Balboa
+                            h4.tag-lines A Lindy and Bal Workshop
+                        .section.container
+                            .row
+                                .hide-on-small-only
+                                    h2.center -Teachers-
+                                    div.col.s12.m4.l4(ng-repeat="headshot in headshots")
+                                        img(src="{{headshot.src}}" href="#{{headshot.id}}").circle.headshot.z-depth-2.modal-trigger
+                                        div.modal.modal-fixed-footer(id="{{headshot.id}}")
+                                            .modal-content
+                                                h4.center.name {{headshot.name}}
+                                                img(src="{{headshot.bodyshot}}").img-responsive
+                                            .modal-footer
+                                                a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
