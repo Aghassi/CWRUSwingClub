@@ -22,6 +22,7 @@ header {
 }
 
 .background-sparx nav .brand-logo {
+    padding-left: 40px;
     font-size: 4.5rem;
     color: #dd9a5f;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
@@ -134,6 +135,10 @@ nav .nav-wrapper i:focus {
     font-size: 1.25rem;
     padding: 10px;
     margin-top: -10px;
+}
+
+.sparx-logo {
+    padding-left: 40px;
 }
 
 .sparx-nav .side-nav li a,
