@@ -45,14 +45,6 @@ nav .nav-wrapper i:focus {
     text-decoration: none;
 }
 
-.big-letter {
-    font-size: 14rem;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: normal;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-}
-
 .bio-image {
     max-height: 20%;
     margin: 20px 10px;
@@ -98,6 +90,10 @@ nav .nav-wrapper i:focus {
     margin: 10px 0;
 }
 
+.main-image {
+    width: 65%;
+}
+
 .modal {
     width: 45%;
 }
@@ -124,12 +120,6 @@ nav .nav-wrapper i:focus {
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
 }
 
-.location,
-.tag-lines,
-.weekend {
-    font-size: 2.5rem;
-}
-
 .sparx-flow-text {
     color: white;
     font-size: 1.25rem;
@@ -148,16 +138,8 @@ nav .nav-wrapper i:focus {
     text-decoration: none;
 }
 
-.weekend {
-    margin: 1vh auto;
-}
-
-.year {
-    /* Margins and font are set based on viewport */
-    
-    font-size: 10rem;
-    text-decoration: underline;
-    margin: 9vh auto -3vh auto;
+.tag-lines {
+    font-size: 2.5rem;
 }
 /**
  * SPARX MEDIA QUERIES
@@ -168,11 +150,12 @@ nav .nav-wrapper i:focus {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    .big-letter {
-        font-size: 10rem;
-    }
     .bio-image {
         max-width: 92%;
+    }
+    .main-image {
+        width: 120%;
+        margin-left: -56px;
     }
     .location,
     .tag-lines,
@@ -198,12 +181,6 @@ nav .nav-wrapper i:focus {
         max-height: 40%;
         max-width: 50%;
     }
-    .weekend {
-        margin: 1vh auto;
-    }
-    .year {
-        margin-top: 12vh;
-    }
 }
 /* ----------- iPhone 6 ----------- */
 /* ----------- Galaxy S4 ----------- */
@@ -211,23 +188,13 @@ nav .nav-wrapper i:focus {
 /* Landscape */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .big-letter {
-        font-size: 10rem;
-        margin-bottom: -4vh;
-    }
     .bio-image {
         max-height: 40%;
         max-width: 50%;
     }
-    .location,
-    .tag-lines,
-    .weekend {
+    .tag-lines {
         font-size: 1.85rem;
         margin: 1vh auto;
-    }
-    .year {
-        font-size: 7.5rem;
-        margin-top: 6vh;
     }
 }
 /* ----------- iPhone 6+ ----------- */
@@ -238,9 +205,7 @@ nav .nav-wrapper i:focus {
         max-height: 40%;
         max-width: 50%;
     }
-    .location,
-    .tag-line,
-    .weekend {
+    .tag-line {
         margin: 1vh auto;
     }
 }
@@ -249,40 +214,19 @@ nav .nav-wrapper i:focus {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .big-letter {
-        font-size: 10rem;
-        margin-bottom: -4vh;
-    }
     .bio-image {
         max-height: 40%;
         max-width: 50%;
     }
-    .location,
-    .tag-lines,
-    .weekend {
+    .tag-lines {
         font-size: 1.85rem;
         margin: 1vh auto;
-    }
-    .year {
-        font-size: 7.5rem;
-        margin-top: 2vh;
     }
 }
 /* Landscape */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-    .year {
-        margin-top: 2vh;
-    }
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {}
 /* ----------- iPad 3 and 4 ----------- */
 /* Portrait and Landscape */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .big-letter {
-        margin-bottom: -4vh;
-    }
-    .year {
-        margin-top: 6vh;
-    }
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
