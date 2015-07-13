@@ -1,41 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
 	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
 ]>
-<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="576px" height="288px" viewBox="0 0 576 288" enable-background="new 0 0 576 288" xml:space="preserve">
-<rect display="none" fill="#7A0D1E" width="576" height="288"/>
-<g>
-	<defs>
-		<rect id="SVGID_1_" width="576" height="288"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  overflow="visible"/>
-	</clipPath>
-	<g clip-path="url(#SVGID_2_)">
-		<text transform="matrix(1 0 0 1 47.1753 195.2012)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="250.793">S</text>
-	</g>
-</g>
-<text transform="matrix(1 0 0 1 175.5801 175.9199)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">P</text>
-<text transform="matrix(1 0 0 1 226.5181 175.9199)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">A</text>
-<text transform="matrix(1 0 0 1 292.8467 176.0557)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">R</text>
-<polygon fill="#E5A653" points="472.688,249.967 338.93,35.954 363.226,35.954 496.822,249.967 "/>
-<g>
-	<defs>
-		<rect id="SVGID_3_" width="576" height="288"/>
-	</defs>
-	<clipPath id="SVGID_4_">
-		<use xlink:href="#SVGID_3_"  overflow="visible"/>
-	</clipPath>
-	<path clip-path="url(#SVGID_4_)" fill="#FFF6A4" d="M345.751,257.406c8.211-27.673,41.512-116.859,141.416-171.279
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="576px" height="288px" viewBox="0 0 576 288" enable-background="new 0 0 576 288" xml:space="preserve">
+    <rect display="none" fill="#7A0D1E" width="576" height="288" />
+    <g>
+        <defs>
+            <rect id="SVGID_1_" width="576" height="288" />
+        </defs>
+        <clipPath id="SVGID_2_">
+            <use xlink:href="#SVGID_1_" overflow="visible" />
+        </clipPath>
+        <g clip-path="url(#SVGID_2_)">
+            <text transform="matrix(1 0 0 1 47.1753 195.2012)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="250.793">S</text>
+        </g>
+    </g>
+    <text transform="matrix(1 0 0 1 175.5801 175.9199)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">P</text>
+    <text transform="matrix(1 0 0 1 226.5181 175.9199)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">A</text>
+    <text transform="matrix(1 0 0 1 292.8467 176.0557)" fill="#E5A653" font-family="'BodoniSans-Regular'" font-size="136.1982">R</text>
+    <polygon fill="#E5A653" points="472.688,249.967 338.93,35.954 363.226,35.954 496.822,249.967 " />
+    <g>
+        <defs>
+            <rect id="SVGID_3_" width="576" height="288" />
+            <style type="text/css">
+            @font-face {
+                font-family: BodoniSans-Regular;
+                src: url('../fonts/bodoni/2E76D0_0_0.woff');
+            }
+            </style>
+        </defs>
+        <clipPath id="SVGID_4_">
+            <use xlink:href="#SVGID_3_" overflow="visible" />
+        </clipPath>
+        <path clip-path="url(#SVGID_4_)" fill="#FFF6A4" d="M345.751,257.406c8.211-27.673,41.512-116.859,141.416-171.279
 		c-0.082,0.009-0.18,0.033-0.266,0.047l0.039-0.047c-122.071,55.527-149.979,179.737-149.979,179.737
-		C337.303,265.533,345.751,257.406,345.751,257.406"/>
-	<polygon clip-path="url(#SVGID_4_)" fill="#FFF6A4" points="497.982,68.62 502.139,81.43 508.819,93.123 504.663,80.313 	"/>
-	<polygon clip-path="url(#SVGID_4_)" fill="#FFF6A4" points="511.984,77.075 503.011,79.987 494.817,84.667 503.792,81.756 	"/>
-</g>
+		C337.303,265.533,345.751,257.406,345.751,257.406" />
+        <polygon clip-path="url(#SVGID_4_)" fill="#FFF6A4" points="497.982,68.62 502.139,81.43 508.819,93.123 504.663,80.313 	" />
+        <polygon clip-path="url(#SVGID_4_)" fill="#FFF6A4" points="511.984,77.075 503.011,79.987 494.817,84.667 503.792,81.756 	" />
+    </g>
 </svg>
