@@ -117,6 +117,14 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
         }, 500);
     });
 
+    $http.get("json/bands.json").success(function(data) {
+        $scope.bands = data;
+        // So we give the DOM a second to load the data
+        setTimeout(function() {
+            $('.modal-trigger').leanModal();
+        }, 500);
+    });
+
     initSparxNav();
     _scrollToTop();
 

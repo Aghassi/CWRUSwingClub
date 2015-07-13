@@ -20,3 +20,14 @@
                                                 img(src="{{headshot.bodyshot}}").img-responsive
                                             .modal-footer
                                                 a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
+                            .row                    
+                                .hide-on-small-only
+                                    h2.center -Band and DJs-
+                                    div.col.s12.m4.l4(ng-repeat="band in bands")
+                                        img(src="{{band.src}}" href="#{{band.id}}").circle.headshot.z-depth-2.modal-trigger
+                                        div.modal.modal-fixed-footer(id="{{band.id}}")
+                                            .modal-content
+                                                h4.center.name {{band.name}}
+                                                img(src="{{band.bodyshot}}").img-responsive
+                                            .modal-footer
+                                                a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
