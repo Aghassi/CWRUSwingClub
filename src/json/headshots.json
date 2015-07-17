@@ -1,11 +1,16 @@
 [{
-    "src": "images/sparx/left-headshots/BobbyWhite_headshot.jpg",
+    "src": "images/sparx/teachers-headshots/BobbyWhite_headshot.jpg",
     "bodyshot": "images/sparx/BWhite.jpg",
     "id": "Bobby_White",
     "name": "Bobby White"
 }, {
-    "src": "images/sparx/left-headshots/KateHedin_headshot.jpg",
+    "src": "images/sparx/teachers-headshots/KateHedin_headshot.jpg",
     "bodyshot": "images/sparx/KateHedin.jpg",
     "id": "Kate_Hedin",
     "name": "Kate Hedin"
+}, {
+    "src": "images/sparx/teachers-headshots/AnnMony_headshot.jpg",
+    "bodyshot": "images/sparx/AnnMonySolo.jpg",
+    "id": "Ann_Mony",
+    "name": "Ann Mony"
 }]

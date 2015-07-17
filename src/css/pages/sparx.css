@@ -47,7 +47,7 @@ nav .nav-wrapper i:focus {
 
 .bio-image {
     max-height: 20%;
-    margin: 20px 10px;
+    margin: 20px 40px;
     max-width: 25%;
 }
 
@@ -124,7 +124,7 @@ nav .nav-wrapper i:focus {
     color: white;
     font-size: 1.25rem;
     padding: 10px;
-    margin-top: -10px;
+    margin: 10px 40px;
 }
 
 .sparx-logo {
@@ -151,7 +151,7 @@ nav .nav-wrapper i:focus {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     .bio-image {
-        max-width: 92%;
+        max-width: 70%;
     }
     .main-image {
         width: 120%;
@@ -179,7 +179,7 @@ nav .nav-wrapper i:focus {
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .bio-image {
         max-height: 40%;
-        max-width: 50%;
+        max-width: 80%;
     }
 }
 /* ----------- iPhone 6 ----------- */
@@ -189,8 +189,7 @@ nav .nav-wrapper i:focus {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .bio-image {
-        max-height: 40%;
-        max-width: 50%;
+        max-width: 80%;
     }
     .tag-lines {
         font-size: 1.85rem;
@@ -203,10 +202,18 @@ nav .nav-wrapper i:focus {
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     .bio-image {
         max-height: 40%;
-        max-width: 50%;
+        max-width: 49%;
     }
     .tag-line {
         margin: 1vh auto;
+    }
+}
+/* ----------- Asus Nexus 7 ----------- */
+/* Portrait */
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1.322) and (orientation: portrait) {
+    .bio-image {
+        max-width: 84%;
     }
 }
 /* ----------- iPad 1 and 2 ----------- */
