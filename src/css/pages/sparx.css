@@ -7,29 +7,26 @@ header {
 }
 
 .background-sparx {
-    background: navajowhite;
+    background: #FFE6B5;
     font-family: BodoniSans-Regular;
     font-weight: normal;
     font-style: normal;
 }
 
 .background-sparx nav {
-    background-color: maroon;
+    /* Off red **/
+    
+    background-color: #681B20;
     height: 90px;
     line-height: 90px;
 }
 
 .background-sparx nav .brand-logo {
+    padding-left: 40px;
     font-size: 4.5rem;
-    color: gold;
+    color: #dd9a5f;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-}
-
-.sparx-nav .side-nav li a,
-.sparx-nav .side-nav li:hover,
-.sparx-nav .side-nav li:active {
-    color: darkred !important;
-    text-decoration: none;
+    height: 85px;
 }
 /**
  * Overriting materialized/bootstrap hover + focus effects
@@ -42,26 +39,21 @@ header {
 .background-sparx nav .brand-logo:visited,
 nav .nav-wrapper i:hover,
 nav .nav-wrapper i:focus {
-    color: gold;
+    /* Rust orange */
+    
+    color: #dd9a5f;
     text-decoration: none;
 }
 
-.big-letter {
-    font-size: 14rem;
-    margin-bottom: -7vh;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: normal;
-}
-
 .bio-image {
-    margin: 20px 10px;
+    max-height: 20%;
+    margin: 20px 40px;
     max-width: 25%;
 }
 
 .card,
 .card-panel {
-    background-color: maroon;
+    background-color: #681B20;
 }
 
 .card-panel .card-contents {
@@ -73,7 +65,7 @@ nav .nav-wrapper i:focus {
 }
 
 .headshot {
-    max-width: 45%;
+    max-width: 90%;
     margin: 6px;
     -webkit-transition: 0.5s ease;
     -moz-transition: 0.5s ease;
@@ -98,42 +90,56 @@ nav .nav-wrapper i:focus {
     margin: 10px 0;
 }
 
-.modal-content {
-    color: darkred;
+.main-image {
+    width: 65%;
+}
+
+.modal {
+    width: 45%;
+}
+
+.modal,
+.modal .modal-content {
+    background-color: #eeeff1;
+}
+
+.modal .modal-content .name {
+    color: #681B20
+}
+
+.modal .modal-footer {
+    background-color: #681B20
+}
+
+.modal .modal-footer .modal-action {
+    color: #dd9a5f
 }
 
 .lettering {
-    color: gold;
+    color: #fff6a4;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-}
-
-.location {
-    margin: -4vh auto -1vh auto;
-}
-
-.location,
-.tag-lines,
-.weekend {
-    font-size: 2.5rem;
 }
 
 .sparx-flow-text {
     color: white;
     font-size: 1.25rem;
     padding: 10px;
-    margin-top: -10px;
+    margin: 10px 40px;
 }
 
-.weekend {
-    margin: 1vh auto -4vh auto;
+.sparx-logo {
+    padding-left: 40px;
 }
 
-.year {
-    /* Margins and font are set based on viewport */
-    
-    font-size: 10rem;
-    text-decoration: underline;
-    margin: 9vh auto -3vh auto;
+.sparx-nav .side-nav li a,
+.sparx-nav .side-nav li:hover,
+.sparx-nav .side-nav li:active {
+    color: darkred !important;
+    text-decoration: none;
+}
+
+.tag-lines {
+    font-size: 2.5rem;
 }
 /**
  * SPARX MEDIA QUERIES
@@ -144,11 +150,12 @@ nav .nav-wrapper i:focus {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    .big-letter {
-        font-size: 10rem;
-    }
     .bio-image {
-        max-width: 92%;
+        max-width: 70%;
+    }
+    .main-image {
+        width: 120%;
+        margin-left: -56px;
     }
     .location,
     .tag-lines,
@@ -172,13 +179,7 @@ nav .nav-wrapper i:focus {
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .bio-image {
         max-height: 40%;
-        max-width: 50%;
-    }
-    .weekend {
-        margin: 1vh auto;
-    }
-    .year {
-        margin-top: 12vh;
+        max-width: 80%;
     }
 }
 /* ----------- iPhone 6 ----------- */
@@ -187,23 +188,12 @@ nav .nav-wrapper i:focus {
 /* Landscape */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .big-letter {
-        font-size: 10rem;
-        margin-bottom: -4vh;
-    }
     .bio-image {
-        max-height: 40%;
-        max-width: 50%;
+        max-width: 80%;
     }
-    .location,
-    .tag-lines,
-    .weekend {
+    .tag-lines {
         font-size: 1.85rem;
         margin: 1vh auto;
-    }
-    .year {
-        font-size: 7.5rem;
-        margin-top: 6vh;
     }
 }
 /* ----------- iPhone 6+ ----------- */
@@ -212,12 +202,18 @@ nav .nav-wrapper i:focus {
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     .bio-image {
         max-height: 40%;
-        max-width: 50%;
+        max-width: 49%;
     }
-    .location,
-    .tag-line,
-    .weekend {
+    .tag-line {
         margin: 1vh auto;
+    }
+}
+/* ----------- Asus Nexus 7 ----------- */
+/* Portrait */
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1.322) and (orientation: portrait) {
+    .bio-image {
+        max-width: 84%;
     }
 }
 /* ----------- iPad 1 and 2 ----------- */
@@ -225,40 +221,19 @@ nav .nav-wrapper i:focus {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .big-letter {
-        font-size: 10rem;
-        margin-bottom: -4vh;
-    }
     .bio-image {
         max-height: 40%;
         max-width: 50%;
     }
-    .location,
-    .tag-lines,
-    .weekend {
+    .tag-lines {
         font-size: 1.85rem;
         margin: 1vh auto;
-    }
-    .year {
-        font-size: 7.5rem;
-        margin-top: 2vh;
     }
 }
 /* Landscape */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-    .year {
-        margin-top: 2vh;
-    }
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {}
 /* ----------- iPad 3 and 4 ----------- */
 /* Portrait and Landscape */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .big-letter {
-        margin-bottom: -4vh;
-    }
-    .year {
-        margin-top: 6vh;
-    }
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}

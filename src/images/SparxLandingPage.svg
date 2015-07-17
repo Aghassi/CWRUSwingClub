@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+    <polygon display="none" fill="#790F15" points="0.193,0 0,399.859 290.154,400 399.893,400 399.999,177.647 399.999,0.096 
+	201.069,0 " />
+    <polygon display="none" fill="#790F15" points="0.193,0 0.075,245.304 0,399.859 290.154,400 399.893,400 399.999,177.647 
+	399.999,0.096 201.069,0 " />
+    <polygon fill="#E5A653" points="251.578,254.237 100.169,11.983 127.671,11.983 278.896,254.237 " />
+    <g>
+        <defs>
+            <rect id="SVGID_1_" width="400" height="400" />
+            <style type="text/css">
+            @font-face {
+                font-family: BodoniSans-Regular;
+                src: url('../fonts/bodoni/2E76D0_0_0.woff');
+            }
+            </style>
+        </defs>
+        <clipPath id="SVGID_2_">
+            <use xlink:href="#SVGID_1_" overflow="visible" />
+        </clipPath>
+        <path clip-path="url(#SVGID_2_)" fill="#FFF6A4" d="M107.891,262.658c9.295-31.325,46.99-132.279,160.077-193.881
+		c-0.092,0.011-0.204,0.038-0.301,0.054l0.044-0.054C129.532,131.631,97.94,272.232,97.94,272.232
+		C98.329,271.858,107.891,262.658,107.891,262.658" />
+        <polygon clip-path="url(#SVGID_2_)" fill="#FFF6A4" points="280.21,48.96 284.915,63.46 292.478,76.697 287.772,62.196 	" />
+        <polygon clip-path="url(#SVGID_2_)" fill="#FFF6A4" points="296.06,58.531 285.9,61.827 276.628,67.125 286.787,63.829 	" />
+    </g>
+    <text transform="matrix(1 0 0 1 99.2559 322.46)">
+        <tspan x="0" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">2</tspan>
+        <tspan x="54.328" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">0</tspan>
+        <tspan x="110.201" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">1</tspan>
+        <tspan x="160.023" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132">6</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 87.9995 387.6523)">
+        <tspan x="0" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27"> </tspan>
+        <tspan x="5.939" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">CLEVELAND</tspan>
+        <tspan x="146.392" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">, OH</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 112.0024 353.5518)">
+        <tspan x="0" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27" letter-spacing="-2">F</tspan>
+        <tspan x="11.583" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">ebruary 5-</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 234.1768 353.5518)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">7</text>
+    <text transform="matrix(1 0 0 1 246.4854 348.0479)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="18">t</text>
+    <text transform="matrix(1 0 0 1 252.3711 347.7959)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="18">h</text>
+</svg>
