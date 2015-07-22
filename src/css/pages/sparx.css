@@ -147,11 +147,13 @@ nav .nav-wrapper i:focus {
  * We need to handle font sizing on different screen sizes because rem is not universal
  */
 /* ----------- iPhone 4 and 4S ----------- */
+/* ----------- iPhone 5 and 5S ----------- */
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     .bio-image {
-        max-width: 70%;
+        max-width: 80%;
+        max-height: 80%
     }
     .main-image {
         width: 120%;
@@ -166,22 +168,7 @@ nav .nav-wrapper i:focus {
         font-size: 7.5rem;
     }
 }
-/* Landscape */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .bio-image {
-        max-height: 20%;
-    }
-}
-/* ----------- iPhone 5 and 5S ----------- */
-/* Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .bio-image {
-        max-height: 40%;
-        max-width: 80%;
-    }
-}
 /* ----------- iPhone 6 ----------- */
 /* ----------- Galaxy S4 ----------- */
 /* ----------- Galaxy S3 ----------- */
@@ -196,7 +183,7 @@ nav .nav-wrapper i:focus {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .bio-image {
-        max-height: 80%;
+        max-height: 70%;
         max-width: 80%;
     }
     .tag-lines {
