@@ -29,7 +29,7 @@
             <style type="text/css">
             @font-face {
                 font-family: BodoniSans-Regular;
-                src: url('../fonts/bodoni/2E76D0_0_0.woff');
+                src: url('../fonts/2E76D0_0_0.woff');
             }
             </style>
         </defs>
