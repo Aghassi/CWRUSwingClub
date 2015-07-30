@@ -34,7 +34,19 @@
 			"location": "Veale Multipurpose Room"
 		}]
    	}, {
-		"hour": "2:00 PM - 3:30 PM",
+		"hour": "2:00 PM - 4:00 PM",
+    	"tracks": [{
+    		"name": "Beginner - Charleston with Ann",
+    		"location": "Carlton Commons"
+		},{
+    		"name": "Intermediate - Charleston with Danny and Mandy",
+    		"location": "Adelbert Gymnasium"
+		},{
+			"name": "Advanced - Lindy with Bobby and Kate",
+			"location": "Veale Multipurpose Room"
+		}]
+   	}, {
+		"hour": "7:00 PM - 12:00 PM",
     	"tracks": [{
     		"name": "Beginner - Charleston with Ann",
     		"location": "Carlton Commons"
