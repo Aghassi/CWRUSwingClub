@@ -35,6 +35,8 @@ module.exports = function(grunt) {
     ];
     //CSS
     var cssPagesSrc = src + "css/pages/*.css";
+    //JSON
+    var json = src + 'json/*';
 
     // Project configuration.
     grunt.initConfig({
@@ -206,6 +208,11 @@ module.exports = function(grunt) {
                 src: build + jsLib + 'scripts/scripts.js',
                 dest: prod + jsLib + "scripts/scripts.min.js"
             },
+        },
+        jsonlint: {
+            json: {
+                src: json
+            }
         },
         imagemin: {
             dev: {
@@ -463,6 +470,10 @@ module.exports = function(grunt) {
             jade: {
                 files: src + 'pages/*.jade',
                 tasks: ['jade']
+            },
+            json: {
+                files: json,
+                tasks: 'jsonlint'
             }
         }
     });
@@ -475,6 +486,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-html-build');
@@ -504,13 +516,12 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:build', 'jshint',
         'concat', 'csslint',
-        'concat_css', 'jade'
+        'concat_css', 'jsonlint',
+        'jade'
     ]);
     // Lint JS
-    grunt.registerTask('lintjs', 'jshint');
     grunt.registerTask('lintNewJs', 'newer:jshint');
     // Lint CSS
-    grunt.registerTask('lintcss', 'csslint');
     grunt.registerTask('lintNewerCss', 'newer:csslint');
     //Minify JS
     grunt.registerTask('minjs', ['concat', 'uglify']);
