@@ -86,5 +86,41 @@
             }
         ],
         "danceLocation": "Adelbert Gymnasium"
+    },
+    {
+        "day": "Saturday Late Night - Blues",
+        "dance": [
+            {
+                "hour": "12:30 AM - 1:30 AM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "1:30 AM - 2:30 AM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "2:30 AM - 3:30 AM",
+                "evemt": "DJ-TBA"
+            }
+        ],
+        "danceLocation": "Carlton Commons"
+    },
+    {
+        "day": "Saturday Late Night - Lindy",
+        "dance": [
+            {
+                "hour": "12:30 AM - 1:30 AM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "1:30 AM - 2:30 AM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "2:30 AM - 3:30 AM",
+                "evemt": "DJ-TBA"
+            }
+        ],
+        "danceLocation": "Rough Rider Room"
     }
 ]
