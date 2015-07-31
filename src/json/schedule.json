@@ -1,66 +1,90 @@
-[{
-	"day": "Friday",
-    "timeslots": [{
-    	"hour": "7 PM - 8PM",
-    	"event": {
-    		"name": "Beginner East Coast Lesson",
-    		"location": "Adelbert Gymnasium"
-		}
-   	}, {
-   		"hours": "8 PM - 9 PM",
-   		"dj": "DJ-TBA"
-   		},{
-   		"hours": "9 PM - 10 PM",
-   		"dj": "DJ-TBA"
-   		}{
-   		"hours": "10 PM - 11 PM",
-   		"dj": "DJ-TBA"
-   		},{
-   		"hours": "11 PM - 12 PM",
-   		"dj": "DJ-TBA"
-   		}]
-}, {
-	"day": "Saturday",
-    "timeslots": [{
-    	"hour": "10:30 AM - 12:30 PM",
-    	"tracks": [{
-    		"name": "Beginner - Danny and Mandy",
-    		"location": "Carlton Commons"
-		},{
-    		"name": "Intermediate - Lindy with Bobby and Kate",
-    		"location": "Adelbert Gymnasium"
-		},{
-			"name": "Advanced - Solo Charleston with Ann",
-			"location": "Veale Multipurpose Room"
-		}]
-   	}, {
-		"hour": "2:00 PM - 4:00 PM",
-    	"tracks": [{
-    		"name": "Beginner - Charleston with Ann",
-    		"location": "Carlton Commons"
-		},{
-    		"name": "Intermediate - Charleston with Danny and Mandy",
-    		"location": "Adelbert Gymnasium"
-		},{
-			"name": "Advanced - Lindy with Bobby and Kate",
-			"location": "Veale Multipurpose Room"
-		}]
-   	}, {
-		"hour": "7:00 PM - 12:00 PM",
-    	"tracks": [{
-    		"name": "Beginner - Charleston with Ann",
-    		"location": "Carlton Commons"
-		},{
-    		"name": "Intermediate - Charleston with Danny and Mandy",
-    		"location": "Adelbert Gymnasium"
-		},{
-			"name": "Advanced - Lindy with Bobby and Kate",
-			"location": "Veale Multipurpose Room"
-		}]
-   	}]
-}, {
-	"day": "Sunday",
-    "time": "",
-    "track": "",
-    "location": ""
-}]
+[
+    {
+        "day": "Friday",
+        "dance": [
+            {
+                "hour": "7 PM - 8PM",
+                "event": "Beginner East Coast Lesson"
+            },
+            {
+                "hours": "8 PM - 9 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "9 PM - 10 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "10 PM - 11 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "11 PM - 12 PM",
+                "evemt": "DJ-TBA"
+            }
+        ],
+        "danceLocation": "Adelbert Gymnasium"
+    },
+    {
+        "day": "Saturday",
+        "teaching_times": [
+            {
+                "hour": "10:30 AM - 12:30 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate - Lindy with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Advanced - Solo Charleston with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            },
+            {
+                "hour": "2:00 PM - 4:00 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Charleston with Ann",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate - Charleston with Danny and Mandy",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Advanced - Lindy with Bobby and Kate",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            }
+        ],
+        "dance": [
+            {
+                "hour": "7:00 PM - 8:00PM",
+                "event": "Beginner East Coast Lesson"
+            },
+            {
+                "hours": "8 PM - 9 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "9 PM - 10 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "10 PM - 11 PM",
+                "evemt": "DJ-TBA"
+            },
+            {
+                "hours": "11 PM - 12 PM",
+                "evemt": "DJ-TBA"
+            }
+        ],
+        "danceLocation": "Adelbert Gymnasium"
+    }
+]
