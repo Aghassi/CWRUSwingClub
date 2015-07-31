@@ -485,13 +485,15 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default', 'watch');
     // Compile the project for production
-    grunt.registerTask('prod', ['clean:build', 'clean:prod',
+    grunt.registerTask('prod', [
+        'clean:build', 'clean:prod',
         'jshint', 'minjs',
         'csslint', 'mincss',
         'imagemin:prod', 'html'
     ]);
     // Compile the project for dev
-    grunt.registerTask('dev', ['clean:build', 'clean:dev',
+    grunt.registerTask('dev', [
+        'clean:build', 'clean:dev',
         'jshint', 'concat',
         'csslint', 'concat_css',
         'imagemin:dev', 'copy:dev',
@@ -499,10 +501,10 @@ module.exports = function(grunt) {
         'htmlbuild:dev_pages'
     ]);
     //Build the project
-    grunt.registerTask('build', ['clean:build', 'jshint',
+    grunt.registerTask('build', [
+        'clean:build', 'jshint',
         'concat', 'csslint',
-        'concat_css', 'imagemin:dev',
-        'copy:dev', 'jade'
+        'concat_css', 'jade'
     ]);
     // Lint JS
     grunt.registerTask('lintjs', 'jshint');
