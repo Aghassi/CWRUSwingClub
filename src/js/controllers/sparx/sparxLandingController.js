@@ -20,6 +20,6 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
         }, 500);
     });
 
-    initSparxNav();
+    initNav('.sparx-collapse-button');
     _scrollToTop();
 }]);

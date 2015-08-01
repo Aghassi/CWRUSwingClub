@@ -8,5 +8,6 @@ app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', fun
         initGallery('#gallery', '6144618759687328673', 'auto');
     });
 
+    initNav('.button-collapse');
     _scrollToTop();
 }]);

@@ -14,6 +14,6 @@ app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$
 
     fadeInContent('.card');
 
-    initSparxNav();
-    _scrollToTop()
+    initNav('.sparx-collapse-button');
+    _scrollToTop();
 }]);

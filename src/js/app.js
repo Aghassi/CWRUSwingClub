@@ -9,12 +9,23 @@ var _scrollToTop = function() {
 
 /**
  * Makes the slide over nav activate for the SparX Pages
+ *
+ * @param string cssClass cssClass that represents the sideNav
+ * button
  */
-var initSparxNav = function() {
+var initNav = function(cssClass) {
     setTimeout(function() {
-        $('.sparx-collapse-button').sideNav({
-            closeOnClick: true
+        /*
+         There is an issue with materize in that it will slide away a sidenav
+         like the one we have on our home page. We have to make sure that doesn't happen.
+         Solution was found here and adapted: https://github.com/Dogfalo/materialize/pull/1615
+         */
+        var isNotDesktop = window.innerWidth <= 992;
+        $(cssClass).sideNav({
+            closeOnClick: isNotDesktop
         });
+        // This does nothing if collapsible doesn't exist
+        $('.collapsible').collapsible();
     }, 500);
 }
 

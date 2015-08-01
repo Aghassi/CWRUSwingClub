@@ -11,6 +11,6 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     // We always want to see one card so the user doesn't think the page didn't load
     fadeInContent('.instructor-card');
 
-    initSparxNav();
-    _scrollToTop()
+    initNav('.sparx-collapse-button');
+    _scrollToTop();
 }]);

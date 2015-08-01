@@ -4,5 +4,6 @@ app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', fu
     $rootScope.title = 'Overview';
     $scope.$routeParams = $routeParams;
 
+    initNav('.button-collapse');
     _scrollToTop();
 }]);
