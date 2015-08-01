@@ -5,7 +5,7 @@ var _scrollToTop = function() {
     $('html, body').animate({
         scrollTop: 0
     }, 'slow');
-}
+};
 
 /**
  * Makes the slide over nav activate for the SparX Pages
@@ -27,7 +27,7 @@ var initNav = function(cssClass) {
         // This does nothing if collapsible doesn't exist
         $('.collapsible').collapsible();
     }, 500);
-}
+};
 
 /**
  * Initializes nanoGallery widget
@@ -55,7 +55,7 @@ var initGallery = function(id, albumID, thmbWidth) {
         thumbnailGutterWidth: 5,
         thumbnailGutterHeight: 5
     });
-}
+};
 
 /**
  * Fades in the content on the page given a css class name
@@ -69,7 +69,7 @@ var fadeInContent = function(cssClass) {
             }, 800);
         });
     }, 100);
-}
+};
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;

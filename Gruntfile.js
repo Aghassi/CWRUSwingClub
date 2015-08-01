@@ -175,9 +175,6 @@ module.exports = function(grunt) {
             angular: {
                 src: angular
             },
-            js: {
-                src: js
-            }
         },
         concat: {
             controllers: {
@@ -444,10 +441,6 @@ module.exports = function(grunt) {
             angular: {
                 files: '<%= jshint.angular.src %>',
                 tasks: ['newer:jshint:angular']
-            },
-            js: {
-                files: '<%= jshint.js.src %>',
-                tasks: ['newer:jshint:js']
             },
             cssPages: {
                 files: '<%= csslint.pages.src %>',
