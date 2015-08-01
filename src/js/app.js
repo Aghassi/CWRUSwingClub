@@ -176,9 +176,14 @@ app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$
     $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
 
-    $http.get("json/schedule.json").success(function(data) {
+    $http.get("json/schedule-lessons.json").success(function(data) {
         $scope.days = angular.fromJson(data);
     });
+
+    $http.get("json/schedule-dances.json").success(function(data) {
+        $scope.dances = angular.fromJson(data);
+    });
+
 
     initSparxNav();
     _scrollToTop()
