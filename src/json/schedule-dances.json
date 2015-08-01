@@ -26,6 +26,32 @@
         "danceLocation": "Adelbert Gymnasium"
     },
     {
+        "day": "Saturday Evening (Lindy)",
+        "dance": [
+            {
+                "hours": "7:00 PM - 8:00PM",
+                "event": "Beginner East Coast Lesson"
+            },
+            {
+                "hours": "8:00 PM - 9:00 PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "9:00 PM - 10:00 PM",
+                "event": "The Boilermaker Jazz Band"
+            },
+            {
+                "hours": "10:00 PM - 11:00 PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "11:00 PM - 12:00 PM",
+                "event": "The Boilermaker Jazz Band"
+            }
+        ],
+        "danceLocation": "Adelbert Gymnasium"
+    },
+    {
         "day": "Saturday Late Night - Blues",
         "dance": [
             {
@@ -60,5 +86,27 @@
             }
         ],
         "danceLocation": "Rough Rider Room"
+    },
+    {
+        "day": "Sunday Evening (Balboa)",
+        "dance": [
+            {
+                "hours": "6:30 PM - 7:30PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "7:30 PM - 8:30 PM",
+                "event": "The Boilermaker Jazz Band"
+            },
+            {
+                "hours": "8:30 PM - 9:30 PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "9:30 PM - 10:30 PM",
+                "event": "The Boilermaker Jazz Band"
+            }
+        ],
+        "danceLocation": "Adelbert Gymnasium"
     }
 ]

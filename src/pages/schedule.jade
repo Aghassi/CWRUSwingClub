@@ -14,16 +14,12 @@
                     // On this small data set, this is ok
                     // On larger data don't do this
                     tr(ng-repeat="track in day.teaching_times" class="{{track.track}}")
-                        td {{track.hour}}
                         td 
-                            div(ng-repeat="track in track.tracks") 
-                                p {{track.name}}
-                                br
-
+                            p {{track.hour}}
                         td 
-                            div(ng-repeat="track in track.tracks") 
-                                p {{track.location}}
-                                br
+                            p(ng-repeat="track in track.tracks") {{track.name}}
+                        td 
+                            p(ng-repeat="track in track.tracks")  {{track.location}}
 
     .section
         h5 Dances
