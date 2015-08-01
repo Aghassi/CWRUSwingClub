@@ -497,9 +497,7 @@ module.exports = function(grunt) {
         'clean:build', 'clean:dev',
         'jshint', 'concat',
         'csslint', 'concat_css',
-        'imagemin:dev', 'copy:dev',
-        'jade', 'htmlbuild:dev_index',
-        'htmlbuild:dev_pages'
+        'imagemin:dev', 'html_dev'
     ]);
     //Build the project
     grunt.registerTask('build', [
@@ -517,7 +515,10 @@ module.exports = function(grunt) {
     //Minify CSS
     grunt.registerTask('mincss', ['concat_css', 'cssmin']);
     //Build HTML
-    grunt.registerTask('html', ['copy:prod', 'jade',
+    grunt.registerTask('html_prod', ['copy:prod', 'jade',
         'htmlbuild:prod_pages', 'htmlbuild:prod_index'
+    ]);
+    grunt.registerTask('html_dev', ['copy:dev', 'jade',
+        'htmlbuild:dev_pages', 'htmlbuild:dev_index'
     ]);
 };
