@@ -13,6 +13,28 @@ var initSparxNav = function() {
     }, 500);
 }
 
+var initGallery = function(id, albumID, thmbWidth) {
+    jQuery(id).nanoGallery({
+            kind: 'picasa',
+            userID: 'cwruswing@gmail.com',
+            album: albumID,
+            thumbnailWidth: thmbWidth,
+
+            paginationMaxLinesPerPage: 4,
+
+            theme: 'clean',
+            galleryToolbarHideIcons: true,
+            thumbnailHoverEffect: 'imageScale150',
+            thumbnailLabel: {
+                display: false,
+                displayDescription: false,
+                hideIcons: true,
+            },
+            thumbnailGutterWidth: 5,
+            thumbnailGutterHeight: 5
+        });
+}
+
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
@@ -38,6 +60,7 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
 
     _scrollToTop();
 }]);
+
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
@@ -45,35 +68,19 @@ app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', fu
 
     _scrollToTop();
 }]);
+
 app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
     $rootScope.title = 'Gallery';
     $scope.$routeParams = $routeParams;
     // Setup the gallery - justified
     $(document).ready(function() {
-        jQuery('#gallery').nanoGallery({
-            kind: 'picasa',
-            userID: 'cwruswing@gmail.com',
-            album: '6144618759687328673',
-            thumbnailWidth: 'auto',
-
-            paginationMaxLinesPerPage: 4,
-
-            theme: 'clean',
-            galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'imageScale150',
-            thumbnailLabel: {
-                display: false,
-                displayDescription: false,
-                hideIcons: true,
-            },
-            thumbnailGutterWidth: 5,
-            thumbnailGutterHeight: 5
-        });
+        initGallery('#gallery', '6144618759687328673', 'auto');
     });
 
     _scrollToTop();
 }]);
+
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
     $rootScope.title = 'SparX Gallery';
@@ -81,25 +88,7 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
 
     // Setup the gallery - paginated
     $(document).ready(function() {
-        jQuery('#sparx').nanoGallery({
-            kind: 'picasa',
-            userID: 'cwruswing@gmail.com',
-            album: '6135497289919570833',
-            thumbnailWidth: '101',
-
-            paginationMaxLinesPerPage: 4,
-
-            theme: 'clean',
-            galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'imageScale150',
-            thumbnailLabel: {
-                display: false,
-                displayDescription: false,
-                hideIcons: true,
-            },
-            thumbnailGutterWidth: 5,
-            thumbnailGutterHeight: 5
-        });
+        initGallery('#sparx', '6135497289919570833', '101');
     });
 
     _scrollToTop();
@@ -110,7 +99,7 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
     $scope.$routeParams = $routeParams;
 
     $http.get("json/headshots.json").success(function(data) {
-        $scope.headshots = data;
+        $scope.headshots = angular.fromJson(data);
         // So we give the DOM a second to load the data
         setTimeout(function() {
             $('.modal-trigger').leanModal();
@@ -135,7 +124,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     $scope.$routeParams = $routeParams;
 
     $http.get("json/instructors.json").success(function(data) {
-        $scope.teachers = data;
+        $scope.teachers = angular.fromJson(data);
     });
 
     // We always want to see one card so the user doesn't think the page didn't load
@@ -183,6 +172,18 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     _scrollToTop()
 }]);
 
+app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$http', function($scope, $rootScope, $routeParams, $http) {
+    $rootScope.title = 'SparX'; // Page name in browser bar
+    $scope.$routeParams = $routeParams;
+
+    $http.get("json/schedule.json").success(function(data) {
+        $scope.days = angular.fromJson(data);
+    });
+
+    initSparxNav();
+    _scrollToTop()
+}]);
+
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
@@ -214,9 +215,13 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/sparx.html',
             controller: 'SparXLandingController'
         })
-        .when('/sparx/:instructors', {
+        .when('/sparx/instructors', {
             templateUrl: 'pages/instructors.html',
             controller: 'InstructorsController'
+        })
+        .when('/sparx/schedule', {
+            templateUrl: 'pages/schedule.html',
+            controller: 'ScheduleController'
         })
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
@@ -243,5 +248,6 @@ app.config(function($routeProvider, $locationProvider) {
 
     // Leave this false so people can access pages without having
     // to go to cwru.edu/swingclub first.
+    // This is due to the case servers not knowing how to handling HTML5 routing
     $locationProvider.html5Mode(false);
 });

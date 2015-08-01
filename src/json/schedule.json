@@ -1,33 +1,16 @@
 [
     {
-        "day": "Friday",
-        "dance": [
-            {
-                "hour": "7 PM - 8PM",
-                "event": "Beginner East Coast Lesson"
-            },
-            {
-                "hours": "8 PM - 9 PM",
-                "evemt": "DJ-TBA"
-            },
-            {
-                "hours": "9 PM - 10 PM",
-                "evemt": "DJ-TBA"
-            },
-            {
-                "hours": "10 PM - 11 PM",
-                "evemt": "DJ-TBA"
-            },
-            {
-                "hours": "11 PM - 12 PM",
-                "evemt": "DJ-TBA"
-            }
-        ],
-        "danceLocation": "Adelbert Gymnasium"
-    },
-    {
         "day": "Saturday",
         "teaching_times": [
+	        {
+	            "hour": "9:30 AM - 10:15 PM",
+	            "tracks": [
+	                {
+	                    "name": "Auditions for Advanced",
+	                    "location": "Adelbert Gymnasium"
+	                }
+	            ]
+	        },
             {
                 "hour": "10:30 AM - 12:30 PM",
                 "tracks": [
@@ -74,7 +57,7 @@
             },
             {
                 "hours": "9 PM - 10 PM",
-                "evemt": "DJ-TBA"
+                "evemt": "The Boilermaker Jazz Band"
             },
             {
                 "hours": "10 PM - 11 PM",
@@ -82,45 +65,67 @@
             },
             {
                 "hours": "11 PM - 12 PM",
-                "evemt": "DJ-TBA"
+                "evemt": "The Boilermaker Jazz Band"
             }
         ],
         "danceLocation": "Adelbert Gymnasium"
     },
     {
-        "day": "Saturday Late Night - Blues",
+        "day": "Sunday",
+        "teaching_times": [
+            {
+                "hour": "11:00 AM - 1:00 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Balboa Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Isolations with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            },
+            {
+                "hour": "2:30 PM - 4:30 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Balboa Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Isolations with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            }
+        ],
         "dance": [
             {
-                "hour": "12:30 AM - 1:30 AM",
+                "hour": "6:30 PM - 7:30PM",
                 "event": "DJ-TBA"
             },
             {
-                "hours": "1:30 AM - 2:30 AM",
+                "hours": "7:30 PM - 8:30 PM",
+                "evemt": "The Boilermaker Jazz Band"
+            },
+            {
+                "hours": "8:30 PM - 9:30 PM",
                 "evemt": "DJ-TBA"
             },
             {
-                "hours": "2:30 AM - 3:30 AM",
-                "evemt": "DJ-TBA"
+                "hours": "9:30 PM - 10:30 PM",
+                "evemt": "The Boilermaker Jazz Band"
             }
         ],
-        "danceLocation": "Carlton Commons"
-    },
-    {
-        "day": "Saturday Late Night - Lindy",
-        "dance": [
-            {
-                "hour": "12:30 AM - 1:30 AM",
-                "event": "DJ-TBA"
-            },
-            {
-                "hours": "1:30 AM - 2:30 AM",
-                "evemt": "DJ-TBA"
-            },
-            {
-                "hours": "2:30 AM - 3:30 AM",
-                "evemt": "DJ-TBA"
-            }
-        ],
-        "danceLocation": "Rough Rider Room"
+        "danceLocation": "Adelbert Gymnasium"
     }
 ]
