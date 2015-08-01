@@ -27,10 +27,8 @@ module.exports = function(grunt) {
     var devCSS = ['src/css/MyFontsWebfontsKit.css'];
     var fonts = ['src/fonts/bodoni/*'];
 
-    //JS
-    var js = srcJs + "scripts/*.js";
     //Angular
-    var angular = [srcJs + "scripts/app.js", srcJs + 'scripts/sparxApp.js',
+    var angular = [srcJs + "app.js",
         srcJs + 'controllers/**/*.js', srcJs + 'directives/**/*.js'
     ];
     //CSS
@@ -189,10 +187,6 @@ module.exports = function(grunt) {
             directives: {
                 src: srcJs + 'directives/**/*.js',
                 dest: build + jsLib + 'directives.js'
-            },
-            scripts: {
-                src: js,
-                dest: build + jsLib + 'scripts/scripts.js'
             }
         },
         uglify: {
@@ -203,11 +197,7 @@ module.exports = function(grunt) {
             directives: {
                 src: build + jsLib + 'directives.js',
                 dest: prod + jsLib + 'scripts/directives.min.js'
-            },
-            scripts: {
-                src: build + jsLib + 'scripts/scripts.js',
-                dest: prod + jsLib + "scripts/scripts.min.js"
-            },
+            }
         },
         jsonlint: {
             json: {
@@ -269,8 +259,7 @@ module.exports = function(grunt) {
                     scripts: {
                         bundle: [
                             dev + jsLib + 'angular.js',
-                            dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'scripts/*.js'
+                            dev + jsLib + 'angular-route.js'
                         ]
                     },
                     styles: {
@@ -289,8 +278,7 @@ module.exports = function(grunt) {
                     scripts: {
                         bundle: [
                             dev + jsLib + 'angular.js',
-                            dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'scripts/*.js'
+                            dev + jsLib + 'angular-route.js'
                         ]
                     },
                     styles: {
@@ -309,8 +297,7 @@ module.exports = function(grunt) {
                     scripts: {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
-                            prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'scripts/*.js'
+                            prod + jsLib + 'angular-route.min.js'
                         ]
                     },
                     styles: {
@@ -329,8 +316,7 @@ module.exports = function(grunt) {
                     scripts: {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
-                            prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'scripts/*.js'
+                            prod + jsLib + 'angular-route.min.js'
                         ]
                     },
                     styles: {
