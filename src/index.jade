@@ -48,23 +48,23 @@ html(ng-app='swingclub' ng-controller='RouteController')
                         i.mdi-navigation-menu
                     ul.left.hide-on-med-and-down
                         li
-                            a Schedule
+                            a(href="#sparx/schedule") Schedule
                         li
-                            a(href="#sparx/instructors") Instructors
+                            a Venues
                     ul.right.hide-on-med-and-down
                         li
-                            a Register this fall!
-                        li
-                            a Map
-                    ul.side-nav#mobile-nav
-                        li
-                            a Schedule
+                            a Register October 17th!
                         li
                             a(href="#sparx/instructors") Instructors
+                    ul.side-nav#mobile-nav
                         li
-                            a Register this fall!
+                            a(href="#sparx/schedule") Schedule
                         li
-                            a Map
+                            a Venues
+                        li
+                            a Register October 17th!
+                        li
+                            a(href="#sparx/instructors") Instructors
     //- ng-class lets us put CSS classes in based on context.
     //- We need this here so we can color the background of the SparX page        
     body(ng-class="{'background-sparx': title === 'SparX'}")

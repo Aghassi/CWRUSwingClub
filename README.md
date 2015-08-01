@@ -1,4 +1,4 @@
-# CWRU Swing Club
+# CWRU Swing Club [![Build Status](https://travis-ci.org/Aghassi/CWRUSwingClub.svg?branch=master)](https://travis-ci.org/Aghassi/CWRUSwingClub)
 Contents of the CWRU Swing Club Website
 Images are not included
 Please note that this is still a work in progress and may not represent the final product

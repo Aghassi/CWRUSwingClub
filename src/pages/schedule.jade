@@ -1,0 +1,39 @@
+.container
+    .section
+        h5 Lessons
+    .card.grey.lighten-5.schedule-table(ng-repeat="day in days" class="{{day.day}}")
+        .card-content
+            .card-title.black-text {{day.day}}
+            table.striped.responsive-table
+                thead
+                    tr
+                        th(data-field="time") Time
+                        th(data-field="track") Track
+                        th(data-field="location") Location
+                tbody
+                    // On this small data set, this is ok
+                    // On larger data don't do this
+                    tr(ng-repeat="track in day.teaching_times" class="{{track.track}}")
+                        td 
+                            p {{track.hour}}
+                        td 
+                            p(ng-repeat="track in track.tracks") {{track.name}}
+                        td 
+                            p(ng-repeat="track in track.tracks")  {{track.location}}
+
+    .section
+        h5 Dances
+    .card.grey.lighten-5.schedule-table(ng-repeat="eveningDance in dances" class="{{eveningDance.day}}")
+        .card-content
+            .card-title.black-text {{eveningDance.day}} - {{eveningDance.danceLocation}}
+            table.striped.responsive-table
+                thead
+                    tr
+                        th(data-field="time") Time
+                        th(data-field="music") Music
+                tbody
+                    // On this small data set, this is ok
+                    // On larger data don't do this
+                    tr(ng-repeat="dance in eveningDance.dance" class="{{track.track}}")
+                        td {{dance.hours}}
+                        td {{dance.event}}
