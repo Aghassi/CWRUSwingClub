@@ -12,7 +12,9 @@ var _scrollToTop = function() {
  */
 var initSparxNav = function() {
     setTimeout(function() {
-        $('.sparx-collapse-button').sideNav();
+        $('.sparx-collapse-button').sideNav({
+            closeOnClick: true
+        });
     }, 500);
 }
 
@@ -24,24 +26,24 @@ var initSparxNav = function() {
  */
 var initGallery = function(id, albumID, thmbWidth) {
     jQuery(id).nanoGallery({
-            kind: 'picasa',
-            userID: 'cwruswing@gmail.com',
-            album: albumID,
-            thumbnailWidth: thmbWidth,
+        kind: 'picasa',
+        userID: 'cwruswing@gmail.com',
+        album: albumID,
+        thumbnailWidth: thmbWidth,
 
-            paginationMaxLinesPerPage: 4,
+        paginationMaxLinesPerPage: 4,
 
-            theme: 'clean',
-            galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'imageScale150',
-            thumbnailLabel: {
-                display: false,
-                displayDescription: false,
-                hideIcons: true,
-            },
-            thumbnailGutterWidth: 5,
-            thumbnailGutterHeight: 5
-        });
+        theme: 'clean',
+        galleryToolbarHideIcons: true,
+        thumbnailHoverEffect: 'imageScale150',
+        thumbnailLabel: {
+            display: false,
+            displayDescription: false,
+            hideIcons: true,
+        },
+        thumbnailGutterWidth: 5,
+        thumbnailGutterHeight: 5
+    });
 }
 
 /**
@@ -62,117 +64,6 @@ app.controller('RouteController', ['$scope', '$route', '$routeParams', '$locatio
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
-}]);
-
-//Handles the main landing page
-app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$timeout', function($scope, $rootScope, $routeParams, $timeout) {
-    $rootScope.name = ''; // Title of the page at the top
-    $rootScope.title = 'CWRU Swing Club'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
-    $timeout(function() {
-        $('.parallax').parallax();
-    }, 10);
-
-    _scrollToTop();
-}]);
-
-app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
-    $rootScope.name = 'About';
-    $rootScope.title = 'About';
-    $scope.$routeParams = $routeParams;
-
-    _scrollToTop();
-}]);
-
-app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
-    $rootScope.name = 'Overview';
-    $rootScope.title = 'Overview';
-    $scope.$routeParams = $routeParams;
-
-    _scrollToTop();
-}]);
-
-app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
-    $rootScope.name = 'Gallery';
-    $rootScope.title = 'Gallery';
-    $scope.$routeParams = $routeParams;
-    // Setup the gallery - justified
-    $(document).ready(function() {
-        initGallery('#gallery', '6144618759687328673', 'auto');
-    });
-
-    _scrollToTop();
-}]);
-
-app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
-    $rootScope.name = 'SparX 2015';
-    $rootScope.title = 'SparX Gallery';
-    $scope.$routeParams = $routeParams;
-
-    // Setup the gallery - paginated
-    $(document).ready(function() {
-        initGallery('#sparx', '6135497289919570833', '101');
-    });
-
-    _scrollToTop();
-}]);
-
-app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
-    $rootScope.title = 'SparX'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
-
-    $http.get("json/headshots.json").success(function(data) {
-        $scope.headshots = angular.fromJson(data);
-        // So we give the DOM a second to load the data
-        setTimeout(function() {
-            $('.modal-trigger').leanModal();
-        }, 500);
-    });
-
-    $http.get("json/bands.json").success(function(data) {
-        $scope.bands = data;
-        // So we give the DOM a second to load the data
-        setTimeout(function() {
-            $('.modal-trigger').leanModal();
-        }, 500);
-    });
-
-    initSparxNav();
-    _scrollToTop();
-
-}]);
-
-app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams', '$timeout', '$http', function($scope, $rootScope, $routeParams, $timeout, $http) {
-    $rootScope.title = 'SparX'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
-
-    $http.get("json/instructors.json").success(function(data) {
-        $scope.teachers = angular.fromJson(data);
-    });
-
-    // We always want to see one card so the user doesn't think the page didn't load
-    fadeInContent('.instructor-card');
-
-    initSparxNav();
-    _scrollToTop()
-}]);
-
-app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$http', function($scope, $rootScope, $routeParams, $http) {
-    $rootScope.title = 'SparX'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
-
-    $http.get("json/schedule-lessons.json").success(function(data) {
-        $scope.days = angular.fromJson(data);
-    });
-
-    $http.get("json/schedule-dances.json").success(function(data) {
-        $scope.dances = angular.fromJson(data);
-    });
-
-    fadeInContent('.card');
-
-    initSparxNav();
-    _scrollToTop()
 }]);
 
 app.config(function($routeProvider, $locationProvider) {
