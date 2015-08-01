@@ -1,0 +1,89 @@
+[
+    {
+        "day": "Saturday",
+        "teaching_times": [
+	        {
+	            "hour": "9:30 AM - 10:15 PM",
+	            "tracks": [
+	                {
+	                    "name": "Auditions for Advanced",
+	                    "location": "Adelbert Gymnasium"
+	                }
+	            ]
+	        },
+            {
+                "hour": "10:30 AM - 12:30 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate - Lindy with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Advanced - Solo Charleston with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            },
+            {
+                "hour": "2:00 PM - 4:00 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Charleston with Ann",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate - Charleston with Danny and Mandy",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Advanced - Lindy with Bobby and Kate",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "day": "Sunday",
+        "teaching_times": [
+            {
+                "hour": "11:00 AM - 1:00 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Balboa Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Isolations with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            },
+            {
+                "hour": "2:30 PM - 4:30 PM",
+                "tracks": [
+                    {
+                        "name": "Beginner - Balboa Danny and Mandy",
+                        "location": "Carlton Commons"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
+                        "location": "Adelbert Gymnasium"
+                    },
+                    {
+                        "name": "Intermediate/Advanced - Isolations with Ann",
+                        "location": "Veale Multipurpose Room"
+                    }
+                ]
+            }
+        ]
+    }
+]

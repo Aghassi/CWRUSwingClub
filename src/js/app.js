@@ -7,10 +7,55 @@ var _scrollToTop = function() {
     }, 'slow');
 }
 
+/**
+ * Makes the slide over nav activate for the SparX Pages
+ */
 var initSparxNav = function() {
     setTimeout(function() {
         $('.sparx-collapse-button').sideNav();
     }, 500);
+}
+
+/**
+ * Initializes nanoGallery widget
+ * @param  string   id        id on the page
+ * @param  string   albumID   album id from picasa
+ * @param  int      thmbWidth Size of the thumbnail
+ */
+var initGallery = function(id, albumID, thmbWidth) {
+    jQuery(id).nanoGallery({
+            kind: 'picasa',
+            userID: 'cwruswing@gmail.com',
+            album: albumID,
+            thumbnailWidth: thmbWidth,
+
+            paginationMaxLinesPerPage: 4,
+
+            theme: 'clean',
+            galleryToolbarHideIcons: true,
+            thumbnailHoverEffect: 'imageScale150',
+            thumbnailLabel: {
+                display: false,
+                displayDescription: false,
+                hideIcons: true,
+            },
+            thumbnailGutterWidth: 5,
+            thumbnailGutterHeight: 5
+        });
+}
+
+/**
+ * Fades in the content on the page given a css class name
+ * @param  CSS Class    cssClass    Name of the class being selected
+ */
+var fadeInContent = function(cssClass) {
+    setTimeout(function() {
+        $(cssClass).each(function() {
+            $(this).animate({
+                'opacity': '1'
+            }, 800);
+        });
+    }, 100);
 }
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
@@ -38,6 +83,7 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
 
     _scrollToTop();
 }]);
+
 app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Overview';
     $rootScope.title = 'Overview';
@@ -45,35 +91,19 @@ app.controller('OverviewController', ['$scope', '$rootScope', '$routeParams', fu
 
     _scrollToTop();
 }]);
+
 app.controller('GalleryController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'Gallery';
     $rootScope.title = 'Gallery';
     $scope.$routeParams = $routeParams;
     // Setup the gallery - justified
     $(document).ready(function() {
-        jQuery('#gallery').nanoGallery({
-            kind: 'picasa',
-            userID: 'cwruswing@gmail.com',
-            album: '6144618759687328673',
-            thumbnailWidth: 'auto',
-
-            paginationMaxLinesPerPage: 4,
-
-            theme: 'clean',
-            galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'imageScale150',
-            thumbnailLabel: {
-                display: false,
-                displayDescription: false,
-                hideIcons: true,
-            },
-            thumbnailGutterWidth: 5,
-            thumbnailGutterHeight: 5
-        });
+        initGallery('#gallery', '6144618759687328673', 'auto');
     });
 
     _scrollToTop();
 }]);
+
 app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', function($scope, $rootScope, $routeParams) {
     $rootScope.name = 'SparX 2015';
     $rootScope.title = 'SparX Gallery';
@@ -81,25 +111,7 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
 
     // Setup the gallery - paginated
     $(document).ready(function() {
-        jQuery('#sparx').nanoGallery({
-            kind: 'picasa',
-            userID: 'cwruswing@gmail.com',
-            album: '6135497289919570833',
-            thumbnailWidth: '101',
-
-            paginationMaxLinesPerPage: 4,
-
-            theme: 'clean',
-            galleryToolbarHideIcons: true,
-            thumbnailHoverEffect: 'imageScale150',
-            thumbnailLabel: {
-                display: false,
-                displayDescription: false,
-                hideIcons: true,
-            },
-            thumbnailGutterWidth: 5,
-            thumbnailGutterHeight: 5
-        });
+        initGallery('#sparx', '6135497289919570833', '101');
     });
 
     _scrollToTop();
@@ -110,7 +122,7 @@ app.controller('SparXLandingController', ['$scope', '$rootScope', '$routeParams'
     $scope.$routeParams = $routeParams;
 
     $http.get("json/headshots.json").success(function(data) {
-        $scope.headshots = data;
+        $scope.headshots = angular.fromJson(data);
         // So we give the DOM a second to load the data
         setTimeout(function() {
             $('.modal-trigger').leanModal();
@@ -135,49 +147,29 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     $scope.$routeParams = $routeParams;
 
     $http.get("json/instructors.json").success(function(data) {
-        $scope.teachers = data;
+        $scope.teachers = angular.fromJson(data);
     });
 
     // We always want to see one card so the user doesn't think the page didn't load
-    setTimeout(function() {
-        $('.bobby-kate').animate({
-            'opacity': '1'
-        }, 800);
-    }, 100);
+    fadeInContent('.instructor-card');
 
-    // Fades in the divs of the teachers overview as you scroll
-    var animateOnScroll = function() {
-        /* Every time the window is scrolled ... */
-        $(window).scroll(function() {
+    initSparxNav();
+    _scrollToTop()
+}]);
 
-            /* Check the location of each desired element */
-            $('.instructor-card').each(function(i) {
+app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$http', function($scope, $rootScope, $routeParams, $http) {
+    $rootScope.title = 'SparX'; // Page name in browser bar
+    $scope.$routeParams = $routeParams;
 
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
+    $http.get("json/schedule-lessons.json").success(function(data) {
+        $scope.days = angular.fromJson(data);
+    });
 
-                /* If the object is completely visible in the window, fade it it */
-                if (1.35 * bottom_of_window > bottom_of_object) {
+    $http.get("json/schedule-dances.json").success(function(data) {
+        $scope.dances = angular.fromJson(data);
+    });
 
-                    $(this).animate({
-                        'opacity': '1'
-                    }, 800);
-
-                }
-
-            });
-
-        });
-    }
-
-
-    // Slide in on scroll
-    var options = [{
-        selector: '#teacher-list',
-        offset: 800,
-        callback: animateOnScroll()
-    }];
-    Materialize.scrollFire(options);
+    fadeInContent('.card');
 
     initSparxNav();
     _scrollToTop()
@@ -214,9 +206,13 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/sparx.html',
             controller: 'SparXLandingController'
         })
-        .when('/sparx/:instructors', {
+        .when('/sparx/instructors', {
             templateUrl: 'pages/instructors.html',
             controller: 'InstructorsController'
+        })
+        .when('/sparx/schedule', {
+            templateUrl: 'pages/schedule.html',
+            controller: 'ScheduleController'
         })
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
@@ -243,5 +239,6 @@ app.config(function($routeProvider, $locationProvider) {
 
     // Leave this false so people can access pages without having
     // to go to cwru.edu/swingclub first.
+    // This is due to the case servers not knowing how to handling HTML5 routing
     $locationProvider.html5Mode(false);
 });
