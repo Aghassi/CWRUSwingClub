@@ -82,7 +82,8 @@ nav .nav-wrapper i:focus {
     transform: scale(1.1, 1.1);
 }
 
-.instructor-card {
+.instructor-card,
+.schedule-table {
     opacity: 0;
 }
 
@@ -134,7 +135,7 @@ nav .nav-wrapper i:focus {
 .sparx-nav .side-nav li a,
 .sparx-nav .side-nav li:hover,
 .sparx-nav .side-nav li:active {
-    color: darkred !important;
+    color: darkred;
     text-decoration: none;
 }
 
@@ -166,6 +167,16 @@ nav .nav-wrapper i:focus {
     }
     .year {
         font-size: 7.5rem;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .bio-image {
+        max-width: 75%;
+        margin: 13%;
     }
 }
 

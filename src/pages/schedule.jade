@@ -1,7 +1,7 @@
 .container
     .section
         h5 Lessons
-    .card.grey.lighten-5(ng-repeat="day in days" class="{{day.day}}")
+    .card.grey.lighten-5.schedule-table(ng-repeat="day in days" class="{{day.day}}")
         .card-content
             .card-title.black-text {{day.day}}
             table.striped.responsive-table
@@ -23,7 +23,7 @@
 
     .section
         h5 Dances
-    .card.grey.lighten-5(ng-repeat="eveningDance in dances" class="{{eveningDance.day}}")
+    .card.grey.lighten-5.schedule-table(ng-repeat="eveningDance in dances" class="{{eveningDance.day}}")
         .card-content
             .card-title.black-text {{eveningDance.day}} - {{eveningDance.danceLocation}}
             table.striped.responsive-table

@@ -7,12 +7,21 @@ var _scrollToTop = function() {
     }, 'slow');
 }
 
+/**
+ * Makes the slide over nav activate for the SparX Pages
+ */
 var initSparxNav = function() {
     setTimeout(function() {
         $('.sparx-collapse-button').sideNav();
     }, 500);
 }
 
+/**
+ * Initializes nanoGallery widget
+ * @param  string   id        id on the page
+ * @param  string   albumID   album id from picasa
+ * @param  int      thmbWidth Size of the thumbnail
+ */
 var initGallery = function(id, albumID, thmbWidth) {
     jQuery(id).nanoGallery({
             kind: 'picasa',
@@ -33,6 +42,20 @@ var initGallery = function(id, albumID, thmbWidth) {
             thumbnailGutterWidth: 5,
             thumbnailGutterHeight: 5
         });
+}
+
+/**
+ * Fades in the content on the page given a css class name
+ * @param  CSS Class    cssClass    Name of the class being selected
+ */
+var fadeInContent = function(cssClass) {
+    setTimeout(function() {
+        $(cssClass).each(function() {
+            $(this).animate({
+                'opacity': '1'
+            }, 800);
+        });
+    }, 100);
 }
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
@@ -128,45 +151,7 @@ app.controller('InstructorsController', ['$scope', '$rootScope', '$routeParams',
     });
 
     // We always want to see one card so the user doesn't think the page didn't load
-    setTimeout(function() {
-        $('.bobby-kate').animate({
-            'opacity': '1'
-        }, 800);
-    }, 100);
-
-    // Fades in the divs of the teachers overview as you scroll
-    var animateOnScroll = function() {
-        /* Every time the window is scrolled ... */
-        $(window).scroll(function() {
-
-            /* Check the location of each desired element */
-            $('.instructor-card').each(function(i) {
-
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                /* If the object is completely visible in the window, fade it it */
-                if (1.35 * bottom_of_window > bottom_of_object) {
-
-                    $(this).animate({
-                        'opacity': '1'
-                    }, 800);
-
-                }
-
-            });
-
-        });
-    }
-
-
-    // Slide in on scroll
-    var options = [{
-        selector: '#teacher-list',
-        offset: 800,
-        callback: animateOnScroll()
-    }];
-    Materialize.scrollFire(options);
+    fadeInContent('.instructor-card');
 
     initSparxNav();
     _scrollToTop()
@@ -184,6 +169,7 @@ app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$
         $scope.dances = angular.fromJson(data);
     });
 
+    fadeInContent('.card');
 
     initSparxNav();
     _scrollToTop()
