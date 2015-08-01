@@ -490,7 +490,7 @@ module.exports = function(grunt) {
         'clean:build', 'clean:prod',
         'jshint', 'minjs',
         'csslint', 'mincss',
-        'imagemin:prod', 'html'
+        'imagemin:prod', 'html_prod'
     ]);
     // Compile the project for dev
     grunt.registerTask('dev', [
