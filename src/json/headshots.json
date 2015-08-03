@@ -13,4 +13,9 @@
     "bodyshot": "images/sparx/AnnMonySolo.jpg",
     "id": "Ann_Mony",
     "name": "Ann Mony"
+},  {
+    "src": "images/sparx/teachers-headshots/MandyHogan_headshot.png",
+    "bodyshot": "images/sparx/MandyHogan.png",
+    "id": "Mandy_Hogan",
+    "name": "Mandy Hogan"
 }]
