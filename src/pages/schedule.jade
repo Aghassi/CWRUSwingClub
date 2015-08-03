@@ -1,10 +1,10 @@
 .container
     .section
         h4 Lessons
-        p NOTE: Auditions are only for Saturday's tracks. Sunday's tracks are by choice. If you choose Intermediate/Advance with Bobby and Kate, you must have a solid come around and toss out. Lessons on Sunday are permanent, meaning the track you choose is the one you are in all day.
+        p NOTE: Auditions are only for Saturday's tracks. Sunday's tracks are by choice. If you choose Intermediate/Advance with Bobby and Kate, you must have a solid come around and toss out. The track you choose to be in Sunday is for the whole day, and you can't switch out of the track you are in.
     .card.grey.lighten-5.schedule-table(ng-repeat="day in days" class="{{day.day}}")
         .card-content
-            .card-title.black-text {{day.day}}
+            h5.card-title.black-text {{day.day}}
             table.striped.responsive-table
                 thead
                     tr
@@ -26,7 +26,7 @@
         h4 Dances
     .card.grey.lighten-5.schedule-table(ng-repeat="eveningDance in dances" class="{{eveningDance.day}}")
         .card-content
-            .card-title.black-text {{eveningDance.day}} - {{eveningDance.danceLocation}}
+            h5.card-title.black-text {{eveningDance.day}} - {{eveningDance.danceLocation}}
             table.striped.responsive-table
                 thead
                     tr

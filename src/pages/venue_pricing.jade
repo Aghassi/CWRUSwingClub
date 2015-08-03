@@ -1,0 +1,17 @@
+.container
+	.card.grey.lighten-5.schedule-table
+        .card-content
+        	h4.card-title.black-text  Pricing (student and group discounts offered)
+            table.striped.responsive-table
+                thead
+                    tr
+                        th(data-field="time") Ticket
+                        th(data-field="track") Price
+                tbody
+                    tr(ng-repeat="price in pricing" class="{{price.name}}")
+                        td 
+                            p {{price.name}}
+                        td 
+                            p {{price.cost}}
+
+// Use cards to show picture of building that has a "get directions" button, and a description
