@@ -1,6 +1,15 @@
 var app = angular.module('swingclub');
 
-app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$http', function($scope, $rootScope, $routeParams, $http) {
+app.controller('ScheduleController', [
+    '$scope',
+    '$rootScope',
+    '$routeParams',
+    '$http',
+    function(
+        $scope,
+        $rootScope,
+        $routeParams,
+        $http) {
     $rootScope.title = 'SparX'; // Page name in browser bar
     $scope.$routeParams = $routeParams;
 
@@ -12,8 +21,8 @@ app.controller('ScheduleController', ['$scope', '$rootScope', '$routeParams', '$
         $scope.dances = angular.fromJson(data);
     });
 
-    fadeInContent('.card');
 
     initNav('.sparx-collapse-button');
+    fadeInContent('.card');
     _scrollToTop();
 }]);
