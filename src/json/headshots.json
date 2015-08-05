@@ -18,4 +18,9 @@
     "bodyshot": "images/sparx/MandyHogan.png",
     "id": "Mandy_Hogan",
     "name": "Mandy Hogan"
+}, {
+    "src": "images/sparx/teachers-headshots/DannyBeyrer_headshot.png",
+    "bodyshot": "images/sparx/DannyBeyrer.jpg",
+    "id": "Danny_Beyrer",
+    "name": "Danny Beyrer"
 }]

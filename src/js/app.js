@@ -108,6 +108,10 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/sparx.html',
             controller: 'SparXLandingController'
         })
+        .when('/SparX', {
+            templateUrl: 'pages/sparx.html',
+            controller: 'SparXLandingController'
+        })
         .when('/sparx/instructors', {
             templateUrl: 'pages/instructors.html',
             controller: 'InstructorsController'
