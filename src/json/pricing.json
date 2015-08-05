@@ -1,0 +1,18 @@
+[
+	{
+	"name": "Early Bird",
+	"price": "$70"
+	}, {
+	"name": "Middle of the Pack",
+	"price": "$85"
+	}, {
+	"name": "Last Call / At The Door",
+	"price": "$100"
+	}, {
+	"name": "Dance Pass",
+	"price": "$30"
+	}, {
+	"name": "Lessons Only Pass",
+	"price": "$40"
+	}
+]

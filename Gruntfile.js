@@ -27,10 +27,8 @@ module.exports = function(grunt) {
     var devCSS = ['src/css/MyFontsWebfontsKit.css'];
     var fonts = ['src/fonts/bodoni/*'];
 
-    //JS
-    var js = srcJs + "scripts/*.js";
     //Angular
-    var angular = [srcJs + "scripts/app.js", srcJs + 'scripts/sparxApp.js',
+    var angular = [srcJs + "app.js",
         srcJs + 'controllers/**/*.js', srcJs + 'directives/**/*.js'
     ];
     //CSS
@@ -176,9 +174,6 @@ module.exports = function(grunt) {
             },
             angular: {
                 src: angular
-            },
-            js: {
-                src: js
             }
         },
         concat: {
@@ -189,25 +184,17 @@ module.exports = function(grunt) {
             directives: {
                 src: srcJs + 'directives/**/*.js',
                 dest: build + jsLib + 'directives.js'
-            },
-            scripts: {
-                src: js,
-                dest: build + jsLib + 'scripts/scripts.js'
             }
         },
         uglify: {
             controllers: {
                 src: build + jsLib + 'controllers.js',
-                dest: prod + jsLib + 'scripts/controllers.min.js'
+                dest: prod + jsLib + 'controllers.min.js'
             },
             directives: {
                 src: build + jsLib + 'directives.js',
-                dest: prod + jsLib + 'scripts/directives.min.js'
-            },
-            scripts: {
-                src: build + jsLib + 'scripts/scripts.js',
-                dest: prod + jsLib + "scripts/scripts.min.js"
-            },
+                dest: prod + jsLib + 'directives.min.js'
+            }
         },
         jsonlint: {
             json: {
@@ -270,7 +257,7 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'scripts/*.js'
+                            dev + jsLib + '*.js'
                         ]
                     },
                     styles: {
@@ -290,7 +277,7 @@ module.exports = function(grunt) {
                         bundle: [
                             dev + jsLib + 'angular.js',
                             dev + jsLib + 'angular-route.js',
-                            dev + jsLib + 'scripts/*.js'
+                            dev + jsLib + '*.js'
                         ]
                     },
                     styles: {
@@ -310,7 +297,7 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'scripts/*.js'
+                            prod + jsLib + '*.js'
                         ]
                     },
                     styles: {
@@ -330,7 +317,7 @@ module.exports = function(grunt) {
                         bundle: [
                             prod + jsLib + 'angular.min.js',
                             prod + jsLib + 'angular-route.min.js',
-                            prod + jsLib + 'scripts/*.js'
+                            prod + jsLib + '*.js'
                         ]
                     },
                     styles: {
@@ -349,13 +336,13 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true,
                         src: [srcJs + 'app.js'],
-                        dest: dev + 'js/scripts',
+                        dest: dev + 'js/',
                         filter: 'isFile'
                     }, {
                         expand: true,
                         flatten: true,
                         src: build + 'js/**/*.js',
-                        dest: dev + 'js/scripts',
+                        dest: dev + 'js/',
                         filter: 'isFile'
                     }, {
                         expand: true,
@@ -403,7 +390,13 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true,
                         src: [srcJs + '/app.js'],
-                        dest: prod + 'js/scripts',
+                        dest: prod + 'js',
+                        filter: 'isFile'
+                    }, {
+                        expand: true,
+                        flatten: true,
+                        src: build + 'js/**/*.js',
+                        dest: prod + 'js/',
                         filter: 'isFile'
                     }, {
                         expand: true,
@@ -459,10 +452,6 @@ module.exports = function(grunt) {
                 files: '<%= jshint.angular.src %>',
                 tasks: ['newer:jshint:angular']
             },
-            js: {
-                files: '<%= jshint.js.src %>',
-                tasks: ['newer:jshint:js']
-            },
             cssPages: {
                 files: '<%= csslint.pages.src %>',
                 tasks: ['lintNewerCss', 'concat_css:pages', 'cssmin:pages']
@@ -501,16 +490,14 @@ module.exports = function(grunt) {
         'clean:build', 'clean:prod',
         'jshint', 'minjs',
         'csslint', 'mincss',
-        'imagemin:prod', 'html'
+        'imagemin:prod', 'html_prod'
     ]);
     // Compile the project for dev
     grunt.registerTask('dev', [
         'clean:build', 'clean:dev',
         'jshint', 'concat',
         'csslint', 'concat_css',
-        'imagemin:dev', 'copy:dev',
-        'jade', 'htmlbuild:dev_index',
-        'htmlbuild:dev_pages'
+        'imagemin:dev', 'html_dev'
     ]);
     //Build the project
     grunt.registerTask('build', [
@@ -528,7 +515,10 @@ module.exports = function(grunt) {
     //Minify CSS
     grunt.registerTask('mincss', ['concat_css', 'cssmin']);
     //Build HTML
-    grunt.registerTask('html', ['copy:prod', 'jade',
+    grunt.registerTask('html_prod', ['copy:prod', 'jade',
         'htmlbuild:prod_pages', 'htmlbuild:prod_index'
+    ]);
+    grunt.registerTask('html_dev', ['copy:dev', 'jade',
+        'htmlbuild:dev_pages', 'htmlbuild:dev_index'
     ]);
 };

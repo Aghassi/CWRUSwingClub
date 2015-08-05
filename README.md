@@ -1,6 +1,7 @@
 # CWRU Swing Club [![Build Status](https://travis-ci.org/Aghassi/CWRUSwingClub.svg?branch=master)](https://travis-ci.org/Aghassi/CWRUSwingClub)
 Contents of the CWRU Swing Club Website
 Images are not included
+Any images included of instructors are not owned by CWRU Swing Club, and the ownership is held by the individual's who provided the pictures.
 Please note that this is still a work in progress and may not represent the final product
 
 ## Setup

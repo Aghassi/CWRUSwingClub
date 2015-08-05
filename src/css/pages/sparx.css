@@ -46,7 +46,6 @@ nav .nav-wrapper i:focus {
 }
 
 .bio-image {
-    max-height: 20%;
     margin: 20px 40px;
     max-width: 25%;
 }
@@ -83,6 +82,7 @@ nav .nav-wrapper i:focus {
 }
 
 .instructor-card,
+.pricing-table,
 .schedule-table {
     opacity: 0;
 }
@@ -96,7 +96,7 @@ nav .nav-wrapper i:focus {
 }
 
 .modal {
-    width: 45%;
+    width: 30%;
 }
 
 .modal,
@@ -114,6 +114,11 @@ nav .nav-wrapper i:focus {
 
 .modal .modal-footer .modal-action {
     color: #dd9a5f
+}
+
+.Mandy_Hogan {
+    /* Get higher res image so we don't have to do this*/
+    width: 125%;
 }
 
 .lettering {
