@@ -1,8 +1,16 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "0.11"
-  - "0.10"
+- '0.12'
+- '0.11'
+- '0.10'
 before_install: npm install -g grunt-cli
 install: npm install
 before_script: grunt build
+env:
+  global:
+    secure: K0fdrJikJ2oSdTVV9i1Y8nC84K/4POv+EmuAqck5dgqiduGGnviBPi83IBSAsr/RV3Nu5KssPYnaZCLHPXhuOMOkiDPWdu/SMh6fC8Wr6prcYxeVzEgx2BEJ3R7sM9V2BHQMU7syrDUTU/mWTUx43stgiPaU4Fblp/2iFcdroLbY8sjeu2nGDAn3Lsn21+oELup+E+6mjZY6sCFV/sNsFBcSRecGHt+ikaGKR3VFjn8OYmWAI/klbnHQT+zZ7lIENedXndj1bR5pPcksuFHivTainPLcOsSNICaScLremFVpr1WW2vWt4ly+4dPR3q8dry/n79KlLozUtutjAQJk6uPjsVzu0E8TZbAas/yOlw3B1cNldck41kHILqXdeM/rvhKNAgXOhrtpVhm+afbNEs8p1MLmtlCwdqTyKFKEmuMhn5PpyqC3CBbPqTTfTPV6KRRaOF95WrqqHLQvi7ivrzHMi1UhYmJ6/PE6cVmbZxv7353A9B3O6FReYXZZbMGBro1UMEt+YHm4I2RUfKnuTtFv6JuGxwRab2lftAUrP48mhxW/6Wd5/EeAXosnEtLJRBAL9QLD0t0kdXssEjz9hUwfODtH2+r6+YKJKUkqYgtpNSClWzK4oW7IeAmWjWKzrySEIKo6RInJJ77rx7nrVSk5hC+n3UAbAkeMEidJm7g=
+deploy:
+    provider: script
+    script: deploy.sh $PHRASE
+    on:
+        branch: master
