@@ -57,7 +57,7 @@ var initNav = function (cssClass) {
             $('<a></a>', {
                 'href': "/",
                 'data-activates': 'mobile-nav',
-                'class': 'sparx-button-collapse .hide-on-large-only'
+                'class': 'sparx-button-collapse hide-on-large-only'
             }).insertAfter('.brand-logo.center');
             $('<i></i>', {
                 'class': 'mdi-navigation-menu'
