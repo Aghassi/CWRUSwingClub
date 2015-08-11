@@ -4,6 +4,5 @@ app.controller('AboutController', ['$scope', '$rootScope', '$routeParams', funct
     $rootScope.title = 'About';
     $scope.$routeParams = $routeParams;
 
-    initNav('.button-collapse');
     _scrollToTop();
 }]);

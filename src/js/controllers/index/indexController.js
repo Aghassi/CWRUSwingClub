@@ -7,7 +7,6 @@ app.controller('IndexController', ['$scope', '$rootScope', '$routeParams', '$tim
     $timeout(function() {
         $('.parallax').parallax();
     }, 10);
-
-    initNav('.button-collapse');
+    
     _scrollToTop();
 }]);

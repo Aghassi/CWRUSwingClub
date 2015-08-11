@@ -9,7 +9,6 @@ app.controller('SparxController', ['$scope', '$rootScope', '$routeParams', funct
     $(document).ready(function() {
         initGallery('#sparx', '6135497289919570833', '101');
     });
-
-    initNav('.button-collapse');
+    
     _scrollToTop();
 }]);

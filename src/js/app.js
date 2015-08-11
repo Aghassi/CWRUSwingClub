@@ -1,6 +1,10 @@
 var app = angular.module('swingclub', ['ngRoute']);
 
-var _scrollToTop = function() {
+/**
+ * Forces the page to scroll to the top when people navigate to different
+ * parts of the website since we are a single page view
+ */
+var _scrollToTop = function () {
     // Always make sure we are looking at the top of the page
     $('html, body').animate({
         scrollTop: 0
@@ -8,25 +12,31 @@ var _scrollToTop = function() {
 };
 
 /**
+ * Some thing in Materialize create two overlay divs, but only one is removed
+ * We have to go through and remove the ones that aren't
+ */
+var removeOverlays = function () {
+    var parent = document.getElementsByClassName('background-sparx')[0];
+    var modal = document.getElementsByClassName('lean-overlay')[0];
+    if (!!modal) {
+        parent.removeChild(modal);
+    }
+};
+
+
+/**
  * Makes the slide over nav activate for the SparX Pages
  *
  * @param string cssClass cssClass that represents the sideNav
  * button
  */
-var initNav = function(cssClass) {
-    setTimeout(function() {
-        /*
-         There is an issue with materize in that it will slide away a sidenav
-         like the one we have on our home page. We have to make sure that doesn't happen.
-         Solution was found here and adapted: https://github.com/Dogfalo/materialize/pull/1615
-         */
-        var isNotDesktop = window.innerWidth <= 992;
-        $(cssClass).sideNav({
-            closeOnClick: isNotDesktop
-        });
-        // This does nothing if collapsible doesn't exist
-        $('.collapsible').collapsible();
-    }, 500);
+var initNav = function (cssClass) {
+    var isNotDesktop = window.innerWidth <= 992;
+    $(cssClass).sideNav({
+        closeOnClick: isNotDesktop
+    });
+    // This does nothing if collapsible doesn't exist
+    $('.collapsible').collapsible();
 };
 
 /**
@@ -35,7 +45,7 @@ var initNav = function(cssClass) {
  * @param  string   albumID   album id from picasa
  * @param  int      thmbWidth Size of the thumbnail
  */
-var initGallery = function(id, albumID, thmbWidth) {
+var initGallery = function (id, albumID, thmbWidth) {
     jQuery(id).nanoGallery({
         kind: 'picasa',
         userID: 'cwruswing@gmail.com',
@@ -62,19 +72,29 @@ var initGallery = function(id, albumID, thmbWidth) {
  * @param  CSS Class    cssClass    Name of the class being selected
  */
 var fadeInContent = function(cssClass) {
-    setTimeout(function() {
-        $(cssClass).each(function() {
+    setTimeout(function () {
+        $(cssClass).each(function () {
             $(this).animate({
                 'opacity': '1'
             }, 800);
         });
-    }, 100);
+    }, 50);
 };
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
+
+    setTimeout(function () {
+        var sparxPage = document.getElementsByClassName('sparx-button-collapse')[0];
+        if (!!sparxPage) {
+            initNav('.sparx-button-collapse');
+        }
+        else {
+            initNav('.button-collapse');
+        }
+    }, 100);
 }]);
 
 app.config(function($routeProvider, $locationProvider) {

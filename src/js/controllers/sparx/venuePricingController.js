@@ -17,7 +17,6 @@ app.controller('VenuePricingController', [
         $scope.pricing = data;
     });
 
-    initNav('.sparx-collapse-button');
     fadeInContent('.card');
     _scrollToTop();
 }]);

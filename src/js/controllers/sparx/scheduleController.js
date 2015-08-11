@@ -21,8 +21,6 @@ app.controller('ScheduleController', [
         $scope.dances = angular.fromJson(data);
     });
 
-
-    initNav('.sparx-collapse-button');
     fadeInContent('.card');
     _scrollToTop();
 }]);
