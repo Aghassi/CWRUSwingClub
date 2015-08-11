@@ -19,8 +19,7 @@ app.controller('InstructorsController',
             $scope.teachers = angular.fromJson(data);
         });
 
-        // We always want to see one card so the user doesn't think the page didn't load
+        initNav('.sparx-button-collapse');
         fadeInContent('.instructor-card');
-
         _scrollToTop();
 }]);

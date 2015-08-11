@@ -33,5 +33,6 @@ app.controller('SparXLandingController',
             });
         }, 500);
 
+        initNav('.sparx-button-collapse');
         _scrollToTop();
 }]);

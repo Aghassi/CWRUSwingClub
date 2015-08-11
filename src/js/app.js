@@ -25,18 +25,58 @@ var removeOverlays = function () {
 
 
 /**
- * Makes the slide over nav activate for the SparX Pages
+ * Makes the slide over nav activate for all pages
+ * This must be called by each page controller so the sidenav works
  *
  * @param string cssClass cssClass that represents the sideNav
  * button
  */
 var initNav = function (cssClass) {
-    var isNotDesktop = window.innerWidth <= 992;
-    $(cssClass).sideNav({
-        closeOnClick: isNotDesktop
-    });
-    // This does nothing if collapsible doesn't exist
-    $('.collapsible').collapsible();
+    function activateSideNav (cssClass) {
+        var isNotDesktop = window.innerWidth <= 992;
+        $(cssClass).sideNav({
+            closeOnClick: isNotDesktop
+        });
+        // This does nothing if collapsible doesn't exist
+        $('.collapsible').collapsible();
+    }
+
+    setTimeout(function () {
+        /**
+         * Until materialize fixes their issue, this is what we have to do
+         * They attach a jquery plugin to the navbar, and you can't remove it
+         * without deleting the node. If you keep doing .sideNav() you keep attaching
+         * a plugin. Eventually you end up with multiple overlays because of it.
+         * Since RouteController is only called when you load the website initially,
+         * it doesn't get called if you access a route directly. This means the sidenav
+         * may never be activated.
+         */
+        var sparxPage = document.getElementsByClassName('sparx-button-collapse')[0];
+        if (!!sparxPage) {
+            $('.sparx-button-collapse').remove();
+            $('<a></a>', {
+                'href': "/",
+                'data-activates': 'mobile-nav',
+                'class': 'sparx-button-collapse .hide-on-large-only'
+            }).insertAfter('.brand-logo.center');
+            $('<i></i>', {
+                'class': 'mdi-navigation-menu'
+            }).appendTo('.sparx-button-collapse');
+            activateSideNav('.sparx-button-collapse');
+        }
+        else {
+            $('.button-collapse').remove();
+            $('<a></a>', {
+                'href': "/",
+                'data-activates': 'slide-out',
+                'class': 'button-collapse'
+            }).insertBefore('.side-nav.fixed');
+            $('<i></i>', {
+                'class': 'mdi-navigation-menu'
+            }).appendTo('.button-collapse');
+            activateSideNav('.button-collapse');
+        }
+    }, 100);
 };
 
 /**
@@ -85,16 +125,6 @@ app.controller('RouteController', ['$scope', '$route', '$routeParams', '$locatio
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
-
-    setTimeout(function () {
-        var sparxPage = document.getElementsByClassName('sparx-button-collapse')[0];
-        if (!!sparxPage) {
-            initNav('.sparx-button-collapse');
-        }
-        else {
-            initNav('.button-collapse');
-        }
-    }, 100);
 }]);
 
 app.config(function($routeProvider, $locationProvider) {
