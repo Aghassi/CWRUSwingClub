@@ -1,23 +1,23 @@
 var app = angular.module('swingclub');
 
 app.controller('VenuePricingController', [
-	'$scope',
-	'$rootScope',
-	'$routeParams',
-	'$http',
-	function(
-		$scope,
-		$rootScope,
-		$routeParams,
-		$http) {
-    $rootScope.title = 'SparX'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
+    '$scope',
+    '$rootScope',
+    '$routeParams',
+    '$http',
+    function(
+        $scope,
+        $rootScope,
+        $routeParams,
+        $http) {
+            $rootScope.title = 'SparX'; // Page name in browser bar
+            $scope.$routeParams = $routeParams;
 
-   $http.get("json/pricing.json").success(function(data) {
-        $scope.pricing = data;
-    });
+            $http.get("json/pricing.json").success(function(data) {
+                $scope.pricing = data;
+            });
 
-    initNav('.sparx-collapse-button');
-    fadeInContent('.card');
-    _scrollToTop();
+            initNav('.sparx-button-collapse');
+            fadeInContent('.card');
+            _scrollToTop();
 }]);
