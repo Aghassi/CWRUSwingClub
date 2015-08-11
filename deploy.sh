@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$TRAVIS_BRANCH" == "prod" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ]; then
     grunt prod
 
     # Delete all the old files
