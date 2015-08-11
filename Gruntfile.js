@@ -177,23 +177,15 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            controllers: {
-                src: srcJs + 'controllers/**/*.js',
-                dest: build + jsLib + 'controllers.js'
-            },
-            directives: {
-                src: srcJs + 'directives/**/*.js',
-                dest: build + jsLib + 'directives.js'
+            controllersAndDirectives: {
+                src: [srcJs + 'controllers/**/*.js', srcJs + 'directives/**/*.js'],
+                dest: build + jsLib + 'controllersAndDirectives.js'
             }
         },
         uglify: {
-            controllers: {
-                src: build + jsLib + 'controllers.js',
-                dest: prod + jsLib + 'controllers.min.js'
-            },
-            directives: {
-                src: build + jsLib + 'directives.js',
-                dest: prod + jsLib + 'directives.min.js'
+            controllersAndDirectives: {
+                src: build + jsLib + 'controllersAndDirectives.js',
+                dest: prod + jsLib + 'controllersAndDirectives.min.js'
             }
         },
         jsonlint: {
