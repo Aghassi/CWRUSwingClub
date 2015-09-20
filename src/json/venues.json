@@ -6,4 +6,8 @@
     "src": "images/sparx/venues/Adelbert.jpg",
     "id": "Adelbert",
     "caption": "Adelbert Gymnasium"
+}, {
+    "src": "images/sparx/venues/Carlton.jpg",
+    "id": "Carlton",
+    "caption": "Carlton Commons"
 }]

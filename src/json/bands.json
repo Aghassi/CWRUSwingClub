@@ -8,4 +8,14 @@
     "bodyshot": "images/sparx/Moses_Allooh.jpg",
     "id": "Allooh",
     "name": "Moses Allooh"
+},{
+    "src": "images/sparx/band-headshots/miles_headshot.jpg",
+    "bodyshot": "images/sparx/DanMiles.jpg",
+    "id": "Miles",
+    "name": "Dan Miles"
+},{
+    "src": "images/sparx/band-headshots/blythe_headshot.jpg",
+    "bodyshot": "images/sparx/RossBlythe.jpg",
+    "id": "Blythe",
+    "name": "Ross Blythe"
 }]
