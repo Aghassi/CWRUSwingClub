@@ -16,6 +16,9 @@ app.controller('VenuePricingController', [
             $http.get("json/pricing.json").success(function(data) {
                 $scope.pricing = data;
             });
+            $http.get("json/venues.json").success(function(data) {
+                $scope.venues = data;
+            });
 
             initNav('.sparx-button-collapse');
             fadeInContent('.card');

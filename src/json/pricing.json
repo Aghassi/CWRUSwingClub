@@ -9,10 +9,10 @@
 	"name": "Last Call / At The Door",
 	"price": "$100"
 	}, {
-	"name": "Dance Pass",
+	"name": "Dance Only Pass",
 	"price": "$30"
 	}, {
 	"name": "Lessons Only Pass",
-	"price": "$40"
+	"price": "$40 / $55 / $70"
 	}
 ]
