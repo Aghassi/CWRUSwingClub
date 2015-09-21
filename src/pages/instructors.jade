@@ -1,9 +1,15 @@
 .container
-	ul#teacher-list
-		li.instructor-card(ng-repeat="teacher in teachers" class="{{teacher.id}}")
-			.card
-				.card-contents
-					img.left.bio-image.z-depth-2(src="{{teacher.src}}")
-					div.sparx-flow-text 
-						h4.instructor-names {{teacher.name}}
-						p {{teacher.bio}}
+    ul#teacher-list
+        li.instructor-card(ng-repeat="teacher in teachers" class="{{teacher.id}}")
+            .card
+                .card-image
+                    img.left.bio-image.z-depth-2(src="{{teacher.src}}")
+                .card-content
+                    div.sparx-flow-text 
+                        h4.instructor-names.hide-on-small-only {{teacher.name}}
+                        p.hide-on-small-only {{teacher.bio}}
+                    .card-title.activator.hide-on-med-and-up {{teacher.name}}
+                        i.mdi-navigation-arrow-drop-down
+                .card-reveal.hide-on-med-and-up
+                    .card-title.activator.grey-text.text-darken-4 {{teacher.name}}
+                    p {{teacher.bio}}
