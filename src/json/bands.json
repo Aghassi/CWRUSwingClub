@@ -18,4 +18,9 @@
     "bodyshot": "images/sparx/RossBlythe.jpg",
     "id": "Blythe",
     "name": "Ross Blythe"
+}, {
+    "src": "images/sparx/band-headshots/vergara_headshot.jpg",
+    "bodyshot": "images/sparx/AntonioVergara.jpg",
+    "id": "Vergara",
+    "name": "Antonio 'Tony' Vergara"
 }]

@@ -1,13 +1,19 @@
 [{
     "src": "images/sparx/venues/VealeCenter.jpg",
     "id": "Veale",
-    "caption": "Veale Multipurpose Room"
+    "caption": "Veale Multipurpose Room",
+    "directions": "https://goo.gl/q4nZPw",
+    "note": ""
 }, {
     "src": "images/sparx/venues/Adelbert.jpg",
     "id": "Adelbert",
-    "caption": "Adelbert Gymnasium"
+    "caption": "Adelbert Gymnasium",
+    "directions": "https://goo.gl/JaAPAv",
+    "note": ""
 }, {
     "src": "images/sparx/venues/Carlton.jpg",
     "id": "Carlton",
-    "caption": "Carlton Commons"
+    "caption": "Carlton Commons",
+    "directions": "https://goo.gl/EzI8iI",
+    "note": ""
 }]
