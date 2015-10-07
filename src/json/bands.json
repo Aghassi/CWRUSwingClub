@@ -3,4 +3,24 @@
     "bodyshot": "images/sparx/Boilermakers.jpg",
     "id": "Boilermakers",
     "name": "Boilermakers"
+},{
+    "src": "images/sparx/band-headshots/allooh_headshot.jpg",
+    "bodyshot": "images/sparx/Moses_Allooh.jpg",
+    "id": "Allooh",
+    "name": "Moses Allooh"
+},{
+    "src": "images/sparx/band-headshots/miles_headshot.jpg",
+    "bodyshot": "images/sparx/DanMiles.jpg",
+    "id": "Miles",
+    "name": "Dan Miles"
+},{
+    "src": "images/sparx/band-headshots/blythe_headshot.jpg",
+    "bodyshot": "images/sparx/RossBlythe.jpg",
+    "id": "Blythe",
+    "name": "Ross Blythe"
+}, {
+    "src": "images/sparx/band-headshots/vergara_headshot.jpg",
+    "bodyshot": "images/sparx/AntonioVergara.jpg",
+    "id": "Vergara",
+    "name": "Antonio 'Tony' Vergara"
 }]

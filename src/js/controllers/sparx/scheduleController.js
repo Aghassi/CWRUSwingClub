@@ -10,19 +10,18 @@ app.controller('ScheduleController', [
         $rootScope,
         $routeParams,
         $http) {
-    $rootScope.title = 'SparX'; // Page name in browser bar
-    $scope.$routeParams = $routeParams;
+            $rootScope.title = 'SparX'; // Page name in browser bar
+            $scope.$routeParams = $routeParams;
 
-    $http.get("json/schedule-lessons.json").success(function(data) {
-        $scope.days = angular.fromJson(data);
-    });
+            $http.get("json/schedule-lessons.json").success(function(data) {
+                $scope.days = angular.fromJson(data);
+            });
 
-    $http.get("json/schedule-dances.json").success(function(data) {
-        $scope.dances = angular.fromJson(data);
-    });
+            $http.get("json/schedule-dances.json").success(function(data) {
+                $scope.dances = angular.fromJson(data);
+            });
 
-
-    initNav('.sparx-collapse-button');
-    fadeInContent('.card');
-    _scrollToTop();
+            initNav('.sparx-button-collapse');
+            fadeInContent('.card');
+            _scrollToTop();
 }]);
