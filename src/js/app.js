@@ -118,7 +118,7 @@ var fadeInContent = function(cssClass) {
                 'opacity': '1'
             }, 800);
         });
-    }, 50);
+    }, 300);
 };
 
 app.controller('RouteController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
