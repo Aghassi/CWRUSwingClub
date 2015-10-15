@@ -1,7 +1,8 @@
 .container
     .card.grey.lighten-5.pricing-table
         .card-content
-            h4.card-title.black-text  Pricing (student and group discounts are $10 each, non-stackable)
+            h3.black-text  Pricing
+            h6 (student and group discounts are $10 each, non-stackable)
             table.striped.responsive-table
                 thead
                     tr
@@ -16,13 +17,16 @@
 
 .section.container
     .row
-        .hide-on-small-only
-            h2.center -Venues-
-            div.col.s12.m4.l4(ng-repeat="venue in venues")
-                .card
-                    .card-image
-                        img(src="{{venue.src}}" href="#{{venue.id}}")
-                        span.card-title {{venue.caption}}
-                    .card-action
-                        a(href="{{venue.directions}}") Directions
+        h2.center -Venues-
+        div.col.s12.m4.l4(ng-repeat="venue in venues")
+            .card
+                .card-image
+                    img(src="{{venue.src}}" href="#{{venue.id}}")
+                    span.card-title {{venue.caption}}
+                .card-action
+                    a(href="{{venue.directions}}") Directions
+            
+            .card-panel.white
+                h5 Note:
+                p {{venue.note}}
 // Use cards to show picture of building that has a "get directions" button, and a description
