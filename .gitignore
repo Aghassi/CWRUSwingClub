@@ -1,5 +1,7 @@
 *.png
 *.jpg
+#Except homepage image
+!src/images/excitement.jpg
 #Except the sparx images
 !src/images/sparx/*
 !src/images/sparx/**/*
