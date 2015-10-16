@@ -6,9 +6,9 @@ Please note that this is still a work in progress and may not represent the fina
 
 ## Setup
 1. Install `npm`, `grunt`, and `bower` (or run `./installDependencies`)
-4. run `npm install` and `bower install` to gather dependencies
-5. Run `grunt watch`, or just `grunt` because that maps to `watch`.
-6. Edit your files while grunt watches
+2. run `npm install` and `bower install` to gather dependencies
+3. Run `grunt watch`, or just `grunt` because that maps to `watch`.
+4. Edit your files while grunt watches
 
 ## Creating production
 1. run `grunt prod`

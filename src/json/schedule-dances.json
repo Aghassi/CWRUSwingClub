@@ -37,15 +37,23 @@
                 "event": "DJ-TBA"
             },
             {
-                "hours": "9:00 PM - 10:00 PM",
+                "hours": "9:00 PM - 9:50 PM",
                 "event": "The Boilermaker Jazz Band"
             },
             {
-                "hours": "10:00 PM - 11:00 PM",
+                "hours": "9:50 PM - 10:10 PM",
                 "event": "DJ-TBA"
             },
             {
-                "hours": "11:00 PM - 12:00 PM",
+                "hours": "10:10 PM - 11:00 PM",
+                "event": "The Boilermaker Jazz Band"
+            },
+            {
+                "hours": "11:00 PM - 11:20 PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "11:20 PM - 12:00 AM",
                 "event": "The Boilermaker Jazz Band"
             }
         ],
@@ -91,19 +99,23 @@
         "day": "Sunday Evening (Balboa)",
         "dance": [
             {
-                "hours": "6:30 PM - 7:30PM",
-                "event": "DJ-TBA"
-            },
-            {
-                "hours": "7:30 PM - 8:30 PM",
+                "hours": "6:00 PM - 6:50PM",
                 "event": "The Boilermaker Jazz Band"
             },
             {
-                "hours": "8:30 PM - 9:30 PM",
+                "hours": "6:50 PM - 7:10 PM",
                 "event": "DJ-TBA"
             },
             {
-                "hours": "9:30 PM - 10:30 PM",
+                "hours": "7:10 PM - 8:00 PM",
+                "event": "The Boilermaker Jazz Band"
+            },
+            {
+                "hours": "8:00 PM - 8:20 PM",
+                "event": "DJ-TBA"
+            },
+            {
+                "hours": "8:20 PM - 9:00 PM",
                 "event": "The Boilermaker Jazz Band"
             }
         ],

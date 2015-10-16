@@ -23,4 +23,9 @@
     "bodyshot": "images/sparx/AntonioVergara.jpg",
     "id": "Vergara",
     "name": "Antonio 'Tony' Vergara"
+}, {
+    "src": "images/sparx/band-headshots/helveston_headshot.png",
+    "bodyshot": "images/sparx/JohnHelveston.png",
+    "id": "Helveston",
+    "name": "John Helveston"
 }]
