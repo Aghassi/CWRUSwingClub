@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Beginner",
+        "genre" : "Lindy Hop/ Balboa:",
+        "content" : "Regardless of the day, it means you have never danced the dance before and need to start with the basics. You would learn enough in this course to be ready to dance with everyone at the evening dances. You may/may not have prior dance experience, either way you will be taught as if you are new to the dance."
+    },
+    {
+        "name" : "Intermediate",
+        "genre" : "Lindy Hop:",
+        "content" : " You can do a swingout, and are pretty comfortable with yourself, but as speeds start to get faster you may not know what to do. In addition, you may compete occasionally, but in general you still need to work on your technique and creativity."
+    },
+    {
+        "name" : "Intermediate Advanced",
+        "genre" : "Balboa:",
+        "content" : " You can do a come around, and you are able to do a toss out. Alternatively, you have a solid come around and toss out, and can transition easily between moves with good technique. This track is mixed so there will be a mix of advanced and intermediate dancers."
+    },
+    {
+        "name" : "Advanced",
+        "genre" : "Lindy Hop:",
+        "content" : " You have a solid swingout, compete often, and are here for really refining your already solid technique. You have no issues dancing higher BPM songs, and can hold your own when things may not go as planned with on the spot creativity."
+    }
+]

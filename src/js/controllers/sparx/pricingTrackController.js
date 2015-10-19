@@ -1,6 +1,6 @@
 var app = angular.module('swingclub');
 
-app.controller('VenuePricingController', [
+app.controller('pricingTrackController', [
     '$scope',
     '$rootScope',
     '$routeParams',
@@ -16,8 +16,8 @@ app.controller('VenuePricingController', [
             $http.get("json/pricing.json").success(function(data) {
                 $scope.pricing = data;
             });
-            $http.get("json/venues.json").success(function(data) {
-                $scope.venues = data;
+            $http.get("json/track-descriptions.json").success(function(data) {
+                $scope.descriptions = data;
             });
 
             initNav('.sparx-button-collapse');
