@@ -178,6 +178,13 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/venues.html',
             controller: 'venuesController'
         })
+        .when('/sparx/sponsors', {
+            templateUrl: 'pages/sponsors.html',
+            controller: 'sponsorsController'
+        })
+        /**
+         * Media Galleries
+         */
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',
