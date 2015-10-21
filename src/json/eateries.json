@@ -30,6 +30,11 @@
         "caption" : "Subway",
         "directions" : "https://goo.gl/maps/8oHAyFE3GHF2"
     },{
+        "src" : "images/sparx/resturaunts/chapati.png",
+        "id" : "chapati",
+        "caption" : "Chapati",
+        "directions" : "https://goo.gl/maps/F1mK2kRVnQy"
+    },{
         "src" : "images/sparx/resturaunts/tommys.png",
         "id" : "tommys",
         "caption" : "Tommys",
