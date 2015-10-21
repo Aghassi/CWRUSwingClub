@@ -1,6 +1,6 @@
 var app = angular.module('swingclub');
 
-app.controller('venuesController', [
+app.controller('venuesEateriesController', [
     '$scope',
     '$rootScope',
     '$routeParams',
@@ -15,6 +15,9 @@ app.controller('venuesController', [
 
             $http.get("json/venues.json").success(function(data) {
                 $scope.venues = data;
+            });
+            $http.get("json/eateries.json").success(function(data) {
+                $scope.eateries = data;
             });
 
             initNav('.sparx-button-collapse');

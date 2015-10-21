@@ -63,6 +63,12 @@ nav .nav-wrapper i:focus {
     height: inherit;
 }
 
+.card-image .eatery {
+    height: 150px;
+    padding: 10px;
+    background: white;
+}
+
 .headshot {
     max-width: 90%;
     margin: 6px;

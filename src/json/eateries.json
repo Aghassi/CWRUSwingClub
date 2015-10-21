@@ -1,0 +1,23 @@
+[
+    {
+        "src" : "images/sparx/resturaunts/chipotle.jpg",
+        "id" : "chipotle",
+        "caption" : "Chipotle",
+        "directions" : "https://goo.gl/maps/f9Q8aZagE8E2"
+    },{
+        "src" : "images/sparx/resturaunts/kenko.png",
+        "id" : "kenko",
+        "caption" : "Kenko",
+        "directions" : "https://goo.gl/maps/916xjqUjkiy"
+    },{
+        "src" : "images/sparx/resturaunts/melt-u.jpg",
+        "id" : "melt",
+        "caption" : "Melt-U",
+        "directions" : "https://goo.gl/maps/tzgAehFDjYr"
+    },{
+        "src" : "images/sparx/resturaunts/panera.png",
+        "id" : "panera",
+        "caption" : "Panera",
+        "directions" : "https://goo.gl/maps/EnZXw49W9T72"
+    }
+]

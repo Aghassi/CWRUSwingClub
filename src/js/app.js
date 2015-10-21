@@ -174,9 +174,9 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/pricing-tracks.html',
             controller: 'pricingTrackController'
         })
-        .when('/sparx/venues', {
-            templateUrl: 'pages/venues.html',
-            controller: 'venuesController'
+        .when('/sparx/venues-eateries', {
+            templateUrl: 'pages/venues-eateries.html',
+            controller: 'venuesEateriesController'
         })
         .when('/sparx/sponsors', {
             templateUrl: 'pages/sponsors.html',
