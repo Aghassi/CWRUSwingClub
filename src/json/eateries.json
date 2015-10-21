@@ -1,14 +1,9 @@
 [
     {
-        "src" : "images/sparx/resturaunts/chipotle.jpg",
+        "src" : "images/sparx/resturaunts/chipotle.png",
         "id" : "chipotle",
         "caption" : "Chipotle",
         "directions" : "https://goo.gl/maps/f9Q8aZagE8E2"
-    },{
-        "src" : "images/sparx/resturaunts/kenko.png",
-        "id" : "kenko",
-        "caption" : "Kenko",
-        "directions" : "https://goo.gl/maps/916xjqUjkiy"
     },{
         "src" : "images/sparx/resturaunts/melt-u.jpg",
         "id" : "melt",
@@ -19,5 +14,30 @@
         "id" : "panera",
         "caption" : "Panera",
         "directions" : "https://goo.gl/maps/EnZXw49W9T72"
+    },{
+        "src" : "images/sparx/resturaunts/qdoba.png",
+        "id" : "qdoba",
+        "caption" : "Qdoba",
+        "directions" : "https://goo.gl/maps/zQtM6k9xFeu"
+    },{
+        "src" : "images/sparx/resturaunts/potbelly.png",
+        "id" : "potbelly",
+        "caption" : "Potbelly",
+        "directions" : "https://goo.gl/maps/LWSa4TvevrG2"
+    },{
+        "src" : "images/sparx/resturaunts/subway.jpg",
+        "id" : "subway",
+        "caption" : "Subway",
+        "directions" : "https://goo.gl/maps/8oHAyFE3GHF2"
+    },{
+        "src" : "images/sparx/resturaunts/tommys.png",
+        "id" : "tommys",
+        "caption" : "Tommys",
+        "directions" : "https://goo.gl/maps/sQHiJr6Gven"
+    },{
+        "src" : "images/sparx/resturaunts/kenko.png",
+        "id" : "kenko",
+        "caption" : "Kenko",
+        "directions" : "https://goo.gl/maps/916xjqUjkiy"
     }
 ]
