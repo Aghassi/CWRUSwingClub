@@ -1,6 +1,6 @@
 var app = angular.module('swingclub');
 
-app.controller('VenuePricingController', [
+app.controller('sponsorsController', [
     '$scope',
     '$rootScope',
     '$routeParams',
@@ -13,11 +13,8 @@ app.controller('VenuePricingController', [
             $rootScope.title = 'SparX'; // Page name in browser bar
             $scope.$routeParams = $routeParams;
 
-            $http.get("json/pricing.json").success(function(data) {
-                $scope.pricing = data;
-            });
-            $http.get("json/venues.json").success(function(data) {
-                $scope.venues = data;
+            $http.get("json/sponsors.json").success(function(data) {
+                $scope.sponsors = data;
             });
 
             initNav('.sparx-button-collapse');
