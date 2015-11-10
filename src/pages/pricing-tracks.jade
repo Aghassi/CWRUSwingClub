@@ -15,18 +15,12 @@
                         td 
                             p {{price.price}}
 
-.section.container
-    .row
-        h2.center -Venues-
-        div.col.s12.m4.l4(ng-repeat="venue in venues")
-            .card
-                .card-image
-                    img(src="{{venue.src}}" href="#{{venue.id}}")
-                    span.card-title {{venue.caption}}
-                .card-action
-                    a(href="{{venue.directions}}") Directions
-            
-            .card-panel.white
-                h5 Note:
-                p {{venue.note}}
-// Use cards to show picture of building that has a "get directions" button, and a description
+    .section
+            h4 Tracks
+
+            .row
+                div.col.s12.m3.l3(ng-repeat="description in descriptions")
+                    .card-panel.white
+                        h5 {{description.name}}
+                        em {{description.genre}}
+                        p {{description.content}}
