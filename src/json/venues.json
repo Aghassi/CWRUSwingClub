@@ -1,18 +1,4 @@
-[
-// {
-//     "src": "images/sparx/venues/VealeCenter.jpg",
-//     "id": "Veale",
-//     "caption": "Veale Multipurpose Room",
-//     "directions": "https://goo.gl/q4nZPw",
-//     "note": "Once you get into Veale (the building), you will need to make a left into the track area, and head up the stairs. The Multipurpose room in on the left at the top of the stairs."
-// }, {
-//     "src": "images/sparx/venues/Adelbert.jpg",
-//     "id": "Adelbert",
-//     "caption": "Adelbert Gymnasium",
-//     "directions": "https://goo.gl/JaAPAv",
-//     "note": "Adelbert Gym has a strict rule on proper footwear. You may not wear shoes that have a colored rubber sole (e.g. something that will leave a mark if it scuffs against the floor at high speeds). Hard leather and suade are acceptable, as are Keds or Converse."
-// }, 
-{
+[{
     "src": "images/sparx/venues/Carlton.jpg",
     "id": "Carlton",
     "caption": "Carlton Commons",
