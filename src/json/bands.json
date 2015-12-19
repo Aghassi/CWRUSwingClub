@@ -28,4 +28,9 @@
     "bodyshot": "images/sparx/JohnHelveston.png",
     "id": "Helveston",
     "name": "John Helveston"
+}. {
+    "src": "images/sparx/band-headshots/selzer_headshot.png",
+    "bodyshot": "images/sparx/AndrewSelzer.png",
+    "id": "Selzer",
+    "name": "Andrew Selzer"
 }]
