@@ -170,10 +170,21 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'pages/schedule.html',
             controller: 'ScheduleController'
         })
-        .when('/sparx/venues-pricing', {
-            templateUrl: 'pages/venue_pricing.html',
-            controller: 'VenuePricingController'
+        .when('/sparx/pricing-tracks', {
+            templateUrl: 'pages/pricing-tracks.html',
+            controller: 'pricingTrackController'
         })
+        .when('/sparx/venues-eateries', {
+            templateUrl: 'pages/venues-eateries.html',
+            controller: 'venuesEateriesController'
+        })
+        .when('/sparx/sponsors', {
+            templateUrl: 'pages/sponsors.html',
+            controller: 'sponsorsController'
+        })
+        /**
+         * Media Galleries
+         */
         .when('/media/gallery', {
             templateUrl: 'pages/gallery.html',
             controller: 'GalleryController',

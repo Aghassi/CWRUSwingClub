@@ -1,0 +1,10 @@
+.container
+    .section
+        h4.center Sponsors
+
+        .row
+            div.col.s12.m4.l4(ng-repeat="sponsor in sponsors")
+                .card.white
+                    .card-image
+                        img(src="{{sponsor.image}}")
+                        span.card-title {{sponsor.name}}

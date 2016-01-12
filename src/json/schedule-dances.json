@@ -8,19 +8,19 @@
             },
             {
                 "hours": "8 PM - 9 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Tony Vergara"
             },
             {
                 "hours": "9 PM - 10 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Ross Blythe"
             },
             {
                 "hours": "10 PM - 11 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Andrew Selzer"
             },
             {
                 "hours": "11 PM - 12 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-John Halveston"
             }
         ],
         "danceLocation": "Adelbert Gymnasium"
@@ -42,7 +42,7 @@
             },
             {
                 "hours": "9:50 PM - 10:10 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Tony Vergara"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
@@ -50,29 +50,29 @@
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-John Halveston"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
                 "event": "The Boilermaker Jazz Band"
             }
         ],
-        "danceLocation": "Adelbert Gymnasium"
+        "danceLocation": "TBA"
     },
     {
         "day": "Saturday Late Night - Blues",
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "DJ-TBA"
+                "event": "DJ-Dan Miles"
             },
             {
                 "hours": "1:30 AM - 2:30 AM",
-                "event": "DJ-TBA"
+                "event": "DJ-Moses Allooh"
             },
             {
                 "hours": "2:30 AM - 3:30 AM",
-                "event": "DJ-TBA"
+                "event": "DJ-Ross Blythe"
             }
         ],
         "danceLocation": "Carlton Commons"
@@ -82,15 +82,11 @@
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "DJ-TBA"
+                "event": "DJ-Andrew Selzer"
             },
             {
-                "hours": "1:30 AM - 2:30 AM",
-                "event": "DJ-TBA"
-            },
-            {
-                "hours": "2:30 AM - 3:30 AM",
-                "event": "DJ-TBA"
+                "hours": "1:30 AM - End",
+                "event": "DJ-Brennan Bowman"
             }
         ],
         "danceLocation": "Rough Rider Room"
@@ -104,7 +100,7 @@
             },
             {
                 "hours": "6:50 PM - 7:10 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Brennan Bowman"
             },
             {
                 "hours": "7:10 PM - 8:00 PM",
@@ -112,13 +108,13 @@
             },
             {
                 "hours": "8:00 PM - 8:20 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Ross Blythe"
             },
             {
                 "hours": "8:20 PM - 9:00 PM",
                 "event": "The Boilermaker Jazz Band"
             }
         ],
-        "danceLocation": "Adelbert Gymnasium"
+        "danceLocation": "TBA"
     }
 ]
