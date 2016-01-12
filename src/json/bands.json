@@ -38,4 +38,9 @@
     "bodyshot": "images/sparx/BrennanBowman.jpg",
     "id": "Bowman",
     "name": "Brennan Bowman"
+}, {
+    "src": "images/sparx/band-headshots/selzer_headshot.jpg",
+    "bodyshot": "images/sparx/AndrewSelzer.jpg",
+    "id": "Selzer",
+    "name": "Andrew Selzer"
 }]

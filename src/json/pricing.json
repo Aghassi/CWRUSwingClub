@@ -14,5 +14,8 @@
 	}, {
 	"name": "Lessons Only Pass",
 	"price": "$40 / $55 / $70"
+	}, {
+		"name" : "Al Le Carte Classes",
+		"price" : "$20"
 	}
 ]
