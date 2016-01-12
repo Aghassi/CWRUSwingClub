@@ -42,7 +42,7 @@
             },
             {
                 "hours": "9:50 PM - 10:10 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Tony Vergara"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
@@ -50,7 +50,7 @@
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-John Halveston"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
@@ -82,15 +82,11 @@
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "DJ-TBA"
+                "event": "DJ-Andrew Selzer"
             },
             {
-                "hours": "1:30 AM - 2:30 AM",
-                "event": "DJ-TBA"
-            },
-            {
-                "hours": "2:30 AM - 3:30 AM",
-                "event": "DJ-TBA"
+                "hours": "1:30 AM - End",
+                "event": "DJ-Brennan Bowman"
             }
         ],
         "danceLocation": "Rough Rider Room"
@@ -104,7 +100,7 @@
             },
             {
                 "hours": "6:50 PM - 7:10 PM",
-                "event": "DJ-TBA"
+                "event": "DJ-Brennan Bowman"
             },
             {
                 "hours": "7:10 PM - 8:00 PM",
