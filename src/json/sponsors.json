@@ -1,8 +1,4 @@
-[
-    {
-        "image" : "images/sparx/sponsors/alumni-association.jpg",
-        "title" : "Alumni Association"
-    }, 
+[ 
     {
         "image" : "images/sparx/sponsors/usg.jpg",
         "title" : "Undergraduate Student Government"
@@ -14,5 +10,9 @@
     {
         "image" : "images/sparx/sponsors/jolly.jpg",
         "title" : "The Jolly Scholar"
+    },
+    {
+        "image" : "images/sparx/sponsors/alumni-association.jpg",
+        "title" : "Alumni Association"
     }
 ]
