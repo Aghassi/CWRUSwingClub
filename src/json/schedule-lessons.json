@@ -7,7 +7,7 @@
 	            "tracks": [
 	                {
 	                    "name": "Auditions for Advanced",
-	                    "location": "TBA"
+	                    "location": "John Hay High School"
 	                }
 	            ]
 	        },
@@ -16,15 +16,15 @@
                 "tracks": [
                     {
                         "name": "Beginner - Danny and Mandy",
-                        "location": "Carlton Commons"
+                        "location": "Carlton Commons - Rough Rider Room"
                     },
                     {
                         "name": "Intermediate - Lindy with Bobby and Kate",
-                        "location": "TBA"
+                        "location": "Carlton Commons - Down Stairs"
                     },
                     {
                         "name": "Advanced - Solo Charleston with Ann",
-                        "location": "TBA"
+                        "location": "John Hay High School"
                     }
                 ]
             },
@@ -33,15 +33,15 @@
                 "tracks": [
                     {
                         "name": "Beginner - Charleston with Ann",
-                        "location": "Carlton Commons"
+                        "location": "Carlton Commons - Rough Rider Room"
                     },
                     {
                         "name": "Intermediate - Charleston with Danny and Mandy",
-                        "location": "TBA"
+                        "location": "Carlton Commons - Down Stairs"
                     },
                     {
                         "name": "Advanced - Lindy with Bobby and Kate",
-                        "location": "TBA"
+                        "location": "John Hay High School"
                     }
                 ]
             }
@@ -55,15 +55,15 @@
                 "tracks": [
                     {
                         "name": "Beginner - Balboa Danny and Mandy",
-                        "location": "Carlton Commons"
+                        "location": "Carlton Commons - Down Stairs"
                     },
                     {
                         "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
-                        "location": "TBA"
+                        "location": "Carlton Commons - Rough Rider Room"
                     },
                     {
-                        "name": "Intermediate/Advanced - Develop Your Solo Dance Voice with Ann",
-                        "location": "TBA"
+                        "name": "Solo Class - Develop Your Solo Dance Voice with Ann",
+                        "location": "Veale Multipurpose Room"
                     }
                 ]
             },
@@ -72,15 +72,15 @@
                 "tracks": [
                     {
                         "name": "Beginner - Balboa Danny and Mandy",
-                        "location": "Carlton Commons"
+                        "location": "Carlton Commons - Down Stairs"
                     },
                     {
                         "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
-                        "location": "TBA"
+                        "location": "Carlton Commons - Rough Rider Room"
                     },
                     {
-                        "name": "Intermediate/Advanced - Solo Routine with Ann",
-                        "location": "TBA"
+                        "name": "Solo Class - Solo Routine with Ann",
+                        "location": "Veale Multipurpose Room"
                     }
                 ]
             }
