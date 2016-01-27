@@ -23,7 +23,7 @@
                 "event": "DJ-John Halveston"
             }
         ],
-        "danceLocation": "Adelbert Gymnasium"
+        "danceLocation": "Carlton Commons"
     },
     {
         "day": "Saturday Evening (Lindy)",
@@ -57,7 +57,7 @@
                 "event": "The Boilermaker Jazz Band"
             }
         ],
-        "danceLocation": "TBA"
+        "danceLocation": "John Hay High School"
     },
     {
         "day": "Saturday Late Night - Blues",
@@ -89,7 +89,7 @@
                 "event": "DJ-Brennan Bowman"
             }
         ],
-        "danceLocation": "Rough Rider Room"
+        "danceLocation": "Carlton Commons - Rough Rider Room"
     },
     {
         "day": "Sunday Evening (Balboa)",
@@ -115,6 +115,6 @@
                 "event": "The Boilermaker Jazz Band"
             }
         ],
-        "danceLocation": "TBA"
+        "danceLocation": "John Hay High School"
     }
 ]
