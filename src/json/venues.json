@@ -7,13 +7,7 @@
 }, {
     "src": "images/sparx/venues/VealeCenter.jpg",
     "id": "Veale",
-    "caption": "Veale Multipurpose Room",
+    "caption": "Veale",
     "directions": "https://goo.gl/q4nZPw",
-    "note": "Once you get into Veale (the building), you will need to make a left into the track area, and head up the stairs. The Multipurpose room in on the left at the top of the stairs. We will have people to direct you."
-}, {
-    "src": "images/sparx/venues/JohnHay.jpg",
-    "id": "JohnHay",
-    "caption": "John Hay High School",
-    "directions": "https://goo.gl/maps/rsJ7WsyVJDD2",
-    "note": "There is parking around the school that you can use to park if you are driving. Otherwise, park at Lot 43. We will have people to direct you to the gym."
+    "note": "Veale houses the Multipurpose room and Horsburg. We will have people to direct you to each."
 }]
