@@ -1,26 +1,31 @@
-[{
-    "src": "images/sparx/teachers-headshots/BobbyWhite_headshot.jpg",
-    "bodyshot": "images/sparx/BWhite.jpg",
-    "id": "Bobby_White",
-    "name": "Bobby White"
+{
+    "src": "images/sparx/teachers-headshots/ValerieSalstrom_headshot.jpg",
+    "bodyshot": "images/sparx/ValerieSalstrom.jpg",
+    "id": “Valerie_Salstrom”,
+    "name": “Valerie Salstrom“
 }, {
-    "src": "images/sparx/teachers-headshots/KateHedin_headshot.jpg",
-    "bodyshot": "images/sparx/KateHedin.jpg",
-    "id": "Kate_Hedin",
-    "name": "Kate Hedin"
+    "src": "images/sparx/teachers-headshots/JacobWigger_headshot.jpg",
+    "bodyshot": "images/sparx/JacobWigger.jpg",
+    "id": “Jacob_Wigger”,
+    "name": “Jacob Wigger”
 }, {
-    "src": "images/sparx/teachers-headshots/AnnMony_headshot.jpg",
-    "bodyshot": "images/sparx/AnnMonySolo.jpg",
-    "id": "Ann_Mony",
-    "name": "Ann Mony"
+    "src": "images/sparx/teachers-headshots/RafalPustelny_headshot.jpg",
+    "bodyshot": "images/sparx/RafalPustelny.jpg",
+    "id": "Rafal_Pustelny",
+    "name": "Rafal Pustelny"
 },  {
-    "src": "images/sparx/teachers-headshots/MandyHogan_headshot.png",
-    "bodyshot": "images/sparx/MandyHogan.png",
-    "id": "Mandy_Hogan",
-    "name": "Mandy Hogan"
+    "src": "images/sparx/teachers-headshots/AdrienneWeidert_headshot.jpg”,
+    "bodyshot": "images/sparx/AdrienneWeidert.png",
+    "id": "Adrienne_Weidert",
+    "name": "Adrienne Weidert"
 }, {
-    "src": "images/sparx/teachers-headshots/DannyBeyrer_headshot.png",
-    "bodyshot": "images/sparx/DannyBeyrer.jpg",
-    "id": "Danny_Beyrer",
-    "name": "Danny Beyrer"
+    "src": "images/sparx/teachers-headshots/MarkCalkins_headshot.jpg”,
+    "bodyshot": "images/sparx/MarkCalkins.jpg",
+    "id": "Mark_Calkins",
+    "name": "Mark Calkins"
+}, {
+    "src": "images/sparx/teachers-headshots/ShannonVarner_headshot.png",
+    "bodyshot": "images/sparx/ShannonVarner.jpg",
+    "id": “Shannon_Varner”,
+    "name": "Shannon Varner"
 }]

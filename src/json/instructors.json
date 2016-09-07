@@ -1,21 +1,55 @@
 [{
-    "src": "images/sparx/BobbyKate.jpg",
-    "bio": "Always striving to capture the classic spirit of the original jitterbugs with a modern voice, Bobby and Kate teach Balboa, Lindy Hop, Solo Jazz, and Collegiate Shag nationally and internationally. Between them they have championship titles in almost every major Balboa and many major Lindy Hop competitions, including the American Classic Balboa Championships, the International Lindy Hop Championships, the Euro Balboa Cup, the American Lindy Hop Championships, and the Eastern Balboa Championships.Their judging is highly respected and sought - after for events such as the International Lindy Hop Championships and the European Swing Dance Championships. Both Bobby and Kate are recognized for their engaging teaching— Kate instructs with a thorough, mechanics - based method, while Bobby prefers unique analogies and irk - irk noises. Along with more traditional classes based around moves, variations, and lead / follow technique, Bobby and Kate also enjoy teaching many “alternative education” classes on subjects like partnership, practicing, dancing personality, and developing a unique voice.",
-    "id": "bobby-kate",
-    "name": "Bobby & Kate"
+    "src": "images/sparx/Val.jpg",
+    "bio": "Valerie Salstrom is one of America's busiest and most enthusiastic swing dance instructors. Valerie has been dancing Lindy Hop, Balboa, Charleston and multiple forms of Shag since the early 1990s and has been a consistent favorite on the international teaching circuit for nearly twenty years. She co-founded the Cleveland based swing dance company Get Hep Swing in 1998. Along with a true joy for teaching, dancing and competing, Valerie also savors the opportunity to judge dance competitions and is frequently a main judge at national and international swing dance events.  Having had the opportunity to work with many of the original swing dance masters and innovators from Harlem, New York and Los Angeles, California, Valerie is adamant about paying forward her knowledge and love of the dance to the next generations. She has been a teaching artist for the Ohio Arts Council for close to 20 years and has done numerous in-school and after-school swing dance residencies with them. In 2007 Valerie founded the Cleveland Junior Jitterbugs after-school swing dance program which not only teaches youth in the Cleveland area about swing dancing but also helps them develop their skills in leadership, teamwork, communications and more. 
+
+Although Valerie has won numerous dance competitions, her proudest achievement to date happened at the 2014 International Lindy Hop Championships when two of the members of The Cleveland Junior Jitterbugs, won the title of Junior World Lindy Hop Champions. She is hopeful that her work with the Cleveland Junior Jitterbugs will inspire more people to become involved in teaching swing dancing to young people.
+ 
+You may find more information about Valerie at www.GetHepSwing.com, www.JuniorJitterbugs.org & www.AllBalboa.com 
+ 
+Valerie’s competition achievements -
+2015 Open Balboa Champion, National Jitterbug Championships
+2014 Open Balboa Champion, National Jitterbug Championships
+2013 Eastern Balboa Championships Champion
+2011 International Balboa Champion, Balboa Rendezvous
+2011 Open Balboa Champion, National Jitterbug Championships
+2010 Open Balboa Champion, National Jitterbug Championships
+2008 International Balboa Champion, Balboa Rendezvous
+2006 Pro Lindy Champion, National Jitterbug Championships
+2006 Pro Balboa Champion, National Jitterbug Championships
+2006 Shag, 2nd place, National Jitterbug Championships
+2006 Pro Grand Slam Champion (best overall scores in Shag, Lindy & Balboa), National Jitterbug Championships
+2004 American Showcase Division Champion (choreographed routine), American Lindy Hop Championships
+2004 Balboa Champion, National Jitterbug Championships
+2003 Grand Slam Award (best overall scores in Pro-Lindy, Shag, Showcase & Balboa), National Jitterbug Championships
+2002 Showcase, 2nd place, National Jitterbug Championships
+2001 Pro Lindy, 3rd place, National Jitterbug Championships
+2001 Balboa, 2nd place, National Jitterbug Championships
+2001 Shag, 2nd place, National Jitterbug Championships",
+    "id": “val”,
+    "name": “Valerie Salstrom”
 }, {
-    "src": "images/sparx/AnnMonySolo.jpg",
-    "bio": "Ann Mony strives to make every dance a unique and memorable one. Known for her playful style and the joy that she exudes while dancing, she travels as often as she can to share her love of Lindy Hop through classes, competitions, performances, and social dances. She is committed to preserving the improvisational link between Lindy Hop and jazz, empowering followers, and celebrating the cultural wealth of vernacular jazz dances.",
-    "id": "annMony",
-    "name": "Ann Mony"
+    "src": "images/sparx/Jacob.jpg",
+    "bio": “…”,
+    "id": “jacob”,
+    "name": “Jacob Wigger”
 }, {
-    "src": "images/sparx/DannyBeyrer.jpg",
-    "bio": "Danny started dancing at a ballroom studio in 2007 and left on a mission to pursue vintage swing dancing after watching his first old timey dance clip. He has since competed and placed at many regional and national events and challenged himself by studying rhythm tap in New York City under Andrew Nemr. Danny started teaching dance after co-founding a swing dance club at his alma mater and has since taught in scenes around the Midwest. Danny’s passion in the dance is striving for freedom of movement in cooperation with the freely expressed art form that is jazz. In class he likes to emphasize personal body movement, musicality, and fun.",
-    "id": "danny",
-    "name": "Danny Beyrer"
+    "src": "images/sparx/Rafal.jpg",
+    "bio": “…”,
+    "id": “rafal”,
+    "name": “Rafal Pustelny”
 }, {
-    "src": "images/sparx/MandyHogan.png",
-    "bio": "Mandy Hogan is a dental hygienist by day and fun loving lindy hopper by night. Her dancing journey began in 2008 attending AU's swing club. Since then she has traveled around the US social dancing, performing, competing, and teaching. Mandy loves the joy that lindy hop brings and sharing that joy with others. As a teacher she strives to bring the best out of her students through clear communication and keeping a positive atmosphere.",
-    "id": "mandy",
-    "name": "Mandy Hogan"
+    "src": "images/sparx/Adrienne.jpg",
+    "bio": “…”,
+    "id": “adrienne”,
+    "name": "Adrienne Weidert"
+}, {
+    "src": "images/sparx/Mark.jpg",
+    "bio": “…”,
+    "id": “mark”,
+    "name": "Mark Calkins"
+}, {
+    "src": "images/sparx/Shannon.jpg",
+    "bio": “…”,
+    "id": “shannon”,
+    "name": “Shannon Varner”
 }]
