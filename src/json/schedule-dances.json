@@ -1,48 +1,22 @@
 [
     {
-        "day": "Friday Evening (Lindy)”,
+        "day": "Friday Evening (Lindy)",
         "dance": [
             {
                 "hours": "7 PM - 8PM",
-                "event": "Beginner East Coast Lesson"
-            },
-            {
-                "hours": "8 PM - 9 PM",
-                "event": “…”
-            },
-            {
-                "hours": "9 PM - 10 PM",
-                "event": “…”
-            },
-            {
-                "hours": "10 PM - 11 PM",
-                "event": “…”
-            },
-            {
-                "hours": "11 PM - 12 PM",
-                "event": “…”
-            }
-        ],
-        "danceLocation": "Carlton Commons"
-    },
-    {
-        "day": "Saturday Evening (Balboa)”,
-        "dance": [
-            {
-                "hours": "7:00 PM - 8:00PM",
-                "event": “—“
+                "event": "Beginner Lindy Lesson"
             },
             {
                 "hours": "8:00 PM - 9:00 PM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "9:00 PM - 9:50 PM",
-                "event": “Michael Gamble and the Rhythm Serenaders”
+                "event": "Michael Gamble and the Rhythm Serenaders"
             },
             {
                 "hours": "9:50 PM - 10:10 PM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
@@ -50,29 +24,59 @@
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
                 "event": "Michael Gamble and the Rhythm Serenaders"
             }
         ],
-        "danceLocation": “Carlton Commons”
+        "danceLocation": "Carlton Commons"
+    },
+    {
+        "day": "Saturday Evening (Balboa)",
+        "dance": [
+            {
+                "hours": "8:00 PM - 9:00 PM",
+                "event": "TBD"
+            },
+            {
+                "hours": "9:00 PM - 9:50 PM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
+            },
+            {
+                "hours": "9:50 PM - 10:10 PM",
+                "event": "TBD"
+            },
+            {
+                "hours": "10:10 PM - 11:00 PM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
+            },
+            {
+                "hours": "11:00 PM - 11:20 PM",
+                "event": "TBD"
+            },
+            {
+                "hours": "11:20 PM - 12:00 AM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
+            }
+        ],
+        "danceLocation": "Carlton Commons"
     },
     {
         "day": "Saturday Late Night - Blues",
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "1:30 AM - 2:30 AM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "2:30 AM - 3:30 AM",
-                "event": “…”
+                "event": "TBD"
             }
         ],
         "danceLocation": "Carlton Commons"
@@ -82,11 +86,11 @@
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": “…”
+                "event": "TBD"
             },
             {
                 "hours": "1:30 AM - End",
-                "event": “…”
+                "event": "TBD"
             }
         ],
         "danceLocation": "Carlton Commons - Rough Rider Room"

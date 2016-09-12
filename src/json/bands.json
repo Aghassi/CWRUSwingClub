@@ -1,46 +1,6 @@
 [{
     "src": "images/sparx/band-headshots/RhythmSerenaders_headshot.jpg",
     "bodyshot": "images/sparx/RhythmSerenaders.jpg",
-    "id": “Michael Gamble & The Rhythm Serenaders”,
+    "id": "Michael Gamble & The Rhythm Serenaders",
     "name": "Michael Gamble & The Rhythm Serenaders"
-},{
-    "src": "images/sparx/band-headshots/allooh_headshot.jpg",
-    "bodyshot": "images/sparx/Moses_Allooh.jpg",
-    "id": "Allooh",
-    "name": "Moses Allooh"
-},{
-    "src": "images/sparx/band-headshots/miles_headshot.jpg",
-    "bodyshot": "images/sparx/DanMiles.jpg",
-    "id": "Miles",
-    "name": "Dan Miles"
-},{
-    "src": "images/sparx/band-headshots/blythe_headshot.jpg",
-    "bodyshot": "images/sparx/RossBlythe.jpg",
-    "id": "Blythe",
-    "name": "Ross Blythe"
-}, {
-    "src": "images/sparx/band-headshots/vergara_headshot.jpg",
-    "bodyshot": "images/sparx/AntonioVergara.jpg",
-    "id": "Vergara",
-    "name": "Antonio 'Tony' Vergara"
-}, {
-    "src": "images/sparx/band-headshots/helveston_headshot.png",
-    "bodyshot": "images/sparx/JohnHelveston.png",
-    "id": "Helveston",
-    "name": "John Helveston"
-}, {
-    "src": "images/sparx/band-headshots/benze_headshot.jpg",
-    "bodyshot": "images/sparx/JamesBenze.jpg",
-    "id": "Benze",
-    "name": "James Benze"
-}, {
-    "src": "images/sparx/band-headshots/bowman_headshot.jpg",
-    "bodyshot": "images/sparx/BrennanBowman.jpg",
-    "id": "Bowman",
-    "name": "Brennan Bowman"
-}, {
-    "src": "images/sparx/band-headshots/selzer_headshot.jpg",
-    "bodyshot": "images/sparx/AndrewSelzer.jpg",
-    "id": "Selzer",
-    "name": "Andrew Selzer"
 }]
