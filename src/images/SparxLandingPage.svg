@@ -1,36 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
-]>
-<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
-<polygon display="none" fill="#790F15" points="0.193,0 0,399.859 290.154,400 399.893,400 399.999,177.647 399.999,0.096 
-	201.069,0 "/>
-<polygon display="none" fill="#790F15" points="0.193,0 0.075,245.304 0,399.859 290.154,400 399.893,400 399.999,177.647 
-	399.999,0.096 201.069,0 "/>
-<polygon fill="#E5A653" points="251.578,254.237 100.169,11.983 127.671,11.983 278.896,254.237 "/>
-<g>
-	<defs>
-		<rect id="SVGID_1_" width="400" height="400"/>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="400px"
+   height="400px"
+   viewBox="0 0 400 400"
+   enable-background="new 0 0 400 400"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="SparxLandingPage(New2017).svg"><metadata
+   id="metadata3387"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs3385" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1536"
+   inkscape:window-height="801"
+   id="namedview3383"
+   showgrid="false"
+   inkscape:zoom="1.565"
+   inkscape:cx="200"
+   inkscape:cy="200"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<polygon
+   display="none"
+   fill="#790F15"
+   points="0.193,0 0,399.859 290.154,400 399.893,400 399.999,177.647 399.999,0.096   201.069,0 "
+   id="polygon3337" />
+<polygon
+   display="none"
+   fill="#790F15"
+   points="0.193,0 0.075,245.304 0,399.859 290.154,400 399.893,400 399.999,177.647   399.999,0.096 201.069,0 "
+   id="polygon3339" />
+<polygon
+   fill="#E5A653"
+   points="251.578,254.237 100.169,11.983 127.671,11.983 278.896,254.237 "
+   id="polygon3341" />
+<g
+   id="g3343">
+	<defs
+   id="defs3345">
+		<rect
+   id="SVGID_1_"
+   width="400"
+   height="400" />
 	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	<clipPath
+   id="SVGID_2_">
+		<use
+   xlink:href="#SVGID_1_"
+   overflow="visible"
+   id="use3349" />
 	</clipPath>
-	<path clip-path="url(#SVGID_2_)" fill="#FFF6A4" d="M107.891,262.658c9.295-31.325,46.99-132.279,160.077-193.881
-		c-0.092,0.011-0.204,0.038-0.301,0.054l0.044-0.054C129.532,131.631,97.94,272.232,97.94,272.232
-		C98.329,271.858,107.891,262.658,107.891,262.658"/>
-	<polygon clip-path="url(#SVGID_2_)" fill="#FFF6A4" points="280.21,48.96 284.915,63.46 292.478,76.697 287.772,62.196 	"/>
-	<polygon clip-path="url(#SVGID_2_)" fill="#FFF6A4" points="296.06,58.531 285.9,61.827 276.628,67.125 286.787,63.829 	"/>
+	<path
+   clip-path="url(#SVGID_2_)"
+   fill="#FFF6A4"
+   d="M107.891,262.658c9.295-31.325,46.99-132.279,160.077-193.881   c-0.092,0.011-0.204,0.038-0.301,0.054l0.044-0.054C129.532,131.631,97.94,272.232,97.94,272.232   C98.329,271.858,107.891,262.658,107.891,262.658"
+   id="path3351" />
+	<polygon
+   clip-path="url(#SVGID_2_)"
+   fill="#FFF6A4"
+   points="280.21,48.96 284.915,63.46 292.478,76.697 287.772,62.196  "
+   id="polygon3353" />
+	<polygon
+   clip-path="url(#SVGID_2_)"
+   fill="#FFF6A4"
+   points="296.06,58.531 285.9,61.827 276.628,67.125 286.787,63.829  "
+   id="polygon3355" />
 </g>
-<text transform="matrix(1 0 0 1 99.2559 322.46)"><tspan x="0" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">2</tspan><tspan x="54.328" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">0</tspan><tspan x="110.201" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132" letter-spacing="34">1</tspan><tspan x="160.023" y="0" fill="#FFF9C3" font-family="'BodoniSans-Regular'" font-size="42.9132">6</tspan></text>
-<text transform="matrix(1 0 0 1 87.9995 387.6523)"><tspan x="0" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27"> CLEVELAND, OH</tspan></text>
-<text transform="matrix(1 0 0 1 112.0024 353.5518)"><tspan x="0" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27" letter-spacing="-1">F</tspan><tspan x="11.583" y="0" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">ebruary 5-</tspan></text>
-<text transform="matrix(1 0 0 1 234.1768 353.5518)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="27">7</text>
-<text transform="matrix(1 0 0 1 246.4854 348.0479)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="18">t</text>
-<text transform="matrix(1 0 0 1 252.3711 347.7959)" fill="#FFF6A4" font-family="'BodoniSans-Regular'" font-size="18">h</text>
+<text
+   transform="translate(99.2559,322.46)"
+   id="text3357"><tspan
+     x="0"
+     y="0"
+     font-size="42.9132"
+     letter-spacing="34"
+     id="tspan3359"
+     style="font-size:42.91320038px;font-family:BodoniSans-Regular;letter-spacing:34;fill:#fff9c3">2</tspan><tspan
+     x="54.327999"
+     y="0"
+     font-size="42.9132"
+     letter-spacing="34"
+     id="tspan3361"
+     style="font-size:42.91320038px;font-family:BodoniSans-Regular;letter-spacing:34;fill:#fff9c3">0</tspan><tspan
+     x="110.201"
+     y="0"
+     font-size="42.9132"
+     letter-spacing="34"
+     id="tspan3363"
+     style="font-size:42.91320038px;font-family:BodoniSans-Regular;letter-spacing:34;fill:#fff9c3">17</tspan><tspan
+     x="160.02299"
+     y="0"
+     font-size="42.9132"
+     id="tspan3365"
+     style="font-size:42.91320038px;font-family:BodoniSans-Regular;fill:#fff9c3" /></text>
+
+<text
+   transform="matrix(1 0 0 1 87.9995 387.6523)"
+   id="text3367"><tspan
+     x="0"
+     y="0"
+     fill="#FFF6A4"
+     font-family="'BodoniSans-Regular'"
+     font-size="27"
+     id="tspan3369"> CLEVELAND, OH</tspan></text>
+
+<text
+   id="text3371"
+   x="105.61262"
+   y="353.55179"><tspan
+     x="105.61262"
+     y="353.55179"
+     font-size="27"
+     letter-spacing="-1"
+     id="tspan3373"
+     style="font-size:27px;font-family:BodoniSans-Regular;letter-spacing:-1;fill:#fff6a4">F</tspan><tspan
+     x="117.19562"
+     y="353.55179"
+     font-size="27"
+     id="tspan3375"
+     style="font-size:27px;font-family:BodoniSans-Regular;fill:#fff6a4">ebruary 3-5<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan3393">th</tspan></tspan></text>
+
+<text
+   transform="translate(234.1768,353.5518)"
+   font-size="27"
+   id="text3377"
+   style="font-size:27px;font-family:BodoniSans-Regular;fill:#fff6a4" />
+
+<text
+   transform="translate(246.4854,348.0479)"
+   font-size="18"
+   id="text3379"
+   style="font-size:18px;font-family:BodoniSans-Regular;fill:#fff6a4" />
+
+<text
+   transform="translate(252.3711,347.7959)"
+   font-size="18"
+   id="text3381"
+   style="font-size:18px;font-family:BodoniSans-Regular;fill:#fff6a4" />
+
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   x="246.00639"
+   y="345.68689"
+   id="text3389"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan3391"
+     x="246.00639"
+     y="345.68689"></tspan></text>
 </svg>

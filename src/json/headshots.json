@@ -1,31 +1,31 @@
-{
+[{
     "src": "images/sparx/teachers-headshots/ValerieSalstrom_headshot.jpg",
-    "bodyshot": "images/sparx/ValerieSalstrom.jpg",
+    "bodyshot": "images/sparx/teachers-headshots/ValerieSalstrom_headshot.jpg",
     "id": "Valerie_Salstrom",
     "name": "Valerie Salstrom"
 }, {
     "src": "images/sparx/teachers-headshots/JacobWigger_headshot.jpg",
-    "bodyshot": "images/sparx/JacobWigger.jpg",
+    "bodyshot": "images/sparx/teachers-headshots/JacobWigger_headshot.jpg",
     "id": "Jacob_Wigger",
     "name": "Jacob Wigger"
 }, {
     "src": "images/sparx/teachers-headshots/RafalPustelny_headshot.jpg",
-    "bodyshot": "images/sparx/RafalPustelny.jpg",
+    "bodyshot": "images/sparx/teachers-headshots/RafalPustelny_headshot.jpg",
     "id": "Rafal_Pustelny",
     "name": "Rafal Pustelny"
 },  {
     "src": "images/sparx/Adrienne.jpg",
-    "bodyshot": "images/sparx/AdrienneWeidert.png",
+    "bodyshot": "images/sparx/Adrienne.jpg",
     "id": "Adrienne_Weidert",
     "name": "Adrienne Weidert"
 }, {
     "src": "images/sparx/teachers-headshots/MarkCalkins_headshot.png",
-    "bodyshot": "images/sparx/MarkCalkins.jpg",
+    "bodyshot": "images/sparx/teachers-headshots/MarkCalkins_headshot.png",
     "id": "Mark_Calkins",
     "name": "Mark Calkins"
 }, {
     "src": "images/sparx/teachers-headshots/ShannonVarner_headshot.png",
-    "bodyshot": "images/sparx/ShannonVarner.jpg",
+    "bodyshot": "images/sparx/teachers-headshots/ShannonVarner_headshot.png",
     "id": "Shannon_Varner",
     "name": "Shannon Varner"
 }]
