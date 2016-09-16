@@ -50,6 +50,10 @@ nav .nav-wrapper i:focus {
     max-width: 25%;
 }
 
+.bio-image {
+    color = black
+}
+
 .card,
 .card-panel {
     background-color: #681B20;
