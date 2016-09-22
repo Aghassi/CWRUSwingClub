@@ -48,11 +48,9 @@ nav .nav-wrapper i:focus {
 .bio-image {
     margin: 20px 40px;
     max-width: 25%;
+    color: black;
 }
 
-.bio-image {
-    color = black
-}
 
 .card,
 .card-panel {
