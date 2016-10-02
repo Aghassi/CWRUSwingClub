@@ -1,78 +1,82 @@
 [
     {
-        "day": "Friday",
+        "day": "Friday Evening (Lindy)",
         "dance": [
             {
                 "hours": "7 PM - 8PM",
-                "event": "Beginner East Coast Lesson"
+                "event": "Beginner Lindy Lesson"
             },
             {
-                "hours": "8 PM - 9 PM",
-                "event": "DJ-Tony Vergara"
+                "hours": "8:00 PM - 9:00 PM",
+                "event": "TBD"
             },
             {
-                "hours": "9 PM - 10 PM",
-                "event": "DJ-James Benze"
+                "hours": "9:00 PM - 9:50 PM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
             },
             {
-                "hours": "10 PM - 11 PM",
-                "event": "DJ-Andrew Selzer"
+                "hours": "9:50 PM - 10:10 PM",
+                "event": "TBD"
             },
             {
-                "hours": "11 PM - 12 PM",
-                "event": "DJ-John Halveston"
+                "hours": "10:10 PM - 11:00 PM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
+            },
+            {
+                "hours": "11:00 PM - 11:20 PM",
+                "event": "TBD"
+            },
+            {
+                "hours": "11:20 PM - 12:00 AM",
+                "event": "Michael Gamble and the Rhythm Serenaders"
             }
         ],
         "danceLocation": "Carlton Commons"
     },
     {
-        "day": "Saturday Evening (Lindy)",
+        "day": "Saturday Evening (Balboa)",
         "dance": [
             {
-                "hours": "7:00 PM - 8:00PM",
-                "event": "Beginner East Coast Lesson"
-            },
-            {
                 "hours": "8:00 PM - 9:00 PM",
-                "event": "DJ-David Aghassi"
+                "event": "TBD"
             },
             {
                 "hours": "9:00 PM - 9:50 PM",
-                "event": "The Boilermaker Jazz Band"
+                "event": "Michael Gamble and the Rhythm Serenaders"
             },
             {
                 "hours": "9:50 PM - 10:10 PM",
-                "event": "DJ-Tony Vergara"
+                "event": "TBD"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
-                "event": "The Boilermaker Jazz Band"
+                "event": "Michael Gamble and the Rhythm Serenaders"
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": "DJ-John Halveston"
+                "event": "TBD"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
-                "event": "The Boilermaker Jazz Band"
+                "event": "Michael Gamble and the Rhythm Serenaders"
             }
         ],
-        "danceLocation": "Veale Horsburgh Gym"
+        "danceLocation": "Carlton Commons"
     },
     {
         "day": "Saturday Late Night - Blues",
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "DJ-Dan Miles"
+                "event": "TBD"
             },
             {
                 "hours": "1:30 AM - 2:30 AM",
-                "event": "DJ-Moses Allooh"
+                "event": "TBD"
             },
             {
                 "hours": "2:30 AM - 3:30 AM",
-                "event": "DJ-Ross Blythe"
+                "event": "TBD"
             }
         ],
         "danceLocation": "Carlton Commons"
@@ -82,39 +86,13 @@
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "DJ-Andrew Selzer"
+                "event": "TBD"
             },
             {
                 "hours": "1:30 AM - End",
-                "event": "DJ-Brennan Bowman"
+                "event": "TBD"
             }
         ],
         "danceLocation": "Carlton Commons - Rough Rider Room"
-    },
-    {
-        "day": "Sunday Evening (Balboa)",
-        "dance": [
-            {
-                "hours": "6:00 PM - 6:50PM",
-                "event": "The Boilermaker Jazz Band"
-            },
-            {
-                "hours": "6:50 PM - 7:10 PM",
-                "event": "DJ-Brennan Bowman"
-            },
-            {
-                "hours": "7:10 PM - 8:00 PM",
-                "event": "The Boilermaker Jazz Band"
-            },
-            {
-                "hours": "8:00 PM - 8:20 PM",
-                "event": "DJ-Ross Blythe"
-            },
-            {
-                "hours": "8:20 PM - 9:00 PM",
-                "event": "The Boilermaker Jazz Band"
-            }
-        ],
-        "danceLocation": "Veale Horsburgh Gym"
     }
 ]

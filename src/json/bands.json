@@ -1,46 +1,7 @@
 [{
-    "src": "images/sparx/band-headshots/Boilermakers_headshot.jpg",
-    "bodyshot": "images/sparx/Boilermakers.jpg",
-    "id": "Boilermakers",
-    "name": "Boilermakers"
-},{
-    "src": "images/sparx/band-headshots/allooh_headshot.jpg",
-    "bodyshot": "images/sparx/Moses_Allooh.jpg",
-    "id": "Allooh",
-    "name": "Moses Allooh"
-},{
-    "src": "images/sparx/band-headshots/miles_headshot.jpg",
-    "bodyshot": "images/sparx/DanMiles.jpg",
-    "id": "Miles",
-    "name": "Dan Miles"
-},{
-    "src": "images/sparx/band-headshots/blythe_headshot.jpg",
-    "bodyshot": "images/sparx/RossBlythe.jpg",
-    "id": "Blythe",
-    "name": "Ross Blythe"
-}, {
-    "src": "images/sparx/band-headshots/vergara_headshot.jpg",
-    "bodyshot": "images/sparx/AntonioVergara.jpg",
-    "id": "Vergara",
-    "name": "Antonio 'Tony' Vergara"
-}, {
-    "src": "images/sparx/band-headshots/helveston_headshot.png",
-    "bodyshot": "images/sparx/JohnHelveston.png",
-    "id": "Helveston",
-    "name": "John Helveston"
-}, {
-    "src": "images/sparx/band-headshots/benze_headshot.jpg",
-    "bodyshot": "images/sparx/JamesBenze.jpg",
-    "id": "Benze",
-    "name": "James Benze"
-}, {
-    "src": "images/sparx/band-headshots/bowman_headshot.jpg",
-    "bodyshot": "images/sparx/BrennanBowman.jpg",
-    "id": "Bowman",
-    "name": "Brennan Bowman"
-}, {
-    "src": "images/sparx/band-headshots/selzer_headshot.jpg",
-    "bodyshot": "images/sparx/AndrewSelzer.jpg",
-    "id": "Selzer",
-    "name": "Andrew Selzer"
+    "src": "images/sparx/MichaelGamble.jpg",
+    "bodyshot": "images/sparx/MichaelGamble.jpg",
+    "bio": "The Rhythm Serenaders are an aggressively faithful presentation of tightly-arranged, riff-dominated swinging small-group created for a swing dancing public. Careful transcriptions and subtle adaptations of Goodman/Christian Sextet dominate the repertoire, with thoughtful forays into the combo work of Ellington, Basie, as well as some of the later 40’s material put down by Eldridge, especially his time with Artie Shaw. With Laura Windley featured on vocals, the band also explores the wonderful songbook left behind by Billie Holiday during her years with Brunswick, where she and Teddy Wilson pulled together some of the hardest swinging players to bring to life some of the greatest pop tunes ever written. Bandleader Michael Gamble’s 15+ years in the international swing scene inform every aspect of the band’s repertoire and taste.",
+    "id": "MichaelGambleAndTheRhythmSerenaders",
+    "name": "Michael Gamble & The Rhythm Serenaders"
 }]

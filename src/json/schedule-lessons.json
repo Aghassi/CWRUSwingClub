@@ -3,28 +3,28 @@
         "day": "Saturday",
         "teaching_times": [
 	        {
-	            "hour": "9:30 AM - 10:15 PM",
+	            "hour": "9:00 AM - 9:45 AM",
 	            "tracks": [
 	                {
-	                    "name": "Auditions for Advanced",
+	                    "name": "Auditions for Advanced Lindy",
 	                    "location": "Carlton Commons"
 	                }
 	            ]
 	        },
             {
-                "hour": "10:30 AM - 12:30 PM",
+                "hour": "10:00 AM - 12:00 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - Danny and Mandy",
-                        "location": "Carlton Commons - Rough Rider Room"
+                        "name": "Beginner - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Intermediate - Lindy with Bobby and Kate",
-                        "location": "Carlton Commons - Down Stairs"
+                        "name": "Intermediate - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Advanced - Solo Charleston with Ann",
-                        "location": "Veale Horsburgh Gym"
+                        "name": "Advanced - TBD",
+                        "location": "TBD"
                     }
                 ]
             },
@@ -32,16 +32,34 @@
                 "hour": "2:30 PM - 4:30 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - Charleston with Ann",
-                        "location": "Carlton Commons - Rough Rider Room"
+                        "name": "Beginner - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Intermediate - Charleston with Danny and Mandy",
-                        "location": "Carlton Commons - Down Stairs"
+                        "name": "Intermediate - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Advanced - Lindy with Bobby and Kate",
-                        "location": "Veale Horsburgh Gym"
+                        "name": "Advanced - TBD",
+                        "location": "TBD"
+                    }
+                ]
+            },
+            {
+                "hour": "7:00 PM - 7:25 PM",
+                "tracks": [
+                    {
+                        "name": "Balboa Jack and Jill Prelim",
+                        "location": "Carlton Commons"
+                    }
+                ]
+            },
+            {
+                "hour": "7:30 PM - 7:55 PM",
+                "tracks": [
+                    {
+                        "name": "Lindy Jack and Jill Prelim",
+                        "location": "Carlton Commons"
                     }
                 ]
             }
@@ -50,20 +68,29 @@
     {
         "day": "Sunday",
         "teaching_times": [
-            {
-                "hour": "11:00 AM - 1:00 PM",
+        	{
+	            "hour": "9:30 AM - 10:15 PM",
+	            "tracks": [
+	                {
+	                    "name": "Auditions for Advanced Balboa",
+	                    "location": "Carlton Commons"
+	                }
+	            ]
+	        },    
+		    {
+                "hour": "10:30 AM - 12:30 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - Balboa Danny and Mandy",
-                        "location": "Carlton Commons - Down Stairs"
+                        "name": "Beginner - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
-                        "location": "Carlton Commons - Rough Rider Room"
+                        "name": "Intermediate - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Solo Class - Develop Your Solo Dance Voice with Ann",
-                        "location": "Veale Multipurpose Room"
+                        "name": "Advanced— TBD",
+                        "location": "TBD"
                     }
                 ]
             },
@@ -71,16 +98,25 @@
                 "hour": "2:30 PM - 4:30 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - Balboa Danny and Mandy",
-                        "location": "Carlton Commons - Down Stairs"
+                        "name": "Beginner - TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Intermediate/Advanced - Balboa with Bobby and Kate",
-                        "location": "Carlton Commons - Rough Rider Room"
+                        "name": "Intermediate — TBD",
+                        "location": "TBD"
                     },
                     {
-                        "name": "Solo Class - Solo Routine with Ann",
-                        "location": "Veale Multipurpose Room"
+                        "name": "Advanced — TBD",
+                        "location": "TBD"
+                    }
+                ]
+            },
+            {
+                "hour": "5:30 PM - End",
+                "tracks": [
+                    {
+                        "name": "Superbowl Social",
+                        "location": "Jolly Scholar"
                     }
                 ]
             }
