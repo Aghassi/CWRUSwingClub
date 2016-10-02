@@ -10,13 +10,18 @@
         "content" : " You can do a swingout, and are pretty comfortable with yourself, but as speeds start to get faster you may not know what to do. In general you still need to work on your technique and creativity."
     },
     {
-        "name" : "Intermediate Advanced",
-        "genre" : "Balboa:",
-        "content" : " Your come around and toss out are anywhere from passable to stellar. This track is mixed so there will be both advanced and intermediate dancers."
-    },
-    {
         "name" : "Advanced",
         "genre" : "Lindy Hop:",
         "content" : " You have a solid swingout, compete often, and are here for really refining your already solid technique. You have no issues dancing higher BPM songs, and can hold your own when things may not go as planned."
-    }   
+    },   
+    {
+        "name" : "Intermediate",
+        "genre" : "Balboa:",
+        "content" : " Your come around and toss out are anywhere from passable to stellar. You have a solid foundation."
+    },
+    {
+        "name" : "Advanced",
+        "genre" : "Balboa:",
+        "content" : " You've spent years doing Balboa, and bring both technique and creativity into your dancing. This track moves at a fast pace."
+    }
 ]

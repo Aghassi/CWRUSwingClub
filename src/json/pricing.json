@@ -15,7 +15,16 @@
 	"name": "Lessons Only Pass",
 	"price": "$40 / $55 / $70"
 	}, {
-		"name" : "Al Le Carte Classes",
-		"price" : "$20"
+	"name" : "A La Carte Classes",
+	"price" : "$20"
+	}, {
+	"name" : "A La Carte Evening Dances",
+	"price" : "$15"
+	}, {
+	"name" : "A La Carte Late Night Dance",
+	"price" : "$10"
+	}, {
+	"name" : "Jack and Jill (Lindy or Balboa)",
+	"price" : "$5"
 	}
 ]

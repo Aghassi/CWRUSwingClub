@@ -17,7 +17,7 @@
                                         div.modal.modal-fixed-footer(id="{{headshot.id}}")
                                             .modal-content
                                                 h4.center.name {{headshot.name}}
-                                                img(src="{{headshot.bodyshot}}" class="{{headshot.id}}").responsive-img
+                                                img(src="{{headshot.bodyshot}}" class="{{headshot.id}}").responsive-img.center-block
                                             .modal-footer
                                                 a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
                             .row                    
@@ -28,6 +28,7 @@
                                         div.modal.modal-fixed-footer(id="{{band.id}}")
                                             .modal-content
                                                 h4.center.name {{band.name}}
-                                                img(src="{{band.bodyshot}}").responsive-img
+                                                img(src="{{band.bodyshot}}").responsive-img.center-block
+                                                p1.center.bio {{band.bio}}
                                             .modal-footer
                                                 a.modal-action.modal-close.waves-effect.waves-red.btn-flat Close
