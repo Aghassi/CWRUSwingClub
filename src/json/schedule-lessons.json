@@ -15,15 +15,15 @@
                 "hour": "10:00 AM - 12:00 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - TBD",
+                        "name": "Beginner - Val and Jacob",
                         "location": "TBD"
                     },
                     {
-                        "name": "Intermediate - TBD",
+                        "name": "Intermediate - Adrienne and Rafal",
                         "location": "TBD"
                     },
                     {
-                        "name": "Advanced - TBD",
+                        "name": "Advanced - Mark and Shannon",
                         "location": "TBD"
                     }
                 ]
@@ -32,15 +32,15 @@
                 "hour": "2:00 PM - 4:00 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - TBD",
+                        "name": "Beginner - Adrienne and Rafal",
                         "location": "TBD"
                     },
                     {
-                        "name": "Intermediate - TBD",
+                        "name": "Intermediate - Mark and Shannon",
                         "location": "TBD"
                     },
                     {
-                        "name": "Advanced - TBD",
+                        "name": "Advanced - Val and Jacob",
                         "location": "TBD"
                     }
                 ]
@@ -81,38 +81,38 @@
                 "hour": "10:30 AM - 12:30 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - TBD",
+                        "name": "Beginner - Mark and Shannon",
                         "location": "TBD"
                     },
                     {
-                        "name": "Intermediate - TBD",
+                        "name": "Intermediate - Val and Jacob",
                         "location": "TBD"
                     },
                     {
-                        "name": "Advanced— TBD",
+                        "name": "Advanced — Adrienne and Rafal",
                         "location": "TBD"
                     }
                 ]
             },
             {
-                "hour": "2:30 PM - 4:30 PM",
+                "hour": "2:00 PM - 4:00 PM",
                 "tracks": [
                     {
-                        "name": "Beginner - TBD",
+                        "name": "Beginner - Adrienne and Rafal",
                         "location": "TBD"
                     },
                     {
-                        "name": "Intermediate — TBD",
+                        "name": "Intermediate — Mark and Shannon",
                         "location": "TBD"
                     },
                     {
-                        "name": "Advanced — TBD",
+                        "name": "Advanced — Val and Jacob",
                         "location": "TBD"
                     }
                 ]
             },
             {
-                "hour": "5:30 PM - End",
+                "hour": "5:00 PM - End",
                 "tracks": [
                     {
                         "name": "Superbowl Social",
