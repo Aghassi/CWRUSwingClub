@@ -74,7 +74,7 @@ module.exports = function(grunt) {
                 "important": false,
                 //Make sure we are using valid CSS types
                 "known-properties": true,
-                //Will not warn against using outline:none 
+                //Will not warn against using outline:none
                 "outline-none": false,
                 //Just look this one up for an explenation
                 "overqualified-elements": false,
@@ -149,6 +149,8 @@ module.exports = function(grunt) {
                 undef: false,
                 //Warns when you define and never use a variable
                 unused: false,
+
+                reporterOutput: "",
 
                 /**Relaxing options**/
                 //Supress warnings about the use of assignments in cases were comparisons are expected
