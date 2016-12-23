@@ -19,8 +19,8 @@
 	                    "location": "Carlton Commons"
 	                }
 	            ]
-	        },    
-            {
+	        },
+          {
                 "hour": "10:00 AM - 12:00 PM",
                 "tracks": [
                     {
@@ -38,7 +38,7 @@
                 ]
             },
             {
-                "hour": "2:00 PM - 4:00 PM",
+                "hour": "2:30 PM - 4:30 PM",
                 "tracks": [
                     {
                         "name": "Beginner - Adrienne and Rafal",
@@ -77,7 +77,16 @@
     {
         "day": "Sunday",
         "teaching_times": [
-		    {
+            {
+                "hour": "9:30 AM - 10:15 PM",
+                "tracks": [
+                    {
+                        "name": "Auditions for Advanced Balboa",
+                        "location": "Carlton Commons"
+                    }
+                ]
+            },
+            {
                 "hour": "10:30 AM - 12:30 PM",
                 "tracks": [
                     {
