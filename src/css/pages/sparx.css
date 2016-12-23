@@ -15,7 +15,7 @@ header {
 
 .background-sparx nav {
     /* Off red **/
-    
+
     background-color: #681B20;
     height: 90px;
     line-height: 90px;
@@ -40,9 +40,13 @@ header {
 nav .nav-wrapper i:hover,
 nav .nav-wrapper i:focus {
     /* Rust orange */
-    
+
     color: #dd9a5f;
     text-decoration: none;
+}
+
+.bio {
+  color: black;
 }
 
 .bio-image {
