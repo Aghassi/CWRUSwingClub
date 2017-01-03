@@ -78,15 +78,6 @@
         "day": "Sunday",
         "teaching_times": [
             {
-                "hour": "9:30 AM - 10:15 PM",
-                "tracks": [
-                    {
-                        "name": "Auditions for Advanced Balboa",
-                        "location": "Carlton Commons"
-                    }
-                ]
-            },
-            {
                 "hour": "10:30 AM - 12:30 PM",
                 "tracks": [
                     {
