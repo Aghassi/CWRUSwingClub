@@ -5,15 +5,6 @@
     "id": "Michael_Gamble_&_The_Rhythm_Serenaders",
     "name": "Michael Gamble & The Rhythm Serenaders"
 }
-
-,{
-    "src": "images/sparx/band-headshots/ShelbyRowles.jpg",
-    "bodyshot": "images/sparx/band-headshots/ShelbyRowles.jpg",
-    "bio": "Shelby’s love for music began at a very early age thanks to the great influence of her father. Growing up, she became acquainted with the smooth sounds of Ella Fitzgerald and Lena Horne which enticed her to delve deeper into the Bluer side of music. Soon enough she fell in love with the deep tones and incredible storylines that blues music has to offer. Four years ago, Ball State Swing Society fostered that love by introducing her to the dance that coincides. Since then she has DJ'd at events including Big Red Swing Weekend, Timewarp Swing, New Moon Blues, Midwest Fusion Affair, Scramble Light Blues, and Cbus Lindy Exchange! Whether she’s playing rhythmic jook from the delta or smooth tunes for ballroomin’, Shelby is sure to bring the blues to SparX!",
-    "id": "Shelby_Rowles",
-    "name": "Shelby Rowles"
-}
-
 ,{
     "src": "images/sparx/band-headshots/DanielHoy.jpg",
     "bodyshot": "images/sparx/band-headshots/DanielHoy.jpg",
@@ -21,7 +12,6 @@
     "id": "Daniel_Hoy",
     "name": "Daniel Hoy"
 }
-
 ,{
     "src": "images/sparx/band-headshots/EmmaGraceMatcham.jpg",
     "bodyshot": "images/sparx/band-headshots/EmmaGraceMatcham.jpg",
@@ -29,12 +19,38 @@
     "id": "Emma_Grace_Matcham",
     "name": "Emma Grace Matcham"
 }
-
 ,{
     "src": "images/sparx/band-headshots/TonyVergara.jpg",
     "bodyshot": "images/sparx/band-headshots/TonyVergara.jpg",
     "bio": "Tony started dancing in 2005, rocking out to Baltimore Club music at high school dances. He found Lindy Hop and all that jazz in 2007, when he started performing with, and later also teaching for, the West Philly Swingers at the University of Pennsylvania. While there, he started DJing house parties with a solid mix of lindy, blues, and pop music. He also studied Jazz and Popular Music (also neuroscience, but that's less relevant), so he'd love to talk music history and theory with you. When he's DJing, you'll hear a range of music, some driving, some lazy, some fast, some slow, and everything in between. His musical influences include Count Basie, Duke Ellington, Illinois Jacquet, and Lester Young, but also Sharon Jones & The Dap Kings, Chance the Rapper, and Bell Biv Devoe. He'll keep you dancing to the music you want to hear, so come prepared with your most comfortable shoes and a few extra shirts!",
     "id": "Tony_Vergara",
     "name": "Tony Vergara"
-
+}
+,{
+    "src": "images/sparx/band-headshots/JamesBenze.jpg",
+    "bodyshot": "images/sparx/band-headshots/JamesBenze.jpg",
+    "bio": "James Benze started DJing in Dayton, Ohio in 2011.  After having danced for a few years, he found inspiration at a talk at All Balboa Weekend to start playing the music he liked, and an addiction was born. Since then, he has DJ'ed at various local and regional events, including KissME, CBUS, CincyHop, and Rocktober.  James plays a mix of small- and big-band swing...why choose?  He is overjoyed with the chance to DJ for everyone at SparX!",
+    "id": "James_Benze",
+    "name": "James Benze"
+}
+,{
+  "src": "images/sparx/band-headshots/DanMiles.jpg",
+  "bodyshot": "images/sparx/band-headshots/DanMiles.jpg",
+  "bio": "Dan Miles first fell in love with the blues at the 2012 Chicago Blues Festival, on a Sunday evening, overwhelmed by their tribute to Koko Taylor, the Queen of the Chicago Blues. With that as his starting point, he has been refining his understanding of blues and exploring the rich variety of the genre ever since. Dan happily accepts the label of “traditionalist” as a blues DJ, both in the typical sense of sticking to the genre and in the sense of recognizing and embracing the blues tradition as one that is diverse, inclusive, historically rooted, and still very much alive today. Expect his sets to ramble through a range of topics, eras, and regional styles, hitting both some vintage classics and some currently performing blues bands from right here in Ohio.",
+  "id": "Dan_Miles",
+  "name": "Dan Miles"
+}
+,{
+    "src": "images/sparx/band-headshots/AndrewSelzer.jpg",
+    "bodyshot": "images/sparx/band-headshots/AndrewSelzer.jpg",
+    "bio": "Andrew Selzer started DJing in 2010 for weekly dances in the college town of State College, Pennsylvania; but these days he hails from Boston, Massachusetts where he DJs, teaches swing dancing, and plays soprano saxophone and clarinet. Some events he has DJed at include Beantown, The Boston Tea Party, SparX (Case Western Lindy Exchange), The Dirty Water Lindy Exchange, and multiple Penn State workshops/events.",
+    "id": "Andrew_Selzer",
+    "name": "Andrew Selzer"
+}
+,{
+    "src": "images/sparx/band-headshots/MindyBayko.jpg",
+    "bodyshot": "images/sparx/band-headshots/MindyBayko.jpg",
+    "bio" : "Mindy was born at her first swing dance, on January 1, 2014. She grew up surrounded by love, and now lives in St. Louis where she surrounds herself with jazz, badass women, and pictures of Patrick Stump. She likes bourbon, balboa, and following, and can often be found hiding behind a DJ machine, playing Ella, Basie, Ellington, and jump blues. She is 90% coffee and will live forever if she doesn't die first.",
+    "id": "Mindy_Bayko",
+    "name": "Mindy Bayko"
 }]
