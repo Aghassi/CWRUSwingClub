@@ -58,7 +58,7 @@
                 "hour": "7:00 PM - 7:25 PM",
                 "tracks": [
                     {
-                        "name": "Balboa Jack and Jill Prelim",
+                        "name": "Lindy Jack and Jill Prelim",
                         "location": "Carlton Commons"
                     }
                 ]
@@ -67,7 +67,25 @@
                 "hour": "7:30 PM - 7:55 PM",
                 "tracks": [
                     {
-                        "name": "Lindy Jack and Jill Prelim",
+                        "name": "Balboa Jack and Jill Prelim",
+                        "location": "Carlton Commons"
+                    }
+                ]
+            },
+            {
+                "hour": "9:50 PM - 10:10 PM",
+                "tracks": [
+                    {
+                        "name": "Lindy Jack and Jill Finals",
+                        "location": "Carlton Commons"
+                    }
+                ]
+            },
+            {
+                "hour": "11:00 PM - 11:20 PM",
+                "tracks": [
+                    {
+                        "name": "Balboa Jack and Jill Finals",
                         "location": "Carlton Commons"
                     }
                 ]
