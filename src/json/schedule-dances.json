@@ -8,15 +8,19 @@
             },
             {
                 "hours": "8:00 PM - 9:00 PM",
-                "event": "TBD"
+                "event": "Antonio Vergara"
             },
             {
                 "hours": "9:00 PM - 9:50 PM",
                 "event": "Michael Gamble and the Rhythm Serenaders"
             },
             {
-                "hours": "9:50 PM - 10:10 PM",
-                "event": "TBD"
+                "hours": "9:50 PM - 10:00 PM",
+                "event": "Andrew Selzer"
+            },
+            {
+                "hours": "10:00 PM - 10:10 PM",
+                "event": "Instructor Demo-- Michael Gamble and the Rhythm Serenaders"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
@@ -24,7 +28,7 @@
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": "TBD"
+                "event": "Andrew Selzer"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
@@ -38,7 +42,7 @@
         "dance": [
             {
                 "hours": "8:00 PM - 9:00 PM",
-                "event": "TBD"
+                "event": "Daniel Hoy"
             },
             {
                 "hours": "9:00 PM - 9:50 PM",
@@ -46,7 +50,7 @@
             },
             {
                 "hours": "9:50 PM - 10:10 PM",
-                "event": "TBD"
+                "event": "Lindy J&J Finals-- Andrew Selzer"
             },
             {
                 "hours": "10:10 PM - 11:00 PM",
@@ -54,7 +58,7 @@
             },
             {
                 "hours": "11:00 PM - 11:20 PM",
-                "event": "TBD"
+                "event": "Balboa J&J Finals-- Mindy Bayko"
             },
             {
                 "hours": "11:20 PM - 12:00 AM",
@@ -67,16 +71,12 @@
         "day": "Saturday Late Night - Blues",
         "dance": [
             {
-                "hours": "12:30 AM - 1:30 AM",
-                "event": "TBD"
+                "hours": "12:30 AM - 2:00 AM",
+                "event": "Tasha Smith"
             },
             {
-                "hours": "1:30 AM - 2:30 AM",
-                "event": "TBD"
-            },
-            {
-                "hours": "2:30 AM - 3:30 AM",
-                "event": "TBD"
+                "hours": "2:00 AM - 3:30 AM",
+                "event": "Dan Miles"
             }
         ],
         "danceLocation": "Carlton Commons"
@@ -86,11 +86,11 @@
         "dance": [
             {
                 "hours": "12:30 AM - 1:30 AM",
-                "event": "TBD"
+                "event": "Emma Grace Matcham"
             },
             {
                 "hours": "1:30 AM - 3:30",
-                "event": "TBD"
+                "event": "Jay Benze"
             }
         ],
         "danceLocation": "Carlton Commons - Rough Rider Room"
